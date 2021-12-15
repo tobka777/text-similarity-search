@@ -1,3 +1,5 @@
 fastapi==0.70.0
 uvicorn==0.16.0
 fastapi_cache2==0.1.8
+gensim==4.1.2
+elasticsearch==7.16.1
