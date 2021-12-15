@@ -1,3 +1,4 @@
+from . import BaseModel
 class Spacy(BaseModel):  
-  def vector(self, text):   
+  def encode(self, text):   
     return text.vector
