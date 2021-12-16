@@ -1,7 +1,7 @@
 import gensim
 import gensim.downloader
-import os
-from . import BaseModel
+import numpy as np
+from .BaseModel import BaseModel
 
 class Word2Vec(BaseModel):
   def encode(self, text):   
@@ -10,13 +10,10 @@ class Word2Vec(BaseModel):
     else:
       return np.zeros(300)
 
-  def download(self, name):
-    return gensim.downloader.load(name)
+  def download(self, path, name):
+    model = gensim.downloader.load(name)
+    model.save(path+name)
+    return model
 
-  def load(self, path):
-    return gensim.models.KeyedVectors.load(path)
-    return gensim.models.Word2Vec.load(path)
-    #return gensim.models.KeyedVectors.load_word2vec_format(path, binary=False)
-
-  def save(self, model, path):
-    model.save(path)
+  def load(self, path, name):
+    return gensim.models.KeyedVectors.load(path+name)
