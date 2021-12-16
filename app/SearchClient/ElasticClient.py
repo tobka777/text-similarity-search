@@ -1,7 +1,7 @@
 import os
 import requests
 import json
-from . import BaseClient
+from .BaseClient import BaseClient
 import elasticsearch.helpers
 from elasticsearch import Elasticsearch
 
@@ -255,8 +255,43 @@ class ElasticClient(BaseClient):
 
     def get_doc(self, doc_id, index):
         resp = self.es.get(index=index, id=doc_id)
-        #self.resp_msg(msg="Fetched Doc".format(docId), resp=ElasticResp(resp), throw=False)
+        #self.resp_msg(msg="Fetched Doc {}".format(doc_id), resp=resp, throw=False)
         return resp['_source']
 
     def transform_vector(self, vector):
-        return vector.flatten()
+        return vector.flatten().tolist()
+
+    def delete_doc(self, doc_id, index):
+        resp = self.es.delete(index=index, id=doc_id)
+        #self.resp_msg(msg="Deleted Doc {}".format(doc_id), resp=resp, throw=False)
+
+class ElasticQuery():
+    def get_query_basic(self, query):
+        return {
+            "query": query
+        }
+
+    def get_query_densevector(self, query_vector, relevance_json, source, docs_count):
+        return {
+            "size": docs_count,
+            "_source": source,
+            "query": {
+                "script_score": {
+                    "query": {"match_all": {}},
+                    "script": {
+                        "source": self.get_distance_metric(relevance_json),
+                        "params": {"query_vector": query_vector}
+                    }
+                }
+            }
+        }
+
+    def get_distance_value(self, attribute, boost):
+      return "(cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0) * "+str(boost)
+
+    def get_distance_metric(self, relevance_json):
+      metric = []
+      for attribute, boost in relevance_json.items():
+        metric.append(self.get_distance_value(attribute, boost))
+      metric.append('_score')
+      return ' + '.join(metric)
