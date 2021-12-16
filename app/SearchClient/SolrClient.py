@@ -1,6 +1,6 @@
 import os
 import requests
-from . import BaseClient
+from .BaseClient import BaseClient
 
 class SolrResp:
     def __init__(self, resp):
@@ -148,6 +148,9 @@ class SolrClient(BaseClient):
                 solr_vector.append(str(i) + '|' + str(point))
         solr_vector = " ".join(solr_vector)
         return solr_vector
+
+    def delete_doc(self, doc_id, index):
+        pass
 
 
 
