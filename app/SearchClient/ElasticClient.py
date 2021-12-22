@@ -262,7 +262,7 @@ class ElasticClient(BaseClient):
         return vector.flatten().tolist()
 
     def delete_doc(self, doc_id, index):
-        resp = self.es.delete(index=index, id=doc_id)
+        resp = self.es.delete(index=index, id=doc_id, ignore=[400, 404])
         #self.resp_msg(msg="Deleted Doc {}".format(doc_id), resp=resp, throw=False)
 
 class ElasticQuery():

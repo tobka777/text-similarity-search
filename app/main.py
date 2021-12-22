@@ -1,47 +1,51 @@
-from contextlib import nullcontext
+import requests
+import os
+import time
+
 from fastapi import FastAPI, Request
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
-import requests
-
-import time
+from fastapi.middleware.cors import CORSMiddleware
 
 from .Model import Word2Vec
 from .Model import SentenceTransformer
 from .SearchClient import ElasticClient, ElasticQuery
-from .sgic import parse_data
+from .sgic import parse_data, get_relevance, get_source
 
-app = FastAPI()
+INDEX_SPEC = "vector"
+INDEX_NAME = "sgic_search_"
+WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:9876')
+API_URL = WEBSITE_URL+"/api"
+APP_KEY = os.environ.get('APP_KEY', '')
+
 print("Load model")
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 print("Initializing Elastic client")
 searchclient = ElasticClient(configs_dir='config/elastic')
 
-INDEX_SPEC = "vector"
-INDEX_NAME = "sgic_search"
+app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[WEBSITE_URL],
+    allow_credentials=True,
+    allow_methods=["POST", "GET"],
+    allow_headers=["*"]
+)
 
 @app.get("/")
 async def root():
     return {"message": "App is running."}
 
 @app.get("/search")
-#@cache(namespace="search", expire=2000) # cache in seconds
+@cache(namespace="search", expire=2000) # cache in seconds
 async def search(query: str = '', lang: str = 'de'):
     time_embed_start = time.time()
     query_vector = searchclient.transform_vector(model.encode(query))
     time_embed = time.time() - time_embed_start
 
-    print(len(query_vector))
-
-    relevance = {
-        "title_vec": 2,
-        "abstract_vec": 1
-    }
-    source = ["id", "title"]
-
-    query_config = ElasticQuery().get_query_densevector(query_vector, relevance, source, 10)
-    matches, time_elastic, value = searchclient.query(INDEX_NAME, query_config)
+    query_config = ElasticQuery().get_query_densevector(query_vector, get_relevance(), get_source(), 1000)
+    matches, time_elastic, value = searchclient.query(INDEX_NAME+lang, query_config)
     return {
         "matches": matches,
         "time": {
@@ -51,55 +55,49 @@ async def search(query: str = '', lang: str = 'de'):
     }
 
 @app.get("/clear")
-async def clear():
+async def clear(key: str = ''):
     return await FastAPICache.clear(namespace="search")
 
 @app.get("/index")
-def index(lang: str = 'de'):
-    time_start = time.time()
-    # background task, https://testdriven.io/blog/fastapi-and-celery/
-    #secure endpoint, delete index, clean cache
+def index(lang: str = 'de', key: str = ''):
+    if key == '' or APP_KEY != key:
+        return {"message": "Unauthorized."}
+
     print("Read Data")
-    url = "https://seriousgames-portal.org/api/games/de"
+    url = API_URL+"/games/de"
     data_json = requests.get(url).json()
 
     print("Create Index")
-    searchclient.delete_index(INDEX_NAME)
-    searchclient.create_index(INDEX_NAME, INDEX_SPEC)
+    searchclient.delete_index(INDEX_NAME+lang)
+    searchclient.create_index(INDEX_NAME+lang, INDEX_SPEC)
 
     print("Index Documents")   
     data = parse_data(data_json, model, searchclient)
-    searchclient.index_documents(INDEX_NAME, data)
+    searchclient.index_documents(INDEX_NAME+lang, data)
 
     return {"message": "Index created."}
 
 @app.get("/update")
 def update(id: str = '', lang: str = 'de'):
-    #PUT http://localhost:9200/sgic_search/_doc/bf5e5e08-3b8d-4f34-bdc6-0c74be2e3065 -> JSON vom Dokument
-    #check if found true, else bulk
-    
-    ####get only selected game####
-    #id = "bf5e5e08-3b8d-4f34-bdc6-0c74be2e3065"
-    #url = "https://seriousgames-portal.org/api/game/?lang=de&key="+id
-    #data_json = requests.get(url).json()
-
-    ####only testing####
-    url = "https://seriousgames-portal.org/api/games/de"
-    data_json = requests.get(url).json()[0]
+    url = API_URL+"/game/?lang="+lang+"&key="+id
+    request = requests.get(url)
+    if request.content == b'':
+        return {"message": "Game "+id+" not found."}
+    data_json = request.json()
 
     print("Index Document")
     data = parse_data([data_json], model, searchclient)
-    searchclient.index_documents(INDEX_NAME, data)
+    searchclient.index_documents(INDEX_NAME+lang, data)
     return {"message": "Document "+id+" updated."}
 
 @app.get("/delete")
-def update(id: str = ''):
-    searchclient.delete_doc(id, INDEX_NAME)
+def delete(id: str = '', lang: str = 'de'):
+    searchclient.delete_doc(id, INDEX_NAME+lang)
     return {"message": "Document "+id+" deleted."}
 
 @app.get("/get")
 def get(id: str = '', lang: str = 'de'):
-    return searchclient.get_doc(id, INDEX_NAME)
+    return searchclient.get_doc(id, INDEX_NAME+lang)
 
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):

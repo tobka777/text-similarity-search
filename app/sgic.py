@@ -18,3 +18,13 @@ def parse_data(data, model: BaseModel, search: BaseClient):
 
     if count % bulk_size == 0:
       print("Processed {} documents".format(count))
+
+def get_source():
+  return ["id", "title"]
+
+def get_relevance():
+  return {
+    "title_vec": 2,
+    "abstract_vec": 1
+  }
+
