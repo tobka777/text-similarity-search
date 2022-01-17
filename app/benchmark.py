@@ -1,8 +1,6 @@
 from Benchmark import SICK, STSB
 from Model import SentenceTransformer, FastText, Bert, Spacy, LaBSE, mUSE, LASER, XLR
 
-print("Model: ", "paraphrase-multilingual-mpnet-base-v2")
-
 """
 #Baseline
 model = FastText('cc.en.300.bin')
@@ -27,19 +25,13 @@ model = XLR('XLR')
 #model = FastText('cc.en.300.bin')
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 
-
 def benchmark_run_print(benchmark, lang):
   (pearson, spearman, embed_time) = benchmark.run(model, lang)
-  print("Pearson: ", pearson)
-  print("Spearman: ", spearman)
-  print("Avg, Min, Max: ", embed_time)
-  print("------------")
+  #model; benchmark; pearson; spearman; time for embed avg; min; max)
+  return model.name+";"+type(benchmark).__name__+" "+lang+";"+pearson+";"+spearman+";"+embed_time[0]+";"+embed_time[1]+";"+embed_time[2]
 
-print("STSB en")
-benchmark_run_print(STSB(), 'en')
-print("STSB de")
-benchmark_run_print(STSB(), 'de')
-print("SICK en")
-benchmark_run_print(SICK(), 'en')
+print(benchmark_run_print(STSB(), 'en'))
+print(benchmark_run_print(STSB(), 'de'))
+print(benchmark_run_print(SICK(), 'en'))
 
 

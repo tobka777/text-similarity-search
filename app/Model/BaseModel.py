@@ -3,6 +3,7 @@ import os
 class BaseModel(ABC):
   def __init__(self, name, lang='de'):
     self.lang = lang
+    self.name = name
     path = "data/"
     filepath = os.path.expanduser(path+name)
     if os.path.isfile(filepath):

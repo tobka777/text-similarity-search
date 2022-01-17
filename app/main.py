@@ -8,7 +8,6 @@ from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
 from fastapi.middleware.cors import CORSMiddleware
 
-from .Model import Word2Vec
 from .Model import SentenceTransformer
 from .SearchClient import ElasticClient, ElasticQuery
 from .sgic import parse_data, get_relevance, get_source
