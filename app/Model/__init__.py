@@ -1,5 +1,9 @@
-
 from .FastText import FastText
-from .SentenceTransformer import SentenceTransformer
 from .Spacy import Spacy
+from .SentenceTransformer import SentenceTransformer
 from .Word2Vec import Word2Vec
+from .Bert import Bert
+from .LaBSE import LaBSE
+from .mUSE import mUSE
+from .LASER import LASER
+from .XLR import XLR

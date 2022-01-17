@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 import os
-
 class BaseModel(ABC):
-  def __init__(self, name):
+  def __init__(self, name, lang='de'):
+    self.lang = lang
     path = "data/"
     filepath = os.path.expanduser(path+name)
     if os.path.isfile(filepath):
