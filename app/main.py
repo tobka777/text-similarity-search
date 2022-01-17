@@ -18,6 +18,7 @@ INDEX_NAME = "sgic_search_"
 WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:9876')
 API_URL = WEBSITE_URL+"/api"
 APP_KEY = os.environ.get('APP_KEY', '')
+CACHE_MIN = os.environ.get('CACHE_MIN', 60)
 
 print("Load model")
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
@@ -38,7 +39,7 @@ async def root():
     return {"message": "App is running."}
 
 @app.get("/search")
-@cache(namespace="search", expire=2000) # cache in seconds
+@cache(namespace="search", expire=CACHE_MIN*60)
 async def search(query: str = '', lang: str = 'de'):
     time_embed_start = time.time()
     query_vector = searchclient.transform_vector(model.encode(query))
@@ -54,17 +55,14 @@ async def search(query: str = '', lang: str = 'de'):
         }
     }
 
-@app.get("/clear")
-async def clear(key: str = ''):
-    return await FastAPICache.clear(namespace="search")
-
 @app.get("/index")
 def index(lang: str = 'de', key: str = ''):
     if key == '' or APP_KEY != key:
+        #TODO send ERROR code
         return {"message": "Unauthorized."}
 
     print("Read Data")
-    url = API_URL+"/games/de"
+    url = API_URL+"/games/"+lang
     data_json = requests.get(url).json()
 
     print("Create Index")
@@ -98,6 +96,10 @@ def delete(id: str = '', lang: str = 'de'):
 @app.get("/get")
 def get(id: str = '', lang: str = 'de'):
     return searchclient.get_doc(id, INDEX_NAME+lang)
+
+@app.get("/clear")
+async def clear():
+    return await FastAPICache.clear(namespace="search")
 
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):

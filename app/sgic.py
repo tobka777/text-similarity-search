@@ -28,3 +28,5 @@ def get_relevance():
     "abstract_vec": 1
   }
 
+def get_minimum_score():
+  return sum(get_relevance().values())
