@@ -7,3 +7,4 @@ from .LaBSE import LaBSE
 from .mUSE import mUSE
 from .LASER import LASER
 from .XLR import XLR
+from .SIF import SIF
