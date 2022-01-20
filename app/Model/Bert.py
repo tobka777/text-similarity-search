@@ -1,39 +1,37 @@
-from transformers import BertTokenizer, TFBertModel
+from transformers import BertTokenizer, BertModel
 from .BaseModel import BaseModel
 import spacy
 import numpy as np
-
+import torch
 class Bert(BaseModel):
   remove_stopwords = True
 
-  def encode_word(self, word):  
-    encoded_input = self.tokenizer(word, return_tensors='tf')
-    return self.model(encoded_input)
-
   def encode(self, text):
-    tokens = [self.encode_word(token) for token in self.preprocess(text, self.remove_stopwords)]
-    if len(tokens) == 0:
-      return np.zeros(300)
-    embedding = np.average(tokens, axis=0, weights=None).reshape(1, -1)
-    return embedding
+    # Source: https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/
+    marked_text = "[CLS] " + text + " [SEP]"
+    tokenized_text = self.tokenizer.tokenize(marked_text)
+    segments_ids = [1] * len(tokenized_text)
+    indexed_tokens = self.tokenizer.convert_tokens_to_ids(tokenized_text)
+    segments_tensors = torch.tensor([segments_ids])
+    tokens_tensor = torch.tensor([indexed_tokens])
+
+    self.model.eval()
+    with torch.no_grad():
+      outputs = self.model(tokens_tensor, segments_tensors)
+      hidden_states = outputs[2]
+    
+    token_embeddings = torch.stack(hidden_states, dim=0)
+    token_embeddings = torch.squeeze(token_embeddings, dim=1)
+    token_embeddings = token_embeddings.permute(1,0,2)
+
+    token_vecs = hidden_states[-2][0]
+    return torch.mean(token_vecs, dim=0)
 
   def download(self, path, name):
     tokenizer = BertTokenizer.from_pretrained(name, cache_dir=path)
-    model = TFBertModel.from_pretrained(name)
+    model = BertModel.from_pretrained(name, cache_dir=path, output_hidden_states = True)
     self.tokenizer = tokenizer
     return model
 
   def load(self, path, name):
-    if self.lang == 'de':
-      self.spy = spacy.load("de_core_news_lg")
-    else:
-      self.spy = spacy.load("en_core_web_lg")
     return self.download(path, name)
-  
-  def preprocess(self, text, remove_stopwords=False):
-    normalized_text = text.replace("‘", "'").replace("’", "'")
-    token = self.spy(normalized_text.lower())
-    if remove_stopwords:
-      return [t.lower_ for t in token if not t.is_stop and not t.is_punct]
-    else:
-      return token

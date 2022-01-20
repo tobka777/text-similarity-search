@@ -1,4 +1,3 @@
-#from .BaseModel import BaseModel
 import spacy as spy
 import numpy as np
 from .BaseModel import BaseModel
