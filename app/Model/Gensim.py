@@ -1,31 +1,42 @@
+import gensim
+import gensim.downloader
 import numpy as np
-import fasttext
 from .BaseModel import BaseModel
 import spacy
-class FastText(BaseModel):  
+
+class Gensim(BaseModel):
   remove_stopwords = True
 
-  def encode_word(self, word):   
-    return self.model.get_word_vector(str(word).lower())
+  def encode_word(self, word):
+    word = str(word).lower()
+    if word in self.model:
+      return self.model[word]
+    else:
+      return np.zeros(300)
 
   def encode(self, text):
-    tokens = [self.encode_word(token) for token in self.preprocess(text, self.remove_stopwords) if np.linalg.norm(self.encode_word(token)) > 0]
+    tokens = [self.encode_word(token) for token in self.preprocess(text, self.remove_stopwords)]
     if len(tokens) == 0:
       return np.zeros(300)
-    embedding = np.average(tokens, axis=0, weights=None)
+    embedding = np.average(tokens, axis=0, weights=None).reshape(1, -1)
     return embedding
-  
+
   def download(self, path, name):
-    print("Please download and put the model '"+name+"' in the folder '"+path+name+"'.")
-    exit()
+    self.load_spacy()
+    model = gensim.downloader.load(name)
+    model.save(path+name)
+    return model
 
   def load(self, path, name):
+    self.load_spacy()
+    return gensim.models.KeyedVectors.load(path+name)
+
+  def load_spacy(self):
     if self.lang == 'de':
       self.spy = spacy.load("de_core_news_lg")
     else:
       self.spy = spacy.load("en_core_web_lg")
-    return fasttext.load_model(path+name)
-  
+
   def preprocess(self, text, remove_stopwords=False):
     normalized_text = text.replace("‘", "'").replace("’", "'")
     token = self.spy(normalized_text.lower())

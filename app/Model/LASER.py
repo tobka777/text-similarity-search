@@ -8,12 +8,11 @@ class LASER(BaseModel):
     return self.model.embed_sentences([text], lang=self.lang)
 
   def download(self, path, name):
-    os.system("laserembeddings download-models "+path)
-    exit()
+    os.system("python -m laserembeddings download-models "+path)
     return self.load(path, name)
 
   def load(self, path, name):
-    path_to_bpe_codes = ...
-    path_to_bpe_vocab = ...
-    path_to_encoder = ...
-    return Laser()
+    path_to_bpe_codes = path+"93langs.fcodes"
+    path_to_bpe_vocab = path+"93langs.fvocab"
+    path_to_encoder = path+"bilstm.93langs.2018-12-26.pt"
+    return Laser(path_to_bpe_codes, path_to_bpe_vocab, path_to_encoder)
