@@ -7,14 +7,16 @@ import os
 import csv
 from tqdm import tqdm
 import time
+import numpy as np
 
 DEEPL_API_KEY = os.environ.get('DEEPL_API_KEY', '')
 
 class BaseBenchmark(ABC):
+  reshape = True
   def load_dataset_from_file(self, filename, sent1, sent2, sim, delimiter="\t", all=False):
     path = os.path.dirname(os.path.realpath(__file__))
     sent_pairs = []
-    with open(path+'/'+filename, 'r') as f:
+    with open(path+'/'+filename, 'r', encoding='utf-8') as f:
         reader = csv.reader(f, delimiter=delimiter, quotechar='"')
         for ts in reader:
             if all:
@@ -37,17 +39,21 @@ class BaseBenchmark(ABC):
 
     similarities = []
     embed_times = []
-    for (sent1, sent2) in tqdm(zip(sentences1, sentences2), total=len(data.index)): 
+    for (sent1, sent2) in tqdm(zip(sentences1, sentences2), total=len(data.index)):
       time_embed_start = time.time()
-      embedding1 = model.encode(sent1).reshape(1, -1)
+      embedding1 = model.encode(sent1)
       time_embed = time.time() - time_embed_start
       embed_times.append(time_embed)
 
       time_embed_start = time.time()
-      embedding2 = model.encode(sent2).reshape(1, -1)
+      embedding2 = model.encode(sent2)
       time_embed = time.time() - time_embed_start
       embed_times.append(time_embed)
 
+      if embedding1.shape[0] != 1:
+        embedding1 = embedding1.reshape(1, -1)
+      if embedding2.shape[0] != 1:
+        embedding2 = embedding2.reshape(1, -1)
       similarity = cosine_similarity(embedding1, embedding2)[0][0]
       similarities.append(similarity)
 
