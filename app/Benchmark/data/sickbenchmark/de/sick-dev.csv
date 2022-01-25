@@ -1,500 +1,500 @@
-4,Die Jungen spielen im Freien und der Mann lächelt in der Nähe,"Es gibt keinen Jungen, der draußen spielt, und es gibt keinen Mann, der lächelt.",3.6,CONTRADICTION,,,,
-24,Eine Person in einer schwarzen Jacke macht Kunststücke auf einem Motorrad,Eine erfahrene Person fährt ein Fahrrad auf einem Rad,3.4,NEUTRAL,,,,
-105,Vier Kinder machen Rückwärtsbeugen in der Turnhalle,Vier Mädchen machen Rückbeugen und spielen im Freien,3.8,NEUTRAL,,,,
-116,Ein Spieler wirft den Ball,Zwei Mannschaften treten in einem Fußballspiel gegeneinander an,2.9,NEUTRAL,,,,
-119,Fünf Kinder stehen vor einer Holzhütte,Fünf Kinder stehen in einer Holzhütte,4.2,NEUTRAL,,,,
-185,Nur wenige Menschen essen an roten Tischen in einem Restaurant ohne Licht,Eine große Gruppe asiatischer Menschen isst in einem Restaurant,2.6,NEUTRAL,,,,
-197,Jemand sitzt auf einem schwarz-weißen Motorrad und steht auf dem Sitz,Ein Motorrad wird im Stehen auf dem Sitz des Fahrzeugs gefahren,3.165,NEUTRAL,,,,
-211,Zwei Hunde spielen an einem Baum,Zwei Hunde spielen bei einer Pflanze,4.6,ENTAILMENT,,,,
-218,Ein Mädchen in Weiß tanzt,Ein Mädchen trägt weiße Kleidung und tanzt,4.9,ENTAILMENT,,,,
-219,"Es gibt kein Mädchen in Weiß, das tanzt",Ein Mädchen in Weiß tanzt,4.2,CONTRADICTION,,,,
-225,Die Ausrüstung vor dem blonden tanzenden Mädchen ist solide,Ein Mädchen in Weiß tanzt,2.7,NEUTRAL,,,,
-228,Ein Mädchen in Weiß tanzt,Das blonde Mädchen tanzt vor der Tonanlage,3.3,NEUTRAL,,,,
-236,Die Kinder einer Familie spielen und warten,Ein asiatischer Mann tanzt und drei Kinder schauen zu,1.9,NEUTRAL,,,,
-253,Ein Wanderer steht auf dem Gipfel eines Berges und führt einen Freudentanz auf,Ein Wanderer ist auf dem Gipfel des Berges und tanzt,4.7,ENTAILMENT,,,,
-280,Ein Junge steht außerhalb des Wassers,Der Junge watet durch den blauen Ozean,3.135,NEUTRAL,,,,
-285,Eine glatzköpfige Person spielt auf einer Gitarre,Eine Person hat blondes und fliegendes Haar und spielt Gitarre,3.9,NEUTRAL,,,,
-304,"Eine alte, barbusige Frau ist mit Farbe bedeckt","Eine junge, barbusige Frau ist mit Farbe bedeckt",3.8,NEUTRAL
-317,Eine Gruppe von Kindern in Uniformen steht vor einem Tor und niemand küsst die Mutter.,Eine Menschenmenge steht am Wasser,1.3,NEUTRAL,,,,
-382,Ein braun-weißer Hund rennt durch das hohe Gras,Ein braun-weißer Hund bewegt sich durch das wilde Gras,4.4,NEUTRAL,,,,
-384,"Ein weiß-brauner Hund rennt durch das hohe, grüne Gras",Ein weißer und brauner Hund läuft durch ein Feld,4.35,ENTAILMENT,,,,
-394,Ein Mann sitzt neben einem Fahrrad und schreibt einen Zettel,Ein Mann steht neben einem Fahrrad und schreibt auf ein Blatt Papier,3.6,NEUTRAL,,,,
-402,Eine Gruppe von Pfadfindern wandert durch das Gras,Eine Gruppe von Entdeckern läuft durch das Gras,4.1,NEUTRAL,,,,
-417,Zwei Männer machen auf einer verschneiten Straße eine Pause,Zwei Männer mit Autos stehen am Rande einer verschneiten Straße,4.0,NEUTRAL,,,,
-450,Eine Dame surft und reitet auf einer Welle,Ein blondes Mädchen schaut auf die Wellen,3.3,NEUTRAL,,,,
-520,"Die Frau, die eine silberne Hose, eine rosa Schlaghose und einen rosa Schal trägt, fährt mit dem Fahrrad",Rosa Schlaghosen und ein rosa Schal gehören nicht zu Frauen mit silbernen Hosen oder zu Fahrradfahrern,3.3,NEUTRAL
-526,"Die Frau, die eine silberne Hose, eine rosa Schlaghose und einen rosa Schal trägt, fährt mit dem Fahrrad",Eine Fußgängerin baut rosa Fahrräder für Boa-tragende Fahrerinnen,2.4,NEUTRAL
-530,Ein Motorradfahrer trägt eine schwarze Ausrüstung,Ein schwarz gekleideter Biker macht die Gänge kaputt,3.1,NEUTRAL,,,,
-592,"Eine Frau zieht einen sehr weiten Mantel aus, der ein extravagantes Kleid enthüllt.","Eine Frau zieht einen sehr weiten Mantel an, der ein extravagantes Kleid verbirgt.",3.5,CONTRADICTION
-619,Ein Junge klettert eine künstlich errichtete Kletterwand hinauf und ist an einem Seil befestigt.,"Ein kleiner Junge, der ängstlich aussieht, steht an einer Kletterwand.",3.5,NEUTRAL
-630,Ein Mann wirft ein Kind nicht in ein Schwimmbad in der Nähe des Ozeans.,"Der Mann wirft ein Kind in den Swimmingpool, der in der Nähe des Ozeans liegt.",3.5,CONTRADICTION,,,,
-647,Ein Mann klettert mit einem Seil auf eine Klippe,Eine Person mit rosa Kletterausrüstung seilte sich am Felsen ab,3.3,NEUTRAL,,,,
-651,Eine Person klettert mit einem rosa Seil auf einen Felsen.,Ein Mann klettert mit einem Seil auf eine Klippe,4.6,NEUTRAL
-687,Ein weißer Hund starrt auf die schwarze Straße,Zwei Hunde verschiedener Rassen schauen sich auf der anderen Straßenseite an,3.4,NEUTRAL,,,,
-698,"Ein schwarzer, pelziger Hund steht in einem Hinterhof und trägt einen Korb in seinem Maul.","Ein Hund neben einem Baum, der wahrscheinlich eine Kiefer ist, beißt in einen Eimer",2.785,NEUTRAL
-717,"Ein paar Männer, die an einem Wettbewerb teilnehmen, rennen nach draußen.",Ein paar Männer laufen bei einem Wettbewerb in der Halle,3.9,CONTRADICTION,,,,
-718,"Ein paar Männer, die an einem Wettbewerb teilnehmen, rennen nach draußen.",Ein paar Männer veranstalten draußen Wettkämpfe,3.9,NEUTRAL,,,,
-765,Das Kind rutscht fröhlich durch den Schnee,Ein Junge auf einem schneebedeckten Hügel trägt eine rote Jacke und eine schwarze Mütze und rutscht auf seinen Knien,4.0,NEUTRAL,,,,
-780,Eine alte Frau steht in der Nähe eines weißen Hundes,Eine Frau und ein Hund sitzen auf einem Baumstumpf,3.1,NEUTRAL
-816,Eine Gruppe von Personen wird mit Schutzausrüstung ausgestattet,Eine Gruppe von Personen ist mit einer Schutzausrüstung ausgestattet.,5.0,ENTAILMENT,,,,
-860,Ein weißer und ein schwarzer Hund laufen nebeneinander auf der Wiese,"Ein Hund, der ein schwarzes Fell hat, und ein weißer Hund laufen auf dem Gras",4.2,ENTAILMENT
-873,Nicht viele Menschen sind in einem Eislaufpark,Eine Eislaufbahn im Freien ist voll von Menschen,3.5,NEUTRAL,,,,
-882,Das Mädchen in der blau-weißen Uniform jubelt,Das Mädchen jubelt dem Mann in der blau-weißen Uniform zu,3.1,NEUTRAL,,,,
-913,Eine Frau wird von einem Mann geküsst,"Es gibt keine Frau, die von einem Mann geküsst wird",4.2,CONTRADICTION,,,,
-933,Das Mädchen im roten Hemd bläst eine Seifenblase,Das junge Mädchen pustet eine riesige Seifenblase,3.8,NEUTRAL,,,,
-947,"Einige Corndogs werden von zwei Kleinkindern gegessen, die in einem wirklich kleinen Wagen sitzen.","Zwei Kleinkinder essen Corndogs in einem Wagen, der wirklich klein ist",4.8,ENTAILMENT
-980,Ein Mann besteigt ein Pferd auf einem in der Wildnis angelegten Weg,"Ein Pferd wirft den Cowboy, der blaue und rote Hosen trägt.",2.1,NEUTRAL,,,,
-987,Ein Erwachsener befindet sich im Amphitheater und spricht mit einem Jungen,"Im Amphitheater ist kein Erwachsener, der mit einem Jungen spricht.",4.3,CONTRADICTION,,,,
-988,Ein Vortrag über einen Erwachsenen und einen Jungen wird im Amphitheater gehalten,Ein Erwachsener befindet sich im Amphitheater und spricht mit einem Jungen,3.1,NEUTRAL,,,,
-1039,Der Snowboarder springt nicht über weißen Schnee,"Eine Person, die Snowboarding übt, springt in die Luft",3.3,NEUTRAL,,,,
-1102,Eine Frau reitet auf einem Pferd,"Ein Mann öffnet ein kleines Paket, das Kopfhörer enthält.",1.0,NEUTRAL,,,,
-1137,Ein Fisch jagt im Meer nach einer Schildkröte,Die Schildkröte folgt dem Fisch,3.5,NEUTRAL,,,,
-1170,Eine Kartoffel wird von einer Frau in Scheiben geschnitten,Eine Frau schneidet eine Karotte,3.0,NEUTRAL,,,,
-1177,Eine Frau kämmt ihr Haar,Eine Frau ordnet ihr Haar,4.1,NEUTRAL,,,,
-1178,Eine Frau kämmt ihr Haar,"Es gibt keine Frau, die ihr Haar kämmt",3.6,CONTRADICTION,,,,
-1190,Ein Mann und eine Frau wandern durch ein bewaldetes Gebiet,Ein Mann und eine Frau gehen gemeinsam durch den Wald,4.3,ENTAILMENT,,,,
-1192,Ein Mann und eine Frau gehen gemeinsam durch den Wald,Ein Mann und eine Frau gehen durch ein Waldgebiet,4.6,ENTAILMENT,,,,
-1232,Ein Mann schneidet ein Brötchen auf,Ein Mann schneidet eine Tomate,3.6,NEUTRAL,,,,
-1236,Eine Frau tanzt und singt allein,Eine Frau tanzt und singt mit anderen Frauen,3.285,CONTRADICTION,,,,
-1237,Einige Frauen tanzen und singen,Eine Frau tanzt und singt im Regen,3.8,NEUTRAL,,,,
-1241,Eine Frau tanzt und singt mit anderen Frauen,Eine Frau tanzt und singt im Regen,4.1,NEUTRAL,,,,
-1266,Eine Band spielt auf einer Bühne,Eine Band spielt auf der Bühne,5.0,ENTAILMENT,,,,
-1302,Ein Mann spielt Flöte,Ein Mann spielt ein Spiel mit einem Ball,1.5,NEUTRAL,,,,
-1333,Die Frau misst die andere Frau,Eine Frau wird von einer anderen Frau gemessen,4.9,ENTAILMENT,,,,
-1390,Eine Person steht in der Nähe eines Motorrads,Eine Person schneidet eine Zwiebel,1.2,NEUTRAL,,,,
-1396,Ein Mann schreit,Ein Mann hat Angst,3.6,NEUTRAL,,,,
-1400,Ein trauriger Mann weint,Ein Mann schreit,2.9,NEUTRAL,,,,
-1410,Eine Frau schneidet Krabben,Ein Mann schneidet Butter in einen kleinen Behälter,1.4,NEUTRAL,,,,
-1412,Männer sägen Baumstämme,Männer schneiden Holz,4.5,ENTAILMENT,,,,
-1443,Ein Mann spricht im Radio,Ein Mann spuckt,1.7,NEUTRAL,,,,
-1469,"Drei junge Männer rennen, springen und treten in der Nähe eines Verkaufsautomaten","Es gibt keinen Mann, der in der Nähe eines Automaten rennt, springt und tritt",3.8,CONTRADICTION
-1470,Drei Männer springen von einer Mauer,"Drei junge Männer rennen, springen und treten wütend in der Nähe eines Verkaufsautomaten",2.5,NEUTRAL
-1487,Der Mann rührt die Soße für das Huhn nicht um,Der Mann rührt die Soße für das Huhn an,4.0,CONTRADICTION,,,,
-1493,Ein Mann spielt auf einer E-Gitarre,Ein Mann spielt Gitarre,4.9,ENTAILMENT,,,,
-1495,Ein Mann spielt auf einer Gitarre,Ein Mann zupft eine Gitarre,4.9,ENTAILMENT,,,,
-1503,Drei Jungs in Karatekostümen kämpfen nicht gegeneinander.,Drei Jungen in Karatekostümen kämpfen,3.3,CONTRADICTION,,,,
-1506,Drei Männer praktizieren Karate im Freien,Drei Jungen in Karatekostümen kämpfen,3.8,NEUTRAL,,,,
-1525,Eine Frau pflanzt einige Blumen,Eine Frau schneidet Brokkoli,1.2,NEUTRAL,,,,
-1584,Der Dachs gräbt ein Loch,Ein Dachs gräbt schlau in der Erde,4.5,ENTAILMENT,,,,
-1608,Eine Schlange wird von einem Mann mit einer Maus gefüttert,Keine Schlange wird von einem Mann mit einer Maus gefüttert,4.7,CONTRADICTION,,,,
-1628,Einige Zutaten werden von einer Person in einer Schüssel gemischt,Einige Zutaten werden von einer Person in einer Schüssel getrennt,4.6,NEUTRAL,,,,
-1676,Ein Boot fährt friedlich über das Wasser,Die Gitarre wird von dem Mann gespielt,1.1,NEUTRAL,,,,
-1690,Die Milch wird von einer Katze getrunken,Die Katze trinkt etwas Milch,5.0,ENTAILMENT,,,,
-1703,Ein Mann leert einen Kunststoffbehälter vollständig,Ein Mann leert einen Behälter aus Plastik,4.7,ENTAILMENT,,,,
-1711,Ein Mann leert einen Behälter aus Plastik,Ein Mann hält achtlos einen Frosch,1.1,NEUTRAL,,,,
-1754,Ein Mädchen spielt auf einer Flöte,Eine Flöte wird von einem Mädchen gespielt,4.6,ENTAILMENT,,,,
-1807,Der Erwachsene spielt laut auf der Gitarre,Eine Flöte wird von einem Mann gespielt,2.4,NEUTRAL,,,,
-1811,Ein Mann spielt laut auf der Gitarre,Eine Flöte wird nicht von einem Mann gespielt,2.4,NEUTRAL,,,,
-1839,Das kleine Mädchen kämmt ihr Haar sorgfältig zu einem Pferdeschwanz.,Das kleine Mädchen kämmt ihr Haar zu einem Pferdeschwanz.,4.6,ENTAILMENT
-1847,Ein Mann sitzt auf einem Stuhl,Das kleine Mädchen zerzaust ihr Haar,1.0,NEUTRAL
-1861,Das Mikrofon vor dem sprechenden Papagei wird stummgeschaltet,Der Papagei spricht in das Mikrofon,4.0,NEUTRAL,,,,
-1877,Die Kätzchen auf den Tabletts werden als Futter für eine Werbung gegessen,Das Futter auf den Tabletts wird von den Kätzchen gefressen,3.5,NEUTRAL,,,,
-1881,Das Futter auf den Tabletts wird von den Kätzchen gefressen,Ein paar Kätzchen fressen,4.2,ENTAILMENT,,,,
-1964,Eine Person spielt die Gitarre und singt,Eine Person spielt eine Gitarre und singt,4.9,ENTAILMENT,,,,
-2001,Das Pferd wird von einem Mann geritten,Ein Mann reitet auf dem Pferd,5.0,ENTAILMENT,,,,
-2019,Ein Mann wirft gefährlich mit Messern nach einem Baum,Einige gefährliche Männer mit Messern schleudern ein Fahrrad gegen einen Baum,3.3,NEUTRAL,,,,
-2058,Eine Frau schneidet gerade Fleisch auf,Fleisch wird von einer Frau in Stücke geschnitten,4.8,ENTAILMENT,,,,
-2089,Der Mann verweigert ein Interview,Der Mann gibt ein Interview,3.2,CONTRADICTION,,,,
-2096,Der Mann gibt ein Interview,Das weiße Auto eines Mannes wird weggefahren,1.1,NEUTRAL,,,,
-2130,Ein kleiner Junge schimpft mit einem Hund,Ein kleiner Junge spielt mit einem Hund,3.4,NEUTRAL,,,,
-2157,Das Bild einer aufgestellten Kamera wird von einem Mann am Strand bei Sonnenuntergang aufgenommen,Ein Mann macht Fotos von einem See,3.0,NEUTRAL,,,,
-2166,Eine Frau näht mit einer Maschine,Eine Frau benutzt eine Nähmaschine,4.8,ENTAILMENT,,,,
-2221,Jemand fällt von einem Pferd,Der Mann wird nicht vom Pferd gestoßen,3.9,NEUTRAL,,,,
-2229,Eine Frau klopft mit den Fingern auf einen Tisch,Eine Frau stützt ihre Finger auf einen Tisch,4.1,NEUTRAL,,,,
-2231,Eine Frau tippt mit den Fingern,Eine Frau stützt ihre Finger auf einen Tisch,3.1,NEUTRAL,,,,
-2284,Die Katze spielt leidenschaftlich mit einer Wassermelone,Die Katze spielt mit einer Wassermelone,4.7,ENTAILMENT,,,,
-2286,Die Katze spielt leidenschaftlich mit einer Wassermelone,Eine Katze spielt mit einer Wassermelone,4.5,ENTAILMENT,,,,
-2362,Eine Person verbrennt einige Kameras mit einem Schweißbrenner,Die große Person zündet die Kameras an,3.8,NEUTRAL,,,,
-2364,Einige Kameras werden von einer Person mit einem Schweißbrenner verbrannt,Die Person zündet die Kameras an,4.2,ENTAILMENT,,,,
-2366,Eine Person bläst vor einigen Kameras auf eine brennende Fackel,Die Person zündet die Kameras an,3.3,NEUTRAL,,,,
-2385,Eine Person schneidet eine Zwiebel in Stücke,Eine Person schneidet eine Karotte in Stücke,3.4,NEUTRAL,,,,
-2392,Der Mann schneidet die Kartoffel nicht,Der Mann schneidet eine Kartoffel,2.7,CONTRADICTION,,,,
-2402,Jemand schneidet eine Tomate,Die Frau hält eine ganze Tomate in der Hand,3.5,NEUTRAL,,,,
-2404,Die Dame schneidet eine Tomate,Keiner schneidet eine Tomate,3.0,CONTRADICTION,,,,
-2405,Die Dame schneidet eine Tomate,Jemand schneidet eine Tomate,4.7,ENTAILMENT,,,,
-2410,Ein Mann bereitet ein Gericht zu,Eine Zwiebel wird von der Frau mit einem Messer geschnitten,1.3,NEUTRAL,,,,
-2430,Ein Mann rennt die Straße entlang,Ein Mann rennt,4.4,ENTAILMENT,,,,
-2476,Einige Leute singen,Eine Gruppe von Menschen singt,4.7,ENTAILMENT,,,,
-2485,Der Mann spielt auf einer Gitarre,Ein Mann spielt auf einer Trompete,2.2,NEUTRAL,,,,
-2525,Ein paar Leute treiben auf einem Floß,Menschen fahren und paddeln auf einem Floß,3.8,NEUTRAL,,,,
-2527,Menschen fahren und paddeln auf einem Floß,Vier Personen treiben auf einem Floß,4.2,NEUTRAL,,,,
-2535,"Es gibt keine Katze, die Maiskolben isst",Eine Katze frisst etwas Mais,2.5,NEUTRAL,,,,
-2544,Die Person schneidet ein Gemüse,Niemand schneidet eine Tomate,3.1,NEUTRAL,,,,
-2557,Jemand klimpert auf der Gitarre,Jemand spielt auf der Gitarre,4.5,ENTAILMENT,,,,
-2566,Drei Frauen tanzen,Ein paar Frauen tanzen,4.6,ENTAILMENT,,,,
-2604,Ein Stierhund wird von einem Affen gebürstet,Der Affe bürstet einen Stierhund,4.8,ENTAILMENT,,,,
-2606,Der Affe bürstet einen Stierhund,Ein Stierhund bürstet den Affen,3.9,NEUTRAL,,,,
-2662,Die Dame schlägt kein Ei für den Mixer auf,Die Dame schneidet das Fleisch auf,2.335,NEUTRAL,,,,
-2668,Ein paar Frettchen klettern aus dem Käfig,Frettchen klettern von einem Regal herunter,3.1,NEUTRAL,,,,
-2678,Ein Mann steigt eilig in ein Auto in einer Garage ein.,Ein Mann steigt in ein Auto ein,4.1,ENTAILMENT,,,,
-2679,Ein Mann parkt ein Auto in einer Garage,Ein Mann steigt in ein Auto ein,3.4,NEUTRAL,,,,
-2687,Die Person schneidet eine Knoblauchzehe in Stücke,Die Person schneidet eine Knoblauchzehe nicht in Stücke,3.0,CONTRADICTION,,,,
-2704,Nudeln werden von einer Frau in Wasser gekocht,Eine Frau kocht Nudeln in Wasser,5.0,ENTAILMENT,,,,
-2712,"Es gibt keinen Karateka, der auf einen anderen Mann mit Boxhandschuhen eintritt.","Ein Karatekas schlägt auf einen anderen Mann ein, der Boxhandschuhe trägt.",4.3,CONTRADICTION,,,,
-2720,Der Mann macht Kickboxen mit einem Trainer,"Es gibt keinen Karateka, der auf einen anderen Mann mit Boxhandschuhen eintritt.",3.0,NEUTRAL,,,,
-2721,Der Mann macht Kickboxen mit einem Trainer,"Ein Karatekas schlägt auf einen anderen Mann ein, der Boxhandschuhe trägt.",4.0,NEUTRAL,,,,
-2722,"Eine Frau, die sitzt, singt ein Lied und spielt Gitarre",Eine sitzende Frau singt ein Lied und spielt auf der Gitarre,5.0,ENTAILMENT
-2726,Eine Frau auf einem Felsen liegt auf einer Decke und liest ein Buch,"Eine Frau schaukelt über einer Decke, die auf jemandem liegt und ein Buch liest",2.7,NEUTRAL,,,,
-2738,Die Frau spielt nicht auf einer E-Gitarre,Ein Mann spielt auf einer akustischen Gitarre,3.0,NEUTRAL,,,,
-2766,Ein Mann und eine Frau unterhalten sich,Ein Mann und eine Frau essen fröhlich,2.6,NEUTRAL,,,,
-2772,Eine Person gießt Öl zum Kochen in einen Topf,Eine Person gießt Speiseöl in einen Topf,5.0,ENTAILMENT,,,,
-2791,Ein kleines Meerschweinchen knabbert und frisst ein Stück Karotte auf dem Boden.,Ein kleines Meerschweinchen knabbert und frisst ein Stück Karotte auf dem Boden,4.8,ENTAILMENT
-2795,Ein kleines Meerschweinchen knabbert und frisst ein Stück Karotte auf dem Boden,Ein Meerschweinchen verschlingt eine Karotte,4.5,ENTAILMENT,,,,
-2812,Ein Flugzeug landet,Ein animiertes Flugzeug hebt ab,2.7,NEUTRAL,,,,
-2822,Eine Frau nimmt eine Mischung aus einer Schüssel,Eine Frau bereitet ein Ei in einer Bratpfanne zu,2.7,NEUTRAL,,,,
-2829,Die Dame trägt mit einem Stift Lidschatten auf,Die Frau trägt mit einem Stift Lidschatten auf,5.0,ENTAILMENT,,,,
-2842,Ein kleines Mädchen spielt auf der Bühne auf einem Flügel,Ein Mädchen übt Klavier,3.8,NEUTRAL,,,,
-2886,Eine Frau spielt auf einer Flöte,Die Frau spielt nicht auf der Flöte,3.2,CONTRADICTION,,,,
-2898,Der Mann hebt Hanteln,Der Mann hebt Gewichte,4.3,ENTAILMENT,,,,
-2911,Eine Frau trägt Make-up auf,"Es gibt keine Frau, die sich schminkt",4.0,CONTRADICTION,,,,
-2932,Die Frau schneidet eine Karotte,Eine Zwiebel wird von einer Frau geschnitten,2.4,NEUTRAL,,,,
-2936,Zwei Männer kämpfen in einem Viehstall,Zwei Männer stehen vor einem Viehstall,3.0,NEUTRAL,,,,
-2965,Einem großen grünen Ball fehlt eine Kartoffel,Ein großer grüner Ball stößt eine Kartoffel,3.3,NEUTRAL,,,,
-2967,Ein großer grüner Ball trifft auf eine Kartoffel,Ein großer grüner Ball trifft auf eine Kartoffel,4.8,ENTAILMENT,,,,
-2968,Einem großen grünen Ball fehlt eine Kartoffel,Ein großer grüner Ball trifft auf eine Kartoffel,3.5,NEUTRAL,,,,
-2972,Ein großer grüner Ball trifft auf eine Kartoffel,Einem großen grünen Ball fehlt eine Kartoffel,3.4,CONTRADICTION,,,,
-2996,Ein Mann spielt auf einer Gitarre,Ein Mann legt eine Gitarre nieder,3.3,NEUTRAL,,,,
-3002,Eine Frau spielt auf einer E-Gitarre,Ein Mann legt eine Gitarre nieder,2.3,NEUTRAL,,,,
-3036,Der Welpe spielt nicht mit einem Plastikbehälter,Der Welpe spielt mit einem Plastikbehälter,3.2,CONTRADICTION,,,,
-3061,"Eine Frau fährt ein Auto und spricht mit einem Mann, der neben ihr sitzt","Es gibt keine Frau, die ein Auto fährt und mit dem Mann neben ihr spricht",4.7,CONTRADICTION,,,,
-3107,Ein Mann legt den Boden eines sitzenden Gitarristen,Ein Mann sitzt in einem Zimmer auf dem Boden und klimpert auf einer Gitarre,2.3,NEUTRAL,,,,
-3122,Eine Frau benutzt einen Stift für die Augen und trägt Eyeliner auf ihr Augenlid auf,Eine Frau trägt Kosmetika auf ihr Augenlid auf,4.6,ENTAILMENT,,,,
-3123,"Es gibt keine Frau, die einen Augenstift benutzt und Eyeliner auf ihr Augenlid aufträgt",Eine Frau trägt Kosmetika auf ihr Augenlid auf,3.1,CONTRADICTION,,,,
-3143,Ein Affe tritt gegen den Handschuh eines Menschen,Der Affe übt sich im Kampfsport,3.6,NEUTRAL,,,,
-3174,Ein Kind wirft ein Instrument weg,Ein kleiner Junge spielt ein Blasinstrument,2.8,NEUTRAL,,,,
-3181,Ein Mann wandert durch den Wald,Der Mann ist nicht im Wald unterwegs,3.8,NEUTRAL,,,,
-3222,"Es gibt keinen Jungen, der über eine Brücke geht",Ein Junge geht über eine Brücke,3.7,CONTRADICTION,,,,
-3250,Eine Frau legt zwei Eier in einen Topf mit Wasser,Eine Frau gibt zwei Eier in einen Topf mit Wasser,4.9,ENTAILMENT,,,,
-3258,Ein Mann spielt auf der Gitarre,Niemand spielt auf der Gitarre,3.7,CONTRADICTION,,,,
-3275,Ein Kind rennt in die Wellen des Ozeans hinein und wieder heraus,Ein Kind rennt in die Wellen des Ozeans hinein und wieder heraus,4.9,ENTAILMENT,,,,
-3291,Eine Frau räumt Karotten ein,Eine Frau bestreicht ein Schweinekotelett,1.7,NEUTRAL,,,,
-3292,Eine Frau reibt Karotten,Ein Koch beschichtet ein Schweinekotelett,2.1,NEUTRAL,,,,
-3322,Die Frau schneidet etwas Brot und gebratenes Schweinefleisch,Eine Frau kocht ein paniertes Schweinekotelett,3.2,NEUTRAL,,,,
-3338,"Es gibt keinen Mann, der auf einem Dach steht und Geige spielt",Ein Mann steht auf einem Dach und spielt auf einer Geige,3.4,CONTRADICTION,,,,
-3364,Eine Frau putzt eine Garnele,Die Frau putzt eine Garnele,4.9,ENTAILMENT,,,,
-3373,Eine Frau fährt auf einem Wasserscooter,Eine Frau fährt mit einem Motorroller zum Wasser,4.1,ENTAILMENT,,,,
-3384,Ein Pandabär frisst etwas Bambus,Bambus wird von einem Pandabären gefressen,4.8,ENTAILMENT,,,,
-3398,Jemand schlägt ein Ei auf,Die Frau verrührt keine Eier in einer Schüssel,3.2,NEUTRAL,,,,
-3420,Eine Frau entgrätet einen Fisch,Ein großer Fisch fängt einen Mann,1.9,NEUTRAL,,,,
-3433,Ein Tablett wird von einer Person gebuttert,Eine Person bestreicht ein Tablett mit Butter,5.0,ENTAILMENT,,,,
-3459,Der Mann hackt einen Baumstamm mit einer Axt,Ein Mann hackt einen Baumstamm mit einer Axt,4.4,NEUTRAL,,,,
-3485,Die Katze schaut aus dem Fenster auf den Tisch auf der Sitzstange,"Die Katze, die auf dem Tisch sitzt, schaut aus dem Fenster",4.1,NEUTRAL,,,,
-3501,Ein Hund leckt ein Baby,Der Hund leckt das Baby,4.8,ENTAILMENT,,,,
-3505,Eine Frau räumt den Knoblauch weg,Eine Frau zerkleinert Knoblauch,3.6,NEUTRAL,,,,
-3518,Der Mann tanzt nicht,Eine Frau tanzt,3.3,NEUTRAL,,,,
-3536,Jemand kocht Okra in einer Pfanne,Okra wird in einer Pfanne gekocht,4.9,ENTAILMENT,,,,
-3586,Ein Mann spielt die Trommel,Ein Mann übt das Trommeln,4.6,ENTAILMENT,,,,
-3598,Ein Mann macht Bodenübungen,Ein Mann macht Übungen,4.3,ENTAILMENT,,,,
-3625,Eine Frau legt Fleisch in eine Pfanne,"Es gibt keine Frau, die Fleisch in eine Pfanne legt",3.4,CONTRADICTION,,,,
-3626,Jemand wirft das Fleisch in eine Pfanne,Das Fleisch wird in eine Pfanne geworfen,4.7,ENTAILMENT,,,,
-3657,Ein Junge füllt einen Krug mit Wasser,Ein Krug wird von einem Jungen mit Wasser gefüllt,5.0,ENTAILMENT,,,,
-3661,Eine Frau füllt das Wasser aus einem Wasserhahn in einen Becher,Ein Junge füllt einen Krug mit Wasser,2.7,NEUTRAL,,,,
-3670,Es regnet auf einen gehenden Mann,Ein Mann geht im Regen spazieren,4.9,ENTAILMENT,,,,
-3680,Die Rennfahrer fahren eine Strecke entlang,"Es gibt keine Rennfahrer, die auf einer Strecke fahren",3.7,CONTRADICTION,,,,
-3711,Ein Spielzeugeisenbahn stößt gegen ein Spielzeugauto,Einem Spielzeugeisenbahnzug fehlt ein Spielzeugauto,3.8,CONTRADICTION,,,,
-3721,Die Person schneidet Zwiebeln,Die Zwiebeln werden von der Person geschnitten,4.9,ENTAILMENT,,,,
-3733,Schwimmer rennen in einem See um die Wette,Einige Rennfahrer schwimmen in einem See,4.3,ENTAILMENT,,,,
-3747,Ein talentierter Mann spielt auf der Gitarre,Eine Frau spielt auf einer Gitarre,3.2,NEUTRAL,,,,
-3790,Eine Person schrubbt eine Zucchini,Die Person schrubbt eine Zucchini,5.0,ENTAILMENT,,,,
-3812,Eine Frau schneidet eine grüne Paprika in Scheiben.,Eine Frau schneidet eine grüne Paprika,4.8,ENTAILMENT,,,,
-3855,Ein Mann hält mitten auf einer Straße an,Ein Mann geht eine Straße entlang,3.2,NEUTRAL,,,,
-3861,Ein Mann aus der Wildnis ist auf einem Wanderweg,Ein Mann geht eine Straße entlang,3.4,NEUTRAL,,,,
-3862,Der Mann geht auf einem Pfad durch die Wildnis,Ein Mann geht faul eine Straße entlang,3.285,NEUTRAL,,,,
-3880,Ein Mann tanzt an der Decke eines Raumes,Der Mann tanzt kopfüber an der Decke,4.4,ENTAILMENT,,,,
-3897,"Es gibt keinen Menschen, der",Ein Mann übt,3.4,CONTRADICTION,,,,
-3909,Der Mann singt und spielt auf der Gitarre,Die Gitarre wird von einem Mann gespielt,4.3,ENTAILMENT,,,,
-3910,Ein Mann packt die Gitarre ein,Der Mann singt und spielt auf der Gitarre,3.4,NEUTRAL,,,,
-3922,Jungen tanzen nicht vor manchen Leuten,Jungen tanzen vor einigen Leuten,3.8,CONTRADICTION,,,,
-3941,Ein Junge sieht sich einen Kalender an,"Es gibt keinen Jungen, der einen Kalender überprüft",3.9,CONTRADICTION,,,,
-3982,Eine Frau schält eine Kartoffel,Eine Frau kühlt eine Kartoffel,3.7,NEUTRAL,,,,
-3996,"Es gibt keinen Mann, der singt und eine Gitarre spielt",Ein Junge spielt auf einem Klavier,2.2,NEUTRAL,,,,
-4001,Ein Mann klettert leichtsinnig an einem Seil,Ein Mann klettert an einem Seil,4.3,ENTAILMENT,,,,
-4006,Ein Mann klettert an einem Seil,Der Mann klettert an einem Seil hoch,4.8,ENTAILMENT,,,,
-4011,Ein Mann klettert an einem Seil,Ein Mann klettert an einem Seil hoch,4.8,ENTAILMENT,,,,
-4015,Die Dame hebt das Känguru auf,Die Frau hebt das Känguru auf,4.9,ENTAILMENT,,,,
-4031,Ein Mann zerschlägt Fliesen mit seinen Händen,"Es gibt keinen Mann, der mit der Hand Bretter zerschlägt",2.9,NEUTRAL,,,,
-4054,Ein Hund rennt atemlos über die Straße,Ein Hund rennt auf der Straße,4.5,ENTAILMENT,,,,
-4060,Ein Mann läuft auf der Straße,Ein Hund rennt atemlos über die Straße,2.6,NEUTRAL,,,,
-4066,Der Mann schleudert Messer gegen einen Baum,Der Mann wirft mit Messern nach einem Baum,4.6,ENTAILMENT,,,,
-4067,Der Mann entfernt Messer von einem Baum,Der Mann wirft mit Messern nach einem Baum,3.3,NEUTRAL,,,,
-4079,Ein Mann reitet auf einem Pferd,Ein Mann reitet auf einem Pferd,4.7,ENTAILMENT,,,,
-4086,"Es gibt keinen Mann, der ein Bild malt",Ein Mann malt ein Bild,3.9,CONTRADICTION,,,,
-4114,"Es gibt keinen Mann, der Essen isst",Ein Mann isst eine Pizza,3.2,CONTRADICTION,,,,
-4135,Ein Hund hüpft auf einem Trampolin,Ein Hund springt auf einem Trampolin,4.7,ENTAILMENT,,,,
-4140,Mehrere Jungen springen auf einem Trampolin,Ein Mann macht Rückwärtssaltos auf einem Trampolin,3.4,NEUTRAL,,,,
-4155,Ein Mann spielt auf einer Holzflöte,"Es gibt keinen Mann, der eine Holzflöte spielt",3.7,CONTRADICTION,,,,
-4157,"Es gibt keinen Mann, der Klavier spielt",Ein Mann spielt auf dem Klavier,4.0,CONTRADICTION,,,,
-4164,Der Mann radiert die Zeichnung an der Tafel aus,Die Frau radiert die Zeichnung an der Tafel aus,3.7,NEUTRAL,,,,
-4187,"Es gibt keinen Hund, der mit einem Spielzeug spielt",Ein Hund isst eine Puppe,3.8,CONTRADICTION,,,,
-4191,Ein Hund isst eine Puppe,Ein Hund spielt mit einem Spielzeug,3.6,NEUTRAL,,,,
-4196,Ein Mann tanzt,Ein Mann betet inbrünstig,1.7,NEUTRAL,,,,
-4288,Die Frau schneidet gekochten Oktopus in Scheiben,Eine Frau zerschneidet einen Tintenfisch,4.4,ENTAILMENT,,,,
-4321,Ein Mann zeichnet,"Es gibt keinen Mann, der zeichnet",3.8,CONTRADICTION,,,,
-4330,Der Mann zeichnet,"Es gibt keinen Mann, der zeichnet",3.4,CONTRADICTION,,,,
-4342,Ein Mann isst eine Banane,Ein Mann isst eine Frucht,4.6,ENTAILMENT,,,,
-4360,Ein Mann schneidet einen Zettel,Ein Mann schneidet ein Papier,4.4,ENTAILMENT,,,,
-4376,Ein Mann spielt auf einer Gitarre,Es spielt niemand Klavier,2.7,NEUTRAL,,,,
-4411,Zwei Männer in einem Rennen lassen die Reifen eines Traktors platzen,Zwei Männer wetteifern in einem Reifenwettlauf,3.7,NEUTRAL,,,,
-4429,Die Männer reden,Einige alte Frauen reden,3.0,NEUTRAL,,,,
-4477,Ein Mann schlägt auf einen Fußball,Ein Mann mischt den Inhalt einer Schüssel,1.2,NEUTRAL,,,,
-4505,Die Ärzte heilen einen Mann,Der Arzt hilft dem Patienten,4.2,ENTAILMENT,,,,
-4520,"Es gibt keinen Mann, der eine Gitarre spielt",Ein Mann spielt auf einer Gitarre,3.6,CONTRADICTION,,,,
-4614,"Es gibt keinen Mann, der ein Auto fährt",Ein Mann fährt ein Auto,4.4,CONTRADICTION,,,,
-4638,Ein Keyboard wird von einem Mann gespielt,Ein Mann spielt auf einer Harfe,2.4,NEUTRAL,,,,
-4650,Ein Mann schneidet ein dickes Seil mit einem Schwert durch,Kein Mensch schneidet ein Seil mit einem Schwert durch,3.6,CONTRADICTION,,,,
-4661,Eine Frau schneidet eine Kartoffel,Eine Frau schneidet eine Kartoffel,4.8,ENTAILMENT,,,,
-4707,Eine Gruppe von Männern spielt Fußball am Strand,Eine Gruppe von Jungen spielt Fußball am Strand,4.4,NEUTRAL,,,,
-4734,Ein Mann montiert einen Schalldämpfer an eine Pistole,Ein Mann bringt einen Schalldämpfer an einem Gewehr an,4.8,ENTAILMENT,,,,
-4755,Das Mädchen sitzt auf der Couch und häkelt,"Es gibt kein Mädchen, das am Strand Geige spielt",1.4,NEUTRAL,,,,
-4767,Ein Mann kocht eine Schlange,"Es gibt keinen Mann, der eine Schlange kocht",3.7,CONTRADICTION,,,,
-4776,"Es gibt keinen Jungen, der Gitarre spielt",Ein Junge spielt Gitarre,3.8,CONTRADICTION,,,,
-4803,"Im Zoo gibt es keinen Affen, der einen Hund ärgert",Ein Affe ärgert einen Hund im Zoo,2.935,CONTRADICTION,,,,
-4814,Ein Affe zieht einen Hund am Schwanz,Ein Affe ärgert einen Hund im Zoo,4.4,NEUTRAL,,,,
-4816,"Es gibt keine Person, die etwas Ingwer schneidet",Eine Person schneidet etwas Ingwer,3.8,CONTRADICTION,,,,
-4823,Eine Person schneidet etwas Ingwer,Eine Person schneidet eine Zwiebel,3.0,NEUTRAL,,,,
-4831,Ein Mann schneidet eine Kartoffel in Stücke,Ein Mann schneidet keine Kartoffel,4.0,CONTRADICTION,,,,
-4843,Ein Mann öffnet eine Schachtel mit einem Messer,"Es gibt keinen Mann, der eine Schachtel mit einem Messer öffnet",3.8,CONTRADICTION,,,,
-4851,Einige Instrumente werden von einer Band gespielt,Eine Band spielt einige Instrumente,5.0,ENTAILMENT,,,,
-4852,Eine Band spielt nicht einige Instrumente,Eine Band spielt einige Instrumente,3.8,CONTRADICTION,,,,
-4866,Eine Person tanzt,Eine Frau trainiert,3.0,NEUTRAL,,,,
-4891,Ein Mann macht Klimmzüge,Der Mann macht Übungen in einem Fitnessstudio,4.0,NEUTRAL,,,,
-4916,Ein Mann singt und spielt auf einer Gitarre,Ein Mann singt und spielt ein Musikinstrument,4.5,ENTAILMENT,,,,
-4934,Rekruten sprechen mit einem Offizier,Ein Offizier spricht mit den Rekruten,3.7,NEUTRAL,,,,
-4963,Knoblauch wird von einer Frau gehackt,Eine Frau schneidet Knoblauch,4.7,ENTAILMENT,,,,
-4966,Eine Frau schneidet einen Fisch auf,"Es gibt keine Frau, die einen Fisch aufschneidet",2.7,CONTRADICTION,,,,
-4983,Eine Frau reitet auf einem Pferd,Ein Pferd wird von einer Frau geritten,5.0,ENTAILMENT,,,,
-5003,Eine große Katze öffnet eine Plastikschublade mit ihren Pfoten und springt hinein,Eine Katze öffnet eine Schublade und springt hinein,4.4,ENTAILMENT,,,,
-5030,Der Mann spricht am Telefon,Der Mann spricht am Telefon,4.9,ENTAILMENT,,,,
-5047,Ein Mann schneidet Zwiebeln,Eine Frau schneidet eine Zwiebel,3.5,NEUTRAL,,,,
-5051,Ein Mann öffnet eine Tür,"Es gibt keinen Mann, der eine Tür öffnet",3.6,CONTRADICTION,,,,
-5052,Eine Tür wird von einem Mann geöffnet,Ein Mann schneidet eine Zwiebel,1.2,NEUTRAL,,,,
-5082,Eine Frau spielt auf der Geige,"Es gibt keinen Mann, der Klavier spielt",2.1,NEUTRAL,,,,
-5110,Ein Koch bereitet ein Essen zu,Ein Koch bereitet eine Mahlzeit zu,4.8,ENTAILMENT,,,,
-5113,Zwei Sumo-Ringer kämpfen,Zwei Sumo-Ringer kämpfen,4.0,ENTAILMENT,,,,
-5119,Zwei Sumo-Ringer kämpfen,Ein Mann fährt auf einem Wasserspielzeug im Wasser,1.0,NEUTRAL,,,,
-5148,Ein Mann schmiert ein Stück Brot mit Butter,Eine Frau schmiert ein Stück Brot mit Butter,3.5,NEUTRAL,,,,
-5203,Die Frau gibt Nudeln in eine Schüssel,Eine Frau gibt Nudeln in eine Schüssel,5.0,ENTAILMENT,,,,
-5206,Eine Frau zieht einen klebrigen Schleim aus einer Schüssel,Die Frau gibt keine Nudeln in ein Gericht,2.2,NEUTRAL,,,,
-5310,"Es gibt kein Mädchen, das Flöte spielt",Ein Mädchen spielt auf einer Flöte,3.6,CONTRADICTION,,,,
-5349,Eine große Flöte wird von einem Mann gespielt,Ein Mann spielt auf einer Flöte,4.3,ENTAILMENT,,,,
-5352,Ein Mann spielt eine große Flöte,"Es gibt keinen Mann, der eine Flöte spielt",4.1,CONTRADICTION,,,,
-5374,Ein Oktopus wird von einer Frau aufgeschnitten,Eine Frau schneidet einen Oktopus auf,5.0,ENTAILMENT,,,,
-5454,Ein Mann spielt auf einer Flöte,Ein Mann spielt nicht auf einer Flöte,4.2,CONTRADICTION,,,,
-5461,Eine Frau spielt auf der Flöte,Ein Mann spielt auf einer Flöte,3.7,NEUTRAL,,,,
-5498,Eine Frau schneidet eine Zitrone,Eine Frau schneidet Obst,4.2,ENTAILMENT,,,,
-5540,Eine Gruppe von Menschen tanzt in einer Show,Eine Gruppe von Menschen marschiert,2.3,NEUTRAL,,,,
-5588,Ein Muffin wird von einem Mädchen gegessen,Ein Mädchen isst ein Törtchen,5.0,ENTAILMENT,,,,
-5657,Eine Person isst in einem Restaurant,Eine Person macht ein Bett,1.2,NEUTRAL,,,,
-5698,Der Koch bestreut die Pizza mit Käse,Der Mann bestreut die Pizza mit Käse,4.0,NEUTRAL,,,,
-5706,Ein Mann lädt eine Schrotflinte nach,Ein Mann schießt mit einer Schrotflinte,3.7,NEUTRAL,,,,
-5745,Ein Tigerjunges spielt mit einem Ball,Ein Baby spielt mit einer Puppe,1.4,NEUTRAL,,,,
-5747,Ein Baby spielt mit einem Spielzeug,Ein Babytiger spielt mit einem Ball,3.2,NEUTRAL,,,,
-5799,Eine Person schält eine Kartoffel,Eine Kartoffel wird von einer Person geschält,5.0,ENTAILMENT,,,,
-5806,Ein Mann rudert ein Kanu,Ein Mann rudert ein Boot,4.2,ENTAILMENT,,,,
-5904,Ein Mann und eine Frau fahren in einem Jeep die Straße entlang,Ein Mann und eine Frau fahren in einem offenen Fahrzeug die Straße entlang,4.0,NEUTRAL,,,,
-5909,Eine Frau schüttet Zutaten in eine Schüssel,Der Chefkoch würzt das Öl,3.1,NEUTRAL,,,,
-5914,Ein Pferd wird von einer Person geritten,Eine Person reitet auf einem Pferd,5.0,ENTAILMENT,,,,
-5920,Ein Pferd wird von einer Person geritten,Eine Frau schneidet Kartoffeln,1.0,NEUTRAL,,,,
-5924,Der Mann macht keine Übungen,Der Mann macht Übungen,3.8,CONTRADICTION,,,,
-5930,Der Mann macht keine Übungen,Zwei Männer kämpfen,2.3,NEUTRAL,,,,
-5938,Gemüse wird von einem Mann in einen Topf gesteckt,Jemand schüttet Zutaten in einen Topf,4.0,ENTAILMENT,,,,
-5955,Ein Hund lässt einen Ball im Dreck liegen,Ein Hund jagt einen Ball durch den Dreck,3.7,NEUTRAL,,,,
-6001,"Es gibt keinen braunen Hund, der im Wasser steht",Ein Hund mit goldenem Fell ist im Wasser,2.8,NEUTRAL,,,,
-6005,Ein junges Mädchen in einem blauen Hemd geht auf dem Bürgersteig und hält ein rosa Schild hoch,Ein junges Mädchen mit einem rosa Schild hält ein blaues Hemd hoch und geht auf dem Bürgersteig.,3.4,NEUTRAL,,,,
-6042,Das kleine Kind läuft durch das Wasser und wird von einer anderen Person geführt,Ein kleines Kind plantscht im Wasser,3.4,NEUTRAL,,,,
-6047,"Ein Mann und eine Frau befinden sich in einem beige gestrichenen Raum, tragen dunkle Hemden und im Hintergrund ist ein Monitor zu sehen.","Ein Mann und eine Frau befinden sich in einem beigen Raum, tragen dunkle Hemden und im Hintergrund ist ein Monitor zu sehen.",5.0,ENTAILMENT
-6078,"Eine Person, die Jeans trägt, sitzt glücklich auf einem Pferdesattel",Eine Frau in Jeans sitzt auf dem Sattel eines Pferdes,4.2,NEUTRAL,,,,
-6119,Ein braun-weißer Hund hält einen Baseball in seinem Maul,Ein schwarzer und weißer Hund lässt einen Baseball aus seinem Maul fallen,3.3,NEUTRAL,,,,
-6131,Ein kleiner Junge in einem roten Badeanzug springt in ein blaues Kinderbecken,Ein Junge in roten Shorts springt in ein Planschbecken,4.0,NEUTRAL,,,,
-6146,Zwei Menschen stehen im Meer und beobachten den Sonnenuntergang,Niemand steht im Meer und beobachtet den Sonnenuntergang,2.5,CONTRADICTION,,,,
-6153,Ein Rennfahrer steht auf und zeigt mit der Hand in den Himmel,Ein Rennfahrer setzt sich hin und ist unbeweglich,3.0,NEUTRAL,,,,
-6158,Ein Rennfahrer steht auf und deutet mit der Hand in den Himmel,Die Person mit der blauen Jacke trägt einen bunten Helm,1.6,NEUTRAL,,,,
-6203,Ein Radfahrer hält ein Fahrrad über seinen Kopf in einer Gruppe von Menschen,Ein Radfahrer wird über den Köpfen einer Gruppe von Menschen mit dem Fahrrad gehalten,3.4,NEUTRAL,,,,
-6213,"Ein Mann sitzt auf einem Boot vor dem Sonnenuntergang, in der Nähe einer Flagge",Ein Mann steht auf einem Boot vor dem Sonnenuntergang in der Nähe einer Flagge,3.8,NEUTRAL
-6219,Ein Mann steht auf einem Boot vor dem Sonnenuntergang in der Nähe einer Flagge,Ein Mann sitzt auf einem Boot vor dem Sonnenuntergang,4.1,ENTAILMENT,,,,
-6228,"Menschen bei einem Dragster-Rennen rennen vor den Flammen weg, die aus den Autos schlagen","Die Zuschauer beobachten zwei Rennwagen, die die Startlinie verlassen.",2.6,NEUTRAL,,,,
-6231,Zwei Hunde spielen zusammen auf der Wiese,Zwei Hunde ruhen sich gemeinsam im Gras aus,3.3,NEUTRAL,,,,
-6280,"Ein Hund, der schwarz ist, läuft im Gras",Ein schwarzer Hund rennt im Gras,5.0,ENTAILMENT
-6287,Ein schwarzer Hund rennt im Gras und seine Zunge hängt heraus,Ein schwarzer Hund rennt im Gras,4.9,ENTAILMENT,,,,
-6315,Ein gelber Hund läuft auf weißem Schnee an einem sehr sonnigen Tag,Ein gelber Hund läuft auf weißem Schnee an einem sonnigen Tag,4.6,ENTAILMENT,,,,
-6330,Ein Mädchen trägt Jeans und ein rosa T-Shirt und läuft,Ein kleiner Junge in einem rosa Hemd läuft unter einem Baum in der Wüste,2.8,NEUTRAL,,,,
-6344,Ein weißer Hund trägt ein weihnachtliches Rentier-Stirnband und spielt mit einem braunen Hund im Gras,Das weiße Rentier mit den Eselsohren steht in der Nähe eines braunen Rentieres.,2.2,NEUTRAL,,,,
-6358,Die Frau im roten Kostüm lehnt an einer Backsteinmauer und spielt ein Instrument,Die Frau im roten Kostüm lehnt nicht an einer Backsteinmauer und spielt kein Instrument,3.2,CONTRADICTION,,,,
-6394,Ein Wasserfall fließt in ein seichtes Becken,Die Menschen gehen auf der Straße neben einem schönen Wasserfall,2.3,NEUTRAL,,,,
-6396,Ein Hund vertreibt eine Herde weißer Schafe auf einem staubigen Bauernhof,Ein Hund hütet ein Rudel weißer Schafe auf einem staubigen Bauernhof,3.8,NEUTRAL,,,,
-6450,Ein kleiner Junge trägt ein gelbes Tank-Top und lacht,Ein lachender Junge trägt einen gelben Tank und ein Top,3.5,NEUTRAL,,,,
-6482,Die Person steht nicht auf weißem Eis,Eine Person steht in einem riesigen Feld aus Gletschereis,3.1,NEUTRAL,,,,
-6544,Der Eishockeytorwart trägt ein gelbes Trikot und verteidigt das Tor.,"Es gibt keinen Eishockeyspieler im gelben Trikot, der das Tor bewacht.",4.0,CONTRADICTION,,,,
-6568,Eine Frau trägt einen blauen Helm und fährt mit dem Fahrrad auf einem Parkplatz,Eine Frau parkt ein blaues Fahrrad und trägt eine Menge Reithelme,3.1,NEUTRAL,,,,
-6590,Ein junges Mädchen steht auf einem Bein,Eine junge Frau tanzt,3.3,NEUTRAL,,,,
-6592,Ein junges Mädchen steht auf einem Bein,Ein junges Mädchen tanzt,2.7,NEUTRAL,,,,
-6598,Eine Biene klammert sich an eine gelbe Blume,"Es gibt keine kleine Biene, die auf einem Strauß gelber Blumen landet",3.9,NEUTRAL,,,,
-6625,"Es gibt keinen weißen Hund mit beigen Flecken, der durch ein Feld rennt",Ein hellbrauner Hund rennt durch das Gebüsch,2.7,NEUTRAL,,,,
-6634,"Eine Hürde wird von einem Pferd übersprungen, das einen Reiter auf seinem Rücken hat.",Ein Pferd und sein Reiter springen über ein Hindernis,4.5,ENTAILMENT,,,,
-6649,Zwei Mädchen im Teenageralter tragen ausgefallene Kleider bei einer Veranstaltung,Zwei Mädchen im Teenageralter tragen ausgefallene Kleider bei einer Veranstaltung,4.8,ENTAILMENT,,,,
-6673,Ein Klassenzimmer voller Schüler schaut aufmerksam in die gleiche Richtung in einem Bambusbauwerk,Eine Gruppe von Schülern in Uniformen hört aufmerksam zu.,2.8,NEUTRAL,,,,
-6705,Ein kleines Kind klettert im Freien auf einer grasbewachsenen Fläche eine Treppe hinauf.,Ein kleines Kind klettert im Freien auf einer Wiese Stufen hinauf.,4.9,ENTAILMENT
-6709,Ein kleines Kind in einem rosa Pullover klettert eine Betontreppe hinauf,Ein kleines Kind klettert im Freien auf einer Wiese Stufen hinauf.,3.5,NEUTRAL,,,,
-6729,Ein Kind in Orange spielt draußen mit einem Schneeball,Ein Kind macht einen Schneeball,3.3,NEUTRAL,,,,
-6740,Die Menschen sitzen nicht auf einer Bank vor einem Restaurant,Drei Personen sitzen auf einer Bank unter Palmen,3.2,NEUTRAL,,,,
-6756,Ein großer brauner Hund und ein kleiner grauer Hund stehen auf einer felsigen Fläche,Ein großer brauner Hund und ein kleiner grauer Hund stehen auf einer felsigen Fläche,4.8,ENTAILMENT,,,,
-6764,Drei Jungen ruhen sich auf Felsen an einem Fluss aus,Drei Jungen laufen auf Felsen entlang eines Flusses,3.8,NEUTRAL,,,,
-6784,"Es gibt keinen schwarz gekleideten Mann, der eine kunstvolle schwarze Maske trägt",Ein schwarz gekleideter Mann trägt eine kunstvolle schwarze Maske,3.4,CONTRADICTION,,,,
-6849,Zwei kleine Kinder spielen mit einem Spielzeugauto auf der Straße.,Ein Vater schiebt seine Tochter auf einem Gokart und ein anderes Mädchen schaut zu,2.2,NEUTRAL
-6866,Ein goldener Hund rennt durch ein Feld mit hohem Gras,"Es gibt keinen braunen Hund, der durch hohes grünes Gras rennt",4.0,NEUTRAL,,,,
-6912,"Die Frau, die die blau-weiße Uniform mit dem weiß-blauen Hut trägt, hält den Mund offen und steht in der Nähe von anderen, die auf die gleiche Weise gekleidet sind","Eine Frau trägt ein blaues Hemd, eine weiße Weste und eine weiße Mütze, sie spricht und marschiert",3.4,NEUTRAL,,,,
-6932,Der Snowboarder macht einen Salto über einen Schneehügel,Jemand springt auf einem Brett in die Luft,3.8,ENTAILMENT,,,,
-6955,Ein blonder Junge in Grün sitzt auf einer Schaukel,"Es gibt kein kleines Mädchen mit blondem Haar, das lächelt und auf einer Schaukel sitzt",3.185,NEUTRAL,,,,
-6961,Ein weißer Mann setzt sich einen Hut auf und spielt Gitarre,Ein Mann mit einem weißen Hut spielt auf der Bühne Gitarre,3.0,NEUTRAL,,,,
-6971,"Es gibt keinen Mann in einer roten Uniform, der bei einem Dirtbike-Rennen einen Sprung macht",Ein Mann in roter Uniform macht einen Sprung bei einem Dirtbike-Rennen,3.4,CONTRADICTION,,,,
-7002,Rugbyspieler greifen sich nicht gegenseitig an,Ein Fußballspieler wird von seinem Gegenspieler angegriffen,2.5,NEUTRAL,,,,
-7007,Ein weißer Hund steht auf gefallenen Blättern,Ein weißer Hund liegt auf gefallenen Blättern,3.8,NEUTRAL,,,,
-7018,Ein Kind in heller Kleidung steht mit nach außen gestreckten Armen,Ein Kind in heller Kleidung steht mit nach außen gestreckten Armen,5.0,ENTAILMENT,,,,
-7027,Der Junge und das Mädchen spielen nicht auf einem Spielplatz,Der Junge und das Mädchen spielen in der Turnhalle im Freien,3.0,NEUTRAL,,,,
-7043,Der Motocross-Fahrer steht nackt,"Ein Motorradfahrer mit blauer Jacke, schwarzer Hose und weißem Helm fährt auf einer unbefestigten Straße und die Leute schauen zu",2.6,NEUTRAL
-7044,Der Fahrer auf dem blau-schwarzen Motocross-Motorrad hat keine Hose an.,"Ein Motorradfahrer mit blauer Jacke, schwarzer Hose und weißem Helm fährt auf einer unbefestigten Straße und die Leute schauen zu",3.2,NEUTRAL
-7064,Ein Trick wird von einem Rollerblader auf einer Rampe vorgeführt,Ein Rollerblader vollführt einen Trick auf einer Rampe,5.0,ENTAILMENT,,,,
-7088,Eine Gruppe von Fußballspielern steht still auf dem Feld,Die Zuschauer sehen sich ein Fußballspiel an,2.6,NEUTRAL,,,,
-7093,Die Gruppe von Menschen steht zusammen und schaut in die Kamera.,Eine Gruppe von Menschen steht zusammen und schaut in die Kamera,5.0,ENTAILMENT,,,,
-7214,Ein brauner Hund rennt mit einem Spielzeug im Maul über den Hof,"Es gibt keinen braunen Hund, der mit einem Spielzeug im Maul über den Hof rennt",3.8,CONTRADICTION,,,,
-7228,"Es gibt keinen kleinen Jungen, der mit gebeugten Knien und ausgebreiteten Armen in die Luft springt",Eine Person mit einem grünen Hemd springt hoch über das Gras,2.6,NEUTRAL,,,,
-7311,Der Mann mit dem Strohhut raucht eine Zigarette.,Ein Mann trägt einen Strohhut und raucht eine Zigarette,4.8,ENTAILMENT,,,,
-7319,Ein Mann trägt ein blaues Hemd mit langen Ärmeln und Jeans und fährt auf einem Einrad eine Straße entlang.,Ein Mann trägt ein blau-kariertes Hemd und fährt auf der Straße Einrad.,4.3,NEUTRAL,,,,
-7356,Kleine Kinder klettern auf eine Statue in einem Park,Zwei Kinder spielen auf einer Statue,4.1,NEUTRAL,,,,
-7363,Ein Turm wird von einer blonden Dame begutachtet,Eine Frau betrachtet die Aussicht auf eine Stadt,3.3,NEUTRAL,,,,
-7374,Ein Mann steht auf dem Gipfel eines Felsens mit Wolken dahinter,Jemand steht auf einem Berggipfel,3.1,NEUTRAL,,,,
-7394,Ein Kind lächelt in die Kamera und schwimmt unter Wasser,Ein Kind schwimmt in einem Schwimmbecken unter Wasser,4.1,NEUTRAL,,,,
-7410,Ein amerikanischer Fußballspieler trägt das rot-weiße Trikot,Ein Fußballspieler trägt schwarze Armbinden,2.4,NEUTRAL,,,,
-7445,Das kleine Mädchen schaukelt und die Frau steht hinter ihr,Das kleine Mädchen schaukelt und die Frau steht hinter ihm.,4.9,ENTAILMENT
-7448,Ein kleines Kind zeigt Aufregung auf einer Schaukel im Park,Das kleine Mädchen schaukelt und die Frau steht hinter ihm.,3.6,NEUTRAL
-7464,Ein Surfer reitet auf der Welle,Ein Mann fällt von einem Surfbrett ins Wasser,3.5,NEUTRAL,,,,
-7466,Die Gruppe von Menschen sitzt in einem schummrigen Raum.,Die Gruppe von Menschen sitzt in einem schummrigen Raum.,4.9,ENTAILMENT,,,,
-7471,Ein Mann und zwei Frauen sitzen in einem dunklen Raum an einem Tisch mit Kerzen.,Die Gruppe von Menschen sitzt in einem schummrigen Raum.,3.6,ENTAILMENT,,,,
-7475,Ein Mann und zwei Frauen sitzen in einem abgedunkelten Raum an einem Tisch mit Kerzen.,Die Gruppe von schummrigen Menschen sitzt in einem Raum,2.5,NEUTRAL,,,,
-7477,Ein Mann mit einem weißen Hemd und einer Sonnenbrille und ein Mann mit einem schwarzen Hemd und einer Sonnenbrille sitzen an einem Tisch mit vier Bierflaschen,Ein Mann mit einem weißen Hemd und einer Sonnenbrille und ein Mann mit einem schwarzen Hemd und einer Sonnenbrille sitzen an einem Tisch mit vier Bierflaschen,4.9,ENTAILMENT,,,,
-7501,Die Frau trägt keine rote Jacke und hält dem Mann im weißen T-Shirt kein Glas vor die Nase.,Eine Person trägt eine rote Jacke und hält ein Bier,2.4,NEUTRAL,,,,
-7533,"Ein Kind beobachtet jemanden, der im Freien spielt und den Rest seiner Familie mit Wasser bespritzt",Ein Junge hält einen Schlauch neben einem Mann und ein anderer Junge schaut zu,3.0,NEUTRAL,,,,
-7541,"Es gibt keinen Fußballspieler in einem lila Trikot, der mit dem Ball einen Touchdown erzielt.","Ein Fußballspieler läuft an einem Beamten vorbei, der einen Fußball trägt",3.3,NEUTRAL,,,,
-7544,Ein Fußballspieler trägt einen Beamten an einem rollenden Fußball vorbei,Ein Fußballspieler in einem lila Trikot läuft mit dem Ball zu einem Touchdown,2.9,NEUTRAL,,,,
-7546,Ein junges Mädchen in einem blauen Trikot springt in die Luft,Ein junges Mädchen in einem blauen Trikot springt in die Luft,5.0,ENTAILMENT,,,,
-7548,Das junge Mädchen in Blau springt in die Luft,Ein junges Mädchen in Blau springt in die Luft,5.0,ENTAILMENT,,,,
-7582,Ein paar Männer spielen Rugby auf einem Feld voller Schlamm,Einige Männer spielen Rugby,4.5,ENTAILMENT,,,,
-7590,"Eine Person betrachtet ein Motocross-Motorrad, das auf der Seite liegt, während eine andere Person vorbeirennt.",Der Fahrradfahrer sieht sich einen Unfall eines anderen Fahrradfahrers an,3.1,NEUTRAL,,,,
-7649,"Es gibt keinen kleinen Jungen, der ein grünes Fußballtrikot trägt und über den Rasen rennt",Ein kleiner Junge trägt ein grünes Fußballtrikot und rennt auf dem Rasen,3.6,CONTRADICTION,,,,
-7667,Der Mann am Strand macht keinen Handstand auf dem nassen Sand am Rande des Wassers,Der Mann macht einen Handstand auf dem nassen Sand am Rande des Wassers am Strand,3.7,CONTRADICTION,,,,
-7677,Eine junge Mutter spielt mit ihrem Sohn im Park,Ein kleiner Junge spielt mit seiner Mutter im Park,4.5,ENTAILMENT,,,,
-7718,Ein Mann sprüht einen Super Soaker in das Maul eines Hundes,"Es gibt keinen Mann, der einen Super Soaker in das Maul eines Hundes sprüht",3.8,CONTRADICTION,,,,
-7720,"Es gibt keinen Mann, der einen Super Soaker in das Maul eines Hundes sprüht",Ein Mann spritzt einem weißen Hund mit einer Spritzpistole Wasser in den Mund,2.9,NEUTRAL,,,,
-7726,"Ein Junge unter einem Regenschirm wird von seinem Vater gehalten, der einen blauen Mantel trägt.","Ein Junge, der einen blauen Mantel trägt, wird von seinem Vater unter einem Regenschirm gehalten.",4.3,NEUTRAL
-7734,"Ein Junge unter einem Regenschirm wird von seinem Vater gehalten, der einen blauen Mantel trägt.",Ein Kind erlebt eine neue Welt,1.5,NEUTRAL,,,,
-7743,Ein Hund spielt allein an einem verschneiten Strand,Ein Hund läuft entlang einer Schneeverwehung,3.2,NEUTRAL,,,,
-7772,Ein Surfer reitet auf einer großen Welle über dunkelgrünes Wasser,Der Surfer reitet auf einer kleinen Welle,3.9,CONTRADICTION,,,,
-7795,Ein Tennisspieler macht einen Ausfallschritt nach links,Ein Tennisspieler springt nach links,4.4,ENTAILMENT,,,,
-7820,"Zwei Hunde schauen sich etwas an, das im Wasser plätschert",Manche Hunde spielen nicht in einem Bach,3.7,NEUTRAL,,,,
-7877,Ein Mann mit einem blauen Cowboyhut reitet auf einem weißen Pferd,Ein Mann in Blau reitet auf einem Pferd über einen Feldweg,3.9,NEUTRAL,,,,
-7889,Zwei weiße Hunde spielen mit einem braunen Hund und einem Tennisball,Zwei weiße Hunde spielen mit einem braunen Hund und einem Ball,4.7,ENTAILMENT,,,,
-7932,Eine Person in einer rosa Jacke läuft auf das Spielfeld,Vier Sportler sind mit einer Frau in einem überfüllten Stadion,2.0,NEUTRAL,,,,
-7937,Eine elegant gekleidete Frau steht in einer Menschenmenge und schaut nach oben.,Eine elegant gekleidete Frau steht in einer Menschenmenge und blickt nach unten.,3.1,NEUTRAL,,,,
-7938,Eine asiatische Frau hält einen Pelzschal,Eine elegante Frau steht in einer Menschenmenge und schaut nach unten,2.2,NEUTRAL,,,,
-7947,Ein Kind in einem weißen T-Shirt planscht im flachen Wasser,Ein Junge rennt durch das Wasser am Strand,3.4,NEUTRAL,,,,
-7950,Ein Mädchen rennt durch das Wasser am Strand,Ein Junge in einem weißen T-Shirt planscht im flachen Wasser,2.3,NEUTRAL,,,,
-7951,Ein Junge in einem weißen T-Shirt planscht im flachen Wasser,Ein Junge rennt durch das Wasser am Strand,3.5,NEUTRAL,,,,
-7997,Die Kinder haben keine Anzüge an und das Wasser spritzt herum,Kinder in Badeanzügen spielen im Wasser,2.8,NEUTRAL,,,,
-8057,"Ein junges Mädchen trägt einen blau gemusterten Badeanzug, eine schwarz-gelbe Badekappe und hat eine blaue Schwimmbrille auf dem Kopf.","Ein kleines Mädchen trägt einen blau gemusterten Badeanzug, eine schwarz-gelbe Badekappe und hat eine blaue Schwimmbrille auf dem Kopf",4.8,ENTAILMENT
-8122,Ein weiblicher Cheerleader sitzt auf dem Knie eines männlichen Cheerleaders,Einige Cheerleader entspannen sich,3.0,NEUTRAL,,,,
-8138,"Das Mädchen hat rote Haare und Augenbrauen, mehrere Piercings in einem Ohr und eine Zeichnung auf dem Rücken","Das Mädchen hat rote Haare und Augenbrauen, mehrere Piercings in einem Ohr und eine Tätowierung auf dem Rücken",4.4,ENTAILMENT
-8141,"Das Mädchen hat rote Haare und Augenbrauen, mehrere Piercings in einem Ohr und keine Tätowierung auf dem Rücken",Ein Mädchen mit roten Haaren und roten Augenbrauen ist mitten in der Rede,3.0,NEUTRAL
-8163,Zwei Personen fahren einen Jeep und eine Frau sitzt auf dem Dach des Jeeps,Zwei Personen fahren einen Jeep und ein Mädchen sitzt auf dem Dach des Jeeps,4.8,ENTAILMENT,,,,
-8193,Die Erwachsenen und Kinder sind nicht in der Nähe einer Sitzgruppe im Freien versammelt,Die Erwachsenen und Kinder werden in der Nähe einer Sitzgruppe im Freien versammelt.,4.4,CONTRADICTION,,,,
-8212,Ein Mädchen hat farbige Flecken auf den Wangen,Ein Mädchen steht in einer Gruppe und trägt ein schwarzes Hemd und rosa Perlen,2.4,NEUTRAL,,,,
-8220,Zwei Hunde rennen durch Wasser,Zwei Hunde rennen durch hohes Gras,3.335,NEUTRAL,,,,
-8263,Einige Menschen und Fahrzeuge befinden sich auf einer belebten Straße,Einige Menschen und Fahrzeuge befinden sich auf einer fast leeren Straße,4.2,CONTRADICTION,,,,
-8313,Ein junges Mädchen mit bemaltem Gesicht steht neben einigen anderen Kindern,Die Kinder werden verkleidet und spielen ein Spiel,3.1,NEUTRAL,,,,
-8326,"Es gibt keinen Motorradfahrer, der über unbefestigte Rampen vor einem Gewässer springt.",Zwei Motorradfahrer springen über unbefestigte Rampen vor einem Gewässer,4.4,CONTRADICTION,,,,
-8334,Ein Mann macht einen Trick auf einem Skateboard,Eine Person macht einen Trick auf einem Skateboard,4.4,ENTAILMENT,,,,
-8343,Ein Mann in einer Motocross-Uniform trägt einen Helm und fährt auf einem roten Motorrad,Eine Person in einer Motocross-Uniform trägt einen Helm und fährt auf einem roten Motorrad,4.8,ENTAILMENT,,,,
-8362,Ein Junge im gestreiften Hemd springt hinter einer Wasserfontäne,Ein Junge in einem gestreiften Hemd springt vor einem Wasserbrunnen,4.2,NEUTRAL,,,,
-8375,"Zwei große Hunde, ein heller und ein dunkler, schlafen auf einem verschneiten Gelände",Zwei Hunde springen durch verschneites Gras und Felsen,2.4,NEUTRAL,,,,
-8383,Ein Mädchen in Blau rutscht eine grüne Rutsche hinunter,Das junge Mädchen in Blau genießt eine Rutsche,4.3,ENTAILMENT,,,,
-8389,Ein weißer Mann geht neben einem Gebäude in einer Großstadt,Ein schwarzer Mann geht neben einem Gebäude in einer Großstadt,3.3,NEUTRAL,,,,
-8461,Ein Mann ohne Hut sitzt auf dem Boden,Ein Mann mit einem umgekehrten Hut sitzt auf dem Boden,4.0,NEUTRAL,,,,
-8471,Ein Mädchen im blauen Pullover hält ein buntes Spielzeug und sitzt auf den Schultern eines alten Mannes mit grauem Haar.,Ein Mädchen im blauen Pullover hält ein buntes Spielzeug und sitzt auf den Schultern eines Mannes mit grauen Haaren,4.6,ENTAILMENT,,,,
-8500,Der Mann geht ins Wasser,Die Person geht ins Meer,4.1,NEUTRAL,,,,
-8505,Zwei Menschen sitzen an einem sonnigen Tag auf einer Parkbank,Zwei Personen sitzen an einem heißen Tag auf einer Parkbank,4.3,NEUTRAL,,,,
-8548,Das Kind spritzt Wasser in einem großen roten Pool,Ein Kleinkind plantscht in einem blauen Planschbecken,3.1,NEUTRAL,,,,
-8558,"Ein grauer, seidiger Hund liegt im Gras und ein brauner Hund schaut zu","Der braune Hund erspäht einen schwarzen Hund, der im trockenen Gras liegt",3.2,NEUTRAL,,,,
-8576,Ein schwarzer Hund und ein kleiner weißer und schwarzer Hund blicken auf eine Küchenarbeitsplatte,Ein großer und ein kleiner Hund stehen neben der Küchentheke und erforschen,4.2,ENTAILMENT,,,,
-8632,Ein Mann klettert nicht auf einen Felsen und im Hintergrund sind eine Stadt und eine Bucht zu sehen,"Ein Mann klettert am Felsen, im Hintergrund sind eine Stadt und eine Bucht zu sehen.",4.4,CONTRADICTION,,,,
-8633,"Ein Mann klettert am Felsen, hält inne und berechnet die Route","Ein Mann klettert am Fels, hält an und berechnet die Route",4.8,ENTAILMENT,,,,
-8658,Keine Gruppe von Menschen versammelt sich an einem Stand auf der Messe,Die Menschen stehen auf einem Rummelplatz,3.8,NEUTRAL,,,,
-8660,Eine Gruppe von Rollerbladern stellt sich auf der Straße auf,Eine Gruppe von Rollerbladern stellt sich auf der Straße auf,4.9,ENTAILMENT,,,,
-8678,Ein Skateboarder springt von einer Rampe,Ein Skateboarder macht einen Sprung von einer Rampe,4.8,ENTAILMENT,,,,
-8700,Ein schwarz-oranger Vogel steht im Gras,Der schwarze Vogel mit gelbem Schnabel steht im grünen Gras,4.0,NEUTRAL,,,,
-8714,Zwei weiße Hunde laufen schnell zusammen,Zwei weiße Hunde laufen zusammen,4.6,ENTAILMENT,,,,
-8727,Eine Gruppe von Leuten steht um einen Mischpult herum,Einige Leute sehen sich Tontechnik an,3.5,ENTAILMENT,,,,
-8786,Ein Mädchen springt Seil auf einem Bürgersteig,Ein Mädchen springt Seil in der Nähe einer Straße,4.3,ENTAILMENT,,,,
-8792,Ein Mädchen springt auf einem Gehweg in der Nähe eines Parkhauses Seil,Ein Mädchen springt Seil in der Nähe einer Straße,3.7,NEUTRAL,,,,
-8806,Ein Hund schwimmt in einem Gewässer,Ein Tier schwimmt in einem Gewässer,4.5,ENTAILMENT,,,,
-8832,Eine Frau lehnt auf dem Sims eines Balkons,Ein Mann lehnt auf dem Sims eines Balkons,3.8,NEUTRAL,,,,
-8841,Ein kleiner weißer Hund läuft über eine Wiese,Ein großer weißer Hund läuft über eine Wiese,3.1,NEUTRAL,,,,
-8855,Der Hund ist angeleint und läuft in der Nähe des Wassers,Ein schwarzer Hund an der Leine läuft im Wasser,4.5,NEUTRAL,,,,
-8938,Ein Junge in orangefarbenen Shorts steht auf einer Felsklippe über dem Wasser und der andere Junge in schwarzen Shorts springt von dort ins Wasser,Zwei Männer stehen auf einer Klippe und einer springt ins Wasser,4.0,NEUTRAL,,,,
-8963,Eine kleine Gruppe von Menschen steht und zwei sitzen auf dem Sofa.,Eine Gruppe von fünf jungen Erwachsenen macht es sich in einem Haus gemütlich.,3.8,NEUTRAL,,,,
-8986,Ein junges Mädchen im Bikini springt am Strand,Ein junges Mädchen im Badeanzug springt am Strand,4.4,ENTAILMENT,,,,
-9014,Ein blondes Kind fährt eine Rutsche hinunter und wirft die Arme hoch,Ein Kind mit dunklen Haaren fährt eine Rutsche hinunter und wirft die Arme hoch,3.7,CONTRADICTION,,,,
-9029,Zwei Hunde spielen in einem Wald,Ein brauner Hund läuft einem schwarzen Hund an einem felsigen Ufer hinterher,2.3,NEUTRAL,,,,
-9036,Ein weißer Hund nähert sich einem goldenen Hund am Kieselstrand,Zwei Hunde spielen an einem felsigen Strand,2.9,NEUTRAL,,,,
-9056,Zwei junge Mädchen tragen Hüte und strecken ihre farbigen Zungen heraus,Zwei Kinder strecken blaue und grüne Zungen heraus,3.6,NEUTRAL,,,,
-9069,Zwei Jungen liegen im Meer in der Nähe des Strandes,Zwei Jungen liegen in der Nähe des Strandes im Wasser,4.4,ENTAILMENT,,,,
-9093,Ein großer Mann sitzt in einem Geschäft für Militärzubehör,Ein Veteran zeigt manchen Menschen verschiedene Dinge aus einem Krieg,2.8,NEUTRAL,,,,
-9102,Ein Hund mit einem blauen Halsband spielt draußen mit einem Ball,Ein grauer Hund lässt auf einer Wiese einen Fußball auf seinem Kopf hüpfen,3.4,NEUTRAL,,,,
-9125,Eine junge Frau mit indischer Kleidung und Henna auf der Hand erledigt den Papierkram,Eine Frau trägt eine bunte Bluse und eine Menge Schmuck,2.4,NEUTRAL,,,,
-9132,Ein Mann in einem schwarzen Trikot steht in einer Turnhalle.,Ein Mann in einem schwarzen Trikot steht in einer Turnhalle,4.9,ENTAILMENT,,,,
-9136,Ein Mann in einem schwarzen Trikot steht in einer Turnhalle,Ein Mann steht in einer Turnhalle und trägt ein Trikot,4.5,ENTAILMENT,,,,
-9169,Ein kleiner braun-weißer Hund rennt auf dem Bürgersteig,Ein kleiner brauner und weißer Hund läuft auf der Straße,3.7,NEUTRAL,,,,
-9188,Ein Hund dreht sich im Gras und verfolgt einen fliegenden Tennisball,Ein gelber Hund jagt einen Ball,4.4,NEUTRAL,,,,
-9198,Eine Frau in blauen Jeans steht vor einer Gruppe von Kindern neben einem aus Stein gebauten Haus,Keine Frau steht auf der Straße und ist von Schulkindern umgeben,3.2,NEUTRAL,,,,
-9200,Eine Frau steht auf der Straße und ist von Schulkindern umgeben,Ein Mann in blauen Jeans steht vor einer Gruppe von Kindern neben einem Steinhaus.,2.0,NEUTRAL,,,,
-9211,Ein Kerl springt mit Holz in die Luft,Ein Mann springt in einem Waldgebiet in die Luft,4.3,NEUTRAL,,,,
-9224,Ein Hund rennt mit einem Ball,Der schwarze Hund trägt einen blau-weißen Ball in seinem Maul,4.0,NEUTRAL,,,,
-9242,Der Mann in Blau posiert für ein Foto neben einem Fahrzeug,"Ein Mann steht am Steuer eines amerikanischen Oldtimers, dessen Türen und Kofferraum geöffnet sind.",3.2,NEUTRAL,,,,
-9287,Ein Mann fährt einen Hügel hinunter und überspringt ein rotes Hindernis,Ein Mann fährt mit dem Snowboard ein Geländer im Schnee hinunter,3.1,NEUTRAL,,,,
-9303,Der Skateboarder springt in die Luft,Ein Skateboarder springt in die Luft,4.9,ENTAILMENT,,,,
-9314,Ein Snowboarder fährt eine lange Betonschiene hinunter,Eine Person macht Akrobatik auf einem Snowboard,3.3,NEUTRAL,,,,
-9336,Eine Gruppe von Menschen geht die Straße entlang und eine Person mit einem grünen Hut telefoniert.,"Vier Personen gehen auf einem Bürgersteig in der Stadt spazieren, und die Person mit dem grünen Hut telefoniert mit jemandem.",4.2,NEUTRAL,,,,
-9359,Ein Surfer surft auf einer großen Welle,Ein Surfer surft auf einer großen Welle,4.9,ENTAILMENT,,,,
-9371,Eine Person mit roter Kapuzenjacke und schwarzem Rucksack geht in der Nähe einer Felswand,Ein Mann in roter Jacke und khakifarbener Hose geht durch einen europäischen Staat,3.0,NEUTRAL,,,,
-9380,Die Spieler bewegen sich um den Fußball,Ein Mann in Grün kickt einen Fußball und ein Mann in Lila und Weiß erhebt sich,3.5,NEUTRAL,,,,
-9401,"Der Mann mit den Lederchaps und dem lila Hemd steht vor jemandem, der ihn beobachtet.",Ein Mann trägt ein lila Hemd und schwarze Lederchaps und posiert für die Kamera,3.3,NEUTRAL,,,,
-9424,"Ein Hund ist in einem sandigen Bereich mit dem Sand, die aufgewirbelt wird in die Luft und mehrere Pflanzen sind im Hintergrund","Ein Hund liegt im Sand, der in die Luft geblasen wird",4.1,NEUTRAL,,,,
-9425,"Kein Hund ist im Sand, der im Wind weht","Ein Hund ist in einem sandigen Bereich mit dem Sand, die aufgewirbelt wird in die Luft und mehrere Pflanzen sind im Hintergrund",4.0,CONTRADICTION,,,,
-9433,Der schwarz-weiße Hund läuft in einem grünen Garten,Ein schwarz-weißer Hund läuft im Freien,4.4,ENTAILMENT,,,,
-9452,Ein Hund springt auf dem Lande in die Luft,Ein Hund springt im Schatten einiger Bäume,3.7,NEUTRAL,,,,
-9453,Ein Hund springt im Schatten einiger Bäume,Eine Katze springt auf dem Land hoch in die Luft,1.6,NEUTRAL,,,,
-9490,Eine Gruppe von vier braunen Hunden spielt auf einem Feld mit braunem Gras,Vier Hunde spielen nicht auf einer Wiese,4.0,CONTRADICTION,,,,
-9500,Ein großer braun-weiß gefleckter Hund liegt auf einer Jacke auf der Straße,Der Hund macht ein Nickerchen im Park,2.9,NEUTRAL,,,,
-9545,Ein Mann auf einem gelben Sportfahrrad macht einen Wheelie und ein Freund auf einem schwarzen Fahrrad holt auf,Der in Orange gekleidete Fahrer fährt ein Motorrad auf einem Rad,2.8,NEUTRAL,,,,
-9571,Ein älterer Mann sitzt auf einer Bank und trägt eine graue Jacke und eine schwarze Hose.,Ein älterer Mann sitzt auf einer Bank,4.5,ENTAILMENT,,,,
-9584,Die Frau hält den Pinsel neben der Staffelei des Künstlers,Die Dame hält den Pinsel neben der Staffelei des Künstlers,4.9,ENTAILMENT,,,,
-9623,Ein Mann trägt ein blaues Hemd und läuft barfuß auf einem Tennisplatz,Eine Frau trägt ein blaues Hemd und läuft barfuß auf einem Tennisplatz,3.6,NEUTRAL,,,,
-9669,Das junge Mädchen spielt am Rande eines Springbrunnens und eine ältere Frau beobachtet es.,Ein junges Mädchen spielt am Rande eines Springbrunnens und eine ältere Frau beobachtet es,4.8,ENTAILMENT,,,,
-9677,Ein junges Mädchen spielt am Rande eines Springbrunnens und eine ältere Frau beobachtet es,Ein kleines Mädchen und eine Frau in einem gelben Hemd werden von einem Stadtbrunnen bespritzt,3.5,NEUTRAL,,,,
-9706,Ein schwarz-weißer Hund mit einem großen Ast steht auf dem Feld,Ein schwarz-weißer Hund mit einem großen Ast läuft im Feld,4.2,CONTRADICTION,,,,
-9713,Ein schwarz-weißer Hund trägt einen großen Stock auf dem grünen Gras,Ein schwarz-weißer Hund mit einem großen Ast läuft im Feld,4.5,ENTAILMENT,,,,
-9722,Ein Junge rennt durch den Sand,Ein Junge im gestreiften Hemd läuft barfuß über den sandigen Hügel,3.9,NEUTRAL,,,,
-9745,Zwei Jungen schauen in die Kamera und einer streckt seine Zunge heraus.,Der kleine Junge streckt seine Zunge in die Kamera und ein anderer Junge schaut zu,4.4,NEUTRAL,,,,
-9747,Ein kleiner Junge streckt seine Zunge in die Kamera und ein anderer Junge schaut zu,Zwei Kinder schauen in die Kamera und eines streckt die Zunge heraus,4.4,ENTAILMENT,,,,
-9759,Ein lachendes Kind hält eine Wasserpistole und wird mit Wasser bespritzt,Eine Person in einer blauen Jacke springt auf eine hohe Betonmauer,1.1,NEUTRAL,,,,
-9763,Eine Person schneidet einige Pilze,Der Elefant wird von der Frau geritten,1.0,NEUTRAL,,,,
-9771,Zwei kleine Kinder spielen mit einem Spielzeugauto auf der Straße,Ein Hund rennt durch ein Feld und jagt ein Spielzeug,1.4,NEUTRAL,,,,
-9788,Ein Mann spielt auf einer E-Gitarre,Eine Gruppe von Menschen hält Getränke in der Hand und zeigt auf die Kamera,1.0,NEUTRAL,,,,
-9789,Ein Mädchen in Gold und Lila hält eine Regenbogen-Afghane,Ein Mann hockt im Gebüsch und macht ein Foto,1.0,NEUTRAL,,,,
-9822,Zwei Personen fahren auf einem Fahrrad,Ein geübter Springer wirft das Snowboard einer Person in die Luft,2.0,NEUTRAL,,,,
-9838,Einige Instrumente werden von einer Band gespielt,"Eine junge, barbusige Frau ist mit Farbe bedeckt",1.0,NEUTRAL,,,,
-9843,Eine Familie kauft etwas am Automaten,Ein Mann im Anzug steht vor einem Mikrofon und singt,1.0,NEUTRAL,,,,
-9869,Ein Fahrrad wird über einen Affen gerollt,Eine Person fährt mit einem Geländemotorrad einen unbefestigten Hügel hinunter.,2.8,NEUTRAL,,,,
-9880,Ein Motorradfahrer fährt von einem Zaun weg,Ein Mann tanzt auf der Straße,1.2,NEUTRAL,,,,
-9931,Eine Frau spielt auf einer E-Gitarre,Ein Kind spielt Gitarre,3.0,NEUTRAL,,,,
-9963,Das Tier weidet auf der Wiese,Der Polizist sitzt auf einem Polizeimotorrad,1.0,NEUTRAL,,,,
-9975,Der Hund schnappt nach einigen Wassertropfen,Ein Mädchen in einer Band spielt ein Instrument,1.0,NEUTRAL,,,,
-9988,Ein junger Mann schiebt ein Motocross-Motorrad einen unbefestigten Hügel hinunter,Ein Hund schwimmt einem Tennisball hinterher,1.0,NEUTRAL,,,,
+4;Die Jungen spielen im Freien und der Mann lächelt in der Nähe;Es gibt keinen Jungen, der draußen spielt, und es gibt keinen Mann, der lächelt.;3.6;CONTRADICTION
+24;Eine Person in einer schwarzen Jacke macht Kunststücke auf einem Motorrad;Eine erfahrene Person fährt ein Fahrrad auf einem Rad;3.4;NEUTRAL
+105;Vier Kinder machen Rückwärtsbeugen in der Turnhalle;Vier Mädchen machen Rückbeugen und spielen im Freien;3.8;NEUTRAL
+116;Ein Spieler wirft den Ball;Zwei Mannschaften treten in einem Fußballspiel gegeneinander an;2.9;NEUTRAL
+119;Fünf Kinder stehen vor einer Holzhütte;Fünf Kinder stehen in einer Holzhütte;4.2;NEUTRAL
+185;Nur wenige Menschen essen an roten Tischen in einem Restaurant ohne Licht;Eine große Gruppe asiatischer Menschen isst in einem Restaurant;2.6;NEUTRAL
+197;Jemand sitzt auf einem schwarz-weißen Motorrad und steht auf dem Sitz;Ein Motorrad wird im Stehen auf dem Sitz des Fahrzeugs gefahren;3.165;NEUTRAL
+211;Zwei Hunde spielen an einem Baum;Zwei Hunde spielen bei einer Pflanze;4.6;ENTAILMENT
+218;Ein Mädchen in Weiß tanzt;Ein Mädchen trägt weiße Kleidung und tanzt;4.9;ENTAILMENT
+219;Es gibt kein Mädchen in Weiß, das tanzt;Ein Mädchen in Weiß tanzt;4.2;CONTRADICTION
+225;Die Ausrüstung vor dem blonden tanzenden Mädchen ist solide;Ein Mädchen in Weiß tanzt;2.7;NEUTRAL
+228;Ein Mädchen in Weiß tanzt;Das blonde Mädchen tanzt vor der Tonanlage;3.3;NEUTRAL
+236;Die Kinder einer Familie spielen und warten;Ein asiatischer Mann tanzt und drei Kinder schauen zu;1.9;NEUTRAL
+253;Ein Wanderer steht auf dem Gipfel eines Berges und führt einen Freudentanz auf;Ein Wanderer ist auf dem Gipfel des Berges und tanzt;4.7;ENTAILMENT
+280;Ein Junge steht außerhalb des Wassers;Der Junge watet durch den blauen Ozean;3.135;NEUTRAL
+285;Eine glatzköpfige Person spielt auf einer Gitarre;Eine Person hat blondes und fliegendes Haar und spielt Gitarre;3.9;NEUTRAL
+304;Eine alte, barbusige Frau ist mit Farbe bedeckt;Eine junge, barbusige Frau ist mit Farbe bedeckt;3.8;NEUTRAL
+317;Eine Gruppe von Kindern in Uniformen steht vor einem Tor und niemand küsst die Mutter.;Eine Menschenmenge steht am Wasser;1.3;NEUTRAL
+382;Ein braun-weißer Hund rennt durch das hohe Gras;Ein braun-weißer Hund bewegt sich durch das wilde Gras;4.4;NEUTRAL
+384;Ein weiß-brauner Hund rennt durch das hohe, grüne Gras;Ein weißer und brauner Hund läuft durch ein Feld;4.35;ENTAILMENT
+394;Ein Mann sitzt neben einem Fahrrad und schreibt einen Zettel;Ein Mann steht neben einem Fahrrad und schreibt auf ein Blatt Papier;3.6;NEUTRAL
+402;Eine Gruppe von Pfadfindern wandert durch das Gras;Eine Gruppe von Entdeckern läuft durch das Gras;4.1;NEUTRAL
+417;Zwei Männer machen auf einer verschneiten Straße eine Pause;Zwei Männer mit Autos stehen am Rande einer verschneiten Straße;4.0;NEUTRAL
+450;Eine Dame surft und reitet auf einer Welle;Ein blondes Mädchen schaut auf die Wellen;3.3;NEUTRAL
+520;Die Frau, die eine silberne Hose, eine rosa Schlaghose und einen rosa Schal trägt, fährt mit dem Fahrrad;Rosa Schlaghosen und ein rosa Schal gehören nicht zu Frauen mit silbernen Hosen oder zu Fahrradfahrern;3.3;NEUTRAL
+526;Die Frau, die eine silberne Hose, eine rosa Schlaghose und einen rosa Schal trägt, fährt mit dem Fahrrad;Eine Fußgängerin baut rosa Fahrräder für Boa-tragende Fahrerinnen;2.4;NEUTRAL
+530;Ein Motorradfahrer trägt eine schwarze Ausrüstung;Ein schwarz gekleideter Biker macht die Gänge kaputt;3.1;NEUTRAL
+592;Eine Frau zieht einen sehr weiten Mantel aus, der ein extravagantes Kleid enthüllt.;Eine Frau zieht einen sehr weiten Mantel an, der ein extravagantes Kleid verbirgt.;3.5;CONTRADICTION
+619;Ein Junge klettert eine künstlich errichtete Kletterwand hinauf und ist an einem Seil befestigt.;Ein kleiner Junge, der ängstlich aussieht, steht an einer Kletterwand.;3.5;NEUTRAL
+630;Ein Mann wirft ein Kind nicht in ein Schwimmbad in der Nähe des Ozeans.;Der Mann wirft ein Kind in den Swimmingpool, der in der Nähe des Ozeans liegt.;3.5;CONTRADICTION
+647;Ein Mann klettert mit einem Seil auf eine Klippe;Eine Person mit rosa Kletterausrüstung seilte sich am Felsen ab;3.3;NEUTRAL
+651;Eine Person klettert mit einem rosa Seil auf einen Felsen.;Ein Mann klettert mit einem Seil auf eine Klippe;4.6;NEUTRAL
+687;Ein weißer Hund starrt auf die schwarze Straße;Zwei Hunde verschiedener Rassen schauen sich auf der anderen Straßenseite an;3.4;NEUTRAL
+698;Ein schwarzer, pelziger Hund steht in einem Hinterhof und trägt einen Korb in seinem Maul.;Ein Hund neben einem Baum, der wahrscheinlich eine Kiefer ist, beißt in einen Eimer;2.785;NEUTRAL
+717;Ein paar Männer, die an einem Wettbewerb teilnehmen, rennen nach draußen.;Ein paar Männer laufen bei einem Wettbewerb in der Halle;3.9;CONTRADICTION
+718;Ein paar Männer, die an einem Wettbewerb teilnehmen, rennen nach draußen.;Ein paar Männer veranstalten draußen Wettkämpfe;3.9;NEUTRAL
+765;Das Kind rutscht fröhlich durch den Schnee;Ein Junge auf einem schneebedeckten Hügel trägt eine rote Jacke und eine schwarze Mütze und rutscht auf seinen Knien;4.0;NEUTRAL
+780;Eine alte Frau steht in der Nähe eines weißen Hundes;Eine Frau und ein Hund sitzen auf einem Baumstumpf;3.1;NEUTRAL
+816;Eine Gruppe von Personen wird mit Schutzausrüstung ausgestattet;Eine Gruppe von Personen ist mit einer Schutzausrüstung ausgestattet.;5.0;ENTAILMENT
+860;Ein weißer und ein schwarzer Hund laufen nebeneinander auf der Wiese;Ein Hund, der ein schwarzes Fell hat, und ein weißer Hund laufen auf dem Gras;4.2;ENTAILMENT
+873;Nicht viele Menschen sind in einem Eislaufpark;Eine Eislaufbahn im Freien ist voll von Menschen;3.5;NEUTRAL
+882;Das Mädchen in der blau-weißen Uniform jubelt;Das Mädchen jubelt dem Mann in der blau-weißen Uniform zu;3.1;NEUTRAL
+913;Eine Frau wird von einem Mann geküsst;Es gibt keine Frau, die von einem Mann geküsst wird;4.2;CONTRADICTION
+933;Das Mädchen im roten Hemd bläst eine Seifenblase;Das junge Mädchen pustet eine riesige Seifenblase;3.8;NEUTRAL
+947;Einige Corndogs werden von zwei Kleinkindern gegessen, die in einem wirklich kleinen Wagen sitzen.;Zwei Kleinkinder essen Corndogs in einem Wagen, der wirklich klein ist;4.8;ENTAILMENT
+980;Ein Mann besteigt ein Pferd auf einem in der Wildnis angelegten Weg;Ein Pferd wirft den Cowboy, der blaue und rote Hosen trägt.;2.1;NEUTRAL
+987;Ein Erwachsener befindet sich im Amphitheater und spricht mit einem Jungen;Im Amphitheater ist kein Erwachsener, der mit einem Jungen spricht.;4.3;CONTRADICTION
+988;Ein Vortrag über einen Erwachsenen und einen Jungen wird im Amphitheater gehalten;Ein Erwachsener befindet sich im Amphitheater und spricht mit einem Jungen;3.1;NEUTRAL
+1039;Der Snowboarder springt nicht über weißen Schnee;Eine Person, die Snowboarding übt, springt in die Luft;3.3;NEUTRAL
+1102;Eine Frau reitet auf einem Pferd;Ein Mann öffnet ein kleines Paket, das Kopfhörer enthält.;1.0;NEUTRAL
+1137;Ein Fisch jagt im Meer nach einer Schildkröte;Die Schildkröte folgt dem Fisch;3.5;NEUTRAL
+1170;Eine Kartoffel wird von einer Frau in Scheiben geschnitten;Eine Frau schneidet eine Karotte;3.0;NEUTRAL
+1177;Eine Frau kämmt ihr Haar;Eine Frau ordnet ihr Haar;4.1;NEUTRAL
+1178;Eine Frau kämmt ihr Haar;Es gibt keine Frau, die ihr Haar kämmt;3.6;CONTRADICTION
+1190;Ein Mann und eine Frau wandern durch ein bewaldetes Gebiet;Ein Mann und eine Frau gehen gemeinsam durch den Wald;4.3;ENTAILMENT
+1192;Ein Mann und eine Frau gehen gemeinsam durch den Wald;Ein Mann und eine Frau gehen durch ein Waldgebiet;4.6;ENTAILMENT
+1232;Ein Mann schneidet ein Brötchen auf;Ein Mann schneidet eine Tomate;3.6;NEUTRAL
+1236;Eine Frau tanzt und singt allein;Eine Frau tanzt und singt mit anderen Frauen;3.285;CONTRADICTION
+1237;Einige Frauen tanzen und singen;Eine Frau tanzt und singt im Regen;3.8;NEUTRAL
+1241;Eine Frau tanzt und singt mit anderen Frauen;Eine Frau tanzt und singt im Regen;4.1;NEUTRAL
+1266;Eine Band spielt auf einer Bühne;Eine Band spielt auf der Bühne;5.0;ENTAILMENT
+1302;Ein Mann spielt Flöte;Ein Mann spielt ein Spiel mit einem Ball;1.5;NEUTRAL
+1333;Die Frau misst die andere Frau;Eine Frau wird von einer anderen Frau gemessen;4.9;ENTAILMENT
+1390;Eine Person steht in der Nähe eines Motorrads;Eine Person schneidet eine Zwiebel;1.2;NEUTRAL
+1396;Ein Mann schreit;Ein Mann hat Angst;3.6;NEUTRAL
+1400;Ein trauriger Mann weint;Ein Mann schreit;2.9;NEUTRAL
+1410;Eine Frau schneidet Krabben;Ein Mann schneidet Butter in einen kleinen Behälter;1.4;NEUTRAL
+1412;Männer sägen Baumstämme;Männer schneiden Holz;4.5;ENTAILMENT
+1443;Ein Mann spricht im Radio;Ein Mann spuckt;1.7;NEUTRAL
+1469;Drei junge Männer rennen, springen und treten in der Nähe eines Verkaufsautomaten;Es gibt keinen Mann, der in der Nähe eines Automaten rennt, springt und tritt;3.8;CONTRADICTION
+1470;Drei Männer springen von einer Mauer;Drei junge Männer rennen, springen und treten wütend in der Nähe eines Verkaufsautomaten;2.5;NEUTRAL
+1487;Der Mann rührt die Soße für das Huhn nicht um;Der Mann rührt die Soße für das Huhn an;4.0;CONTRADICTION
+1493;Ein Mann spielt auf einer E-Gitarre;Ein Mann spielt Gitarre;4.9;ENTAILMENT
+1495;Ein Mann spielt auf einer Gitarre;Ein Mann zupft eine Gitarre;4.9;ENTAILMENT
+1503;Drei Jungs in Karatekostümen kämpfen nicht gegeneinander.;Drei Jungen in Karatekostümen kämpfen;3.3;CONTRADICTION
+1506;Drei Männer praktizieren Karate im Freien;Drei Jungen in Karatekostümen kämpfen;3.8;NEUTRAL
+1525;Eine Frau pflanzt einige Blumen;Eine Frau schneidet Brokkoli;1.2;NEUTRAL
+1584;Der Dachs gräbt ein Loch;Ein Dachs gräbt schlau in der Erde;4.5;ENTAILMENT
+1608;Eine Schlange wird von einem Mann mit einer Maus gefüttert;Keine Schlange wird von einem Mann mit einer Maus gefüttert;4.7;CONTRADICTION
+1628;Einige Zutaten werden von einer Person in einer Schüssel gemischt;Einige Zutaten werden von einer Person in einer Schüssel getrennt;4.6;NEUTRAL
+1676;Ein Boot fährt friedlich über das Wasser;Die Gitarre wird von dem Mann gespielt;1.1;NEUTRAL
+1690;Die Milch wird von einer Katze getrunken;Die Katze trinkt etwas Milch;5.0;ENTAILMENT
+1703;Ein Mann leert einen Kunststoffbehälter vollständig;Ein Mann leert einen Behälter aus Plastik;4.7;ENTAILMENT
+1711;Ein Mann leert einen Behälter aus Plastik;Ein Mann hält achtlos einen Frosch;1.1;NEUTRAL
+1754;Ein Mädchen spielt auf einer Flöte;Eine Flöte wird von einem Mädchen gespielt;4.6;ENTAILMENT
+1807;Der Erwachsene spielt laut auf der Gitarre;Eine Flöte wird von einem Mann gespielt;2.4;NEUTRAL
+1811;Ein Mann spielt laut auf der Gitarre;Eine Flöte wird nicht von einem Mann gespielt;2.4;NEUTRAL
+1839;Das kleine Mädchen kämmt ihr Haar sorgfältig zu einem Pferdeschwanz.;Das kleine Mädchen kämmt ihr Haar zu einem Pferdeschwanz.;4.6;ENTAILMENT
+1847;Ein Mann sitzt auf einem Stuhl;Das kleine Mädchen zerzaust ihr Haar;1.0;NEUTRAL
+1861;Das Mikrofon vor dem sprechenden Papagei wird stummgeschaltet;Der Papagei spricht in das Mikrofon;4.0;NEUTRAL
+1877;Die Kätzchen auf den Tabletts werden als Futter für eine Werbung gegessen;Das Futter auf den Tabletts wird von den Kätzchen gefressen;3.5;NEUTRAL
+1881;Das Futter auf den Tabletts wird von den Kätzchen gefressen;Ein paar Kätzchen fressen;4.2;ENTAILMENT
+1964;Eine Person spielt die Gitarre und singt;Eine Person spielt eine Gitarre und singt;4.9;ENTAILMENT
+2001;Das Pferd wird von einem Mann geritten;Ein Mann reitet auf dem Pferd;5.0;ENTAILMENT
+2019;Ein Mann wirft gefährlich mit Messern nach einem Baum;Einige gefährliche Männer mit Messern schleudern ein Fahrrad gegen einen Baum;3.3;NEUTRAL
+2058;Eine Frau schneidet gerade Fleisch auf;Fleisch wird von einer Frau in Stücke geschnitten;4.8;ENTAILMENT
+2089;Der Mann verweigert ein Interview;Der Mann gibt ein Interview;3.2;CONTRADICTION
+2096;Der Mann gibt ein Interview;Das weiße Auto eines Mannes wird weggefahren;1.1;NEUTRAL
+2130;Ein kleiner Junge schimpft mit einem Hund;Ein kleiner Junge spielt mit einem Hund;3.4;NEUTRAL
+2157;Das Bild einer aufgestellten Kamera wird von einem Mann am Strand bei Sonnenuntergang aufgenommen;Ein Mann macht Fotos von einem See;3.0;NEUTRAL
+2166;Eine Frau näht mit einer Maschine;Eine Frau benutzt eine Nähmaschine;4.8;ENTAILMENT
+2221;Jemand fällt von einem Pferd;Der Mann wird nicht vom Pferd gestoßen;3.9;NEUTRAL
+2229;Eine Frau klopft mit den Fingern auf einen Tisch;Eine Frau stützt ihre Finger auf einen Tisch;4.1;NEUTRAL
+2231;Eine Frau tippt mit den Fingern;Eine Frau stützt ihre Finger auf einen Tisch;3.1;NEUTRAL
+2284;Die Katze spielt leidenschaftlich mit einer Wassermelone;Die Katze spielt mit einer Wassermelone;4.7;ENTAILMENT
+2286;Die Katze spielt leidenschaftlich mit einer Wassermelone;Eine Katze spielt mit einer Wassermelone;4.5;ENTAILMENT
+2362;Eine Person verbrennt einige Kameras mit einem Schweißbrenner;Die große Person zündet die Kameras an;3.8;NEUTRAL
+2364;Einige Kameras werden von einer Person mit einem Schweißbrenner verbrannt;Die Person zündet die Kameras an;4.2;ENTAILMENT
+2366;Eine Person bläst vor einigen Kameras auf eine brennende Fackel;Die Person zündet die Kameras an;3.3;NEUTRAL
+2385;Eine Person schneidet eine Zwiebel in Stücke;Eine Person schneidet eine Karotte in Stücke;3.4;NEUTRAL
+2392;Der Mann schneidet die Kartoffel nicht;Der Mann schneidet eine Kartoffel;2.7;CONTRADICTION
+2402;Jemand schneidet eine Tomate;Die Frau hält eine ganze Tomate in der Hand;3.5;NEUTRAL
+2404;Die Dame schneidet eine Tomate;Keiner schneidet eine Tomate;3.0;CONTRADICTION
+2405;Die Dame schneidet eine Tomate;Jemand schneidet eine Tomate;4.7;ENTAILMENT
+2410;Ein Mann bereitet ein Gericht zu;Eine Zwiebel wird von der Frau mit einem Messer geschnitten;1.3;NEUTRAL
+2430;Ein Mann rennt die Straße entlang;Ein Mann rennt;4.4;ENTAILMENT
+2476;Einige Leute singen;Eine Gruppe von Menschen singt;4.7;ENTAILMENT
+2485;Der Mann spielt auf einer Gitarre;Ein Mann spielt auf einer Trompete;2.2;NEUTRAL
+2525;Ein paar Leute treiben auf einem Floß;Menschen fahren und paddeln auf einem Floß;3.8;NEUTRAL
+2527;Menschen fahren und paddeln auf einem Floß;Vier Personen treiben auf einem Floß;4.2;NEUTRAL
+2535;Es gibt keine Katze, die Maiskolben isst;Eine Katze frisst etwas Mais;2.5;NEUTRAL
+2544;Die Person schneidet ein Gemüse;Niemand schneidet eine Tomate;3.1;NEUTRAL
+2557;Jemand klimpert auf der Gitarre;Jemand spielt auf der Gitarre;4.5;ENTAILMENT
+2566;Drei Frauen tanzen;Ein paar Frauen tanzen;4.6;ENTAILMENT
+2604;Ein Stierhund wird von einem Affen gebürstet;Der Affe bürstet einen Stierhund;4.8;ENTAILMENT
+2606;Der Affe bürstet einen Stierhund;Ein Stierhund bürstet den Affen;3.9;NEUTRAL
+2662;Die Dame schlägt kein Ei für den Mixer auf;Die Dame schneidet das Fleisch auf;2.335;NEUTRAL
+2668;Ein paar Frettchen klettern aus dem Käfig;Frettchen klettern von einem Regal herunter;3.1;NEUTRAL
+2678;Ein Mann steigt eilig in ein Auto in einer Garage ein.;Ein Mann steigt in ein Auto ein;4.1;ENTAILMENT
+2679;Ein Mann parkt ein Auto in einer Garage;Ein Mann steigt in ein Auto ein;3.4;NEUTRAL
+2687;Die Person schneidet eine Knoblauchzehe in Stücke;Die Person schneidet eine Knoblauchzehe nicht in Stücke;3.0;CONTRADICTION
+2704;Nudeln werden von einer Frau in Wasser gekocht;Eine Frau kocht Nudeln in Wasser;5.0;ENTAILMENT
+2712;Es gibt keinen Karateka, der auf einen anderen Mann mit Boxhandschuhen eintritt.;Ein Karatekas schlägt auf einen anderen Mann ein, der Boxhandschuhe trägt.;4.3;CONTRADICTION
+2720;Der Mann macht Kickboxen mit einem Trainer;Es gibt keinen Karateka, der auf einen anderen Mann mit Boxhandschuhen eintritt.;3.0;NEUTRAL
+2721;Der Mann macht Kickboxen mit einem Trainer;Ein Karatekas schlägt auf einen anderen Mann ein, der Boxhandschuhe trägt.;4.0;NEUTRAL
+2722;Eine Frau, die sitzt, singt ein Lied und spielt Gitarre;Eine sitzende Frau singt ein Lied und spielt auf der Gitarre;5.0;ENTAILMENT
+2726;Eine Frau auf einem Felsen liegt auf einer Decke und liest ein Buch;Eine Frau schaukelt über einer Decke, die auf jemandem liegt und ein Buch liest;2.7;NEUTRAL
+2738;Die Frau spielt nicht auf einer E-Gitarre;Ein Mann spielt auf einer akustischen Gitarre;3.0;NEUTRAL
+2766;Ein Mann und eine Frau unterhalten sich;Ein Mann und eine Frau essen fröhlich;2.6;NEUTRAL
+2772;Eine Person gießt Öl zum Kochen in einen Topf;Eine Person gießt Speiseöl in einen Topf;5.0;ENTAILMENT
+2791;Ein kleines Meerschweinchen knabbert und frisst ein Stück Karotte auf dem Boden.;Ein kleines Meerschweinchen knabbert und frisst ein Stück Karotte auf dem Boden;4.8;ENTAILMENT
+2795;Ein kleines Meerschweinchen knabbert und frisst ein Stück Karotte auf dem Boden;Ein Meerschweinchen verschlingt eine Karotte;4.5;ENTAILMENT
+2812;Ein Flugzeug landet;Ein animiertes Flugzeug hebt ab;2.7;NEUTRAL
+2822;Eine Frau nimmt eine Mischung aus einer Schüssel;Eine Frau bereitet ein Ei in einer Bratpfanne zu;2.7;NEUTRAL
+2829;Die Dame trägt mit einem Stift Lidschatten auf;Die Frau trägt mit einem Stift Lidschatten auf;5.0;ENTAILMENT
+2842;Ein kleines Mädchen spielt auf der Bühne auf einem Flügel;Ein Mädchen übt Klavier;3.8;NEUTRAL
+2886;Eine Frau spielt auf einer Flöte;Die Frau spielt nicht auf der Flöte;3.2;CONTRADICTION
+2898;Der Mann hebt Hanteln;Der Mann hebt Gewichte;4.3;ENTAILMENT
+2911;Eine Frau trägt Make-up auf;Es gibt keine Frau, die sich schminkt;4.0;CONTRADICTION
+2932;Die Frau schneidet eine Karotte;Eine Zwiebel wird von einer Frau geschnitten;2.4;NEUTRAL
+2936;Zwei Männer kämpfen in einem Viehstall;Zwei Männer stehen vor einem Viehstall;3.0;NEUTRAL
+2965;Einem großen grünen Ball fehlt eine Kartoffel;Ein großer grüner Ball stößt eine Kartoffel;3.3;NEUTRAL
+2967;Ein großer grüner Ball trifft auf eine Kartoffel;Ein großer grüner Ball trifft auf eine Kartoffel;4.8;ENTAILMENT
+2968;Einem großen grünen Ball fehlt eine Kartoffel;Ein großer grüner Ball trifft auf eine Kartoffel;3.5;NEUTRAL
+2972;Ein großer grüner Ball trifft auf eine Kartoffel;Einem großen grünen Ball fehlt eine Kartoffel;3.4;CONTRADICTION
+2996;Ein Mann spielt auf einer Gitarre;Ein Mann legt eine Gitarre nieder;3.3;NEUTRAL
+3002;Eine Frau spielt auf einer E-Gitarre;Ein Mann legt eine Gitarre nieder;2.3;NEUTRAL
+3036;Der Welpe spielt nicht mit einem Plastikbehälter;Der Welpe spielt mit einem Plastikbehälter;3.2;CONTRADICTION
+3061;Eine Frau fährt ein Auto und spricht mit einem Mann, der neben ihr sitzt;Es gibt keine Frau, die ein Auto fährt und mit dem Mann neben ihr spricht;4.7;CONTRADICTION
+3107;Ein Mann legt den Boden eines sitzenden Gitarristen;Ein Mann sitzt in einem Zimmer auf dem Boden und klimpert auf einer Gitarre;2.3;NEUTRAL
+3122;Eine Frau benutzt einen Stift für die Augen und trägt Eyeliner auf ihr Augenlid auf;Eine Frau trägt Kosmetika auf ihr Augenlid auf;4.6;ENTAILMENT
+3123;Es gibt keine Frau, die einen Augenstift benutzt und Eyeliner auf ihr Augenlid aufträgt;Eine Frau trägt Kosmetika auf ihr Augenlid auf;3.1;CONTRADICTION
+3143;Ein Affe tritt gegen den Handschuh eines Menschen;Der Affe übt sich im Kampfsport;3.6;NEUTRAL
+3174;Ein Kind wirft ein Instrument weg;Ein kleiner Junge spielt ein Blasinstrument;2.8;NEUTRAL
+3181;Ein Mann wandert durch den Wald;Der Mann ist nicht im Wald unterwegs;3.8;NEUTRAL
+3222;Es gibt keinen Jungen, der über eine Brücke geht;Ein Junge geht über eine Brücke;3.7;CONTRADICTION
+3250;Eine Frau legt zwei Eier in einen Topf mit Wasser;Eine Frau gibt zwei Eier in einen Topf mit Wasser;4.9;ENTAILMENT
+3258;Ein Mann spielt auf der Gitarre;Niemand spielt auf der Gitarre;3.7;CONTRADICTION
+3275;Ein Kind rennt in die Wellen des Ozeans hinein und wieder heraus;Ein Kind rennt in die Wellen des Ozeans hinein und wieder heraus;4.9;ENTAILMENT
+3291;Eine Frau räumt Karotten ein;Eine Frau bestreicht ein Schweinekotelett;1.7;NEUTRAL
+3292;Eine Frau reibt Karotten;Ein Koch beschichtet ein Schweinekotelett;2.1;NEUTRAL
+3322;Die Frau schneidet etwas Brot und gebratenes Schweinefleisch;Eine Frau kocht ein paniertes Schweinekotelett;3.2;NEUTRAL
+3338;Es gibt keinen Mann, der auf einem Dach steht und Geige spielt;Ein Mann steht auf einem Dach und spielt auf einer Geige;3.4;CONTRADICTION
+3364;Eine Frau putzt eine Garnele;Die Frau putzt eine Garnele;4.9;ENTAILMENT
+3373;Eine Frau fährt auf einem Wasserscooter;Eine Frau fährt mit einem Motorroller zum Wasser;4.1;ENTAILMENT
+3384;Ein Pandabär frisst etwas Bambus;Bambus wird von einem Pandabären gefressen;4.8;ENTAILMENT
+3398;Jemand schlägt ein Ei auf;Die Frau verrührt keine Eier in einer Schüssel;3.2;NEUTRAL
+3420;Eine Frau entgrätet einen Fisch;Ein großer Fisch fängt einen Mann;1.9;NEUTRAL
+3433;Ein Tablett wird von einer Person gebuttert;Eine Person bestreicht ein Tablett mit Butter;5.0;ENTAILMENT
+3459;Der Mann hackt einen Baumstamm mit einer Axt;Ein Mann hackt einen Baumstamm mit einer Axt;4.4;NEUTRAL
+3485;Die Katze schaut aus dem Fenster auf den Tisch auf der Sitzstange;Die Katze, die auf dem Tisch sitzt, schaut aus dem Fenster;4.1;NEUTRAL
+3501;Ein Hund leckt ein Baby;Der Hund leckt das Baby;4.8;ENTAILMENT
+3505;Eine Frau räumt den Knoblauch weg;Eine Frau zerkleinert Knoblauch;3.6;NEUTRAL
+3518;Der Mann tanzt nicht;Eine Frau tanzt;3.3;NEUTRAL
+3536;Jemand kocht Okra in einer Pfanne;Okra wird in einer Pfanne gekocht;4.9;ENTAILMENT
+3586;Ein Mann spielt die Trommel;Ein Mann übt das Trommeln;4.6;ENTAILMENT
+3598;Ein Mann macht Bodenübungen;Ein Mann macht Übungen;4.3;ENTAILMENT
+3625;Eine Frau legt Fleisch in eine Pfanne;Es gibt keine Frau, die Fleisch in eine Pfanne legt;3.4;CONTRADICTION
+3626;Jemand wirft das Fleisch in eine Pfanne;Das Fleisch wird in eine Pfanne geworfen;4.7;ENTAILMENT
+3657;Ein Junge füllt einen Krug mit Wasser;Ein Krug wird von einem Jungen mit Wasser gefüllt;5.0;ENTAILMENT
+3661;Eine Frau füllt das Wasser aus einem Wasserhahn in einen Becher;Ein Junge füllt einen Krug mit Wasser;2.7;NEUTRAL
+3670;Es regnet auf einen gehenden Mann;Ein Mann geht im Regen spazieren;4.9;ENTAILMENT
+3680;Die Rennfahrer fahren eine Strecke entlang;Es gibt keine Rennfahrer, die auf einer Strecke fahren;3.7;CONTRADICTION
+3711;Ein Spielzeugeisenbahn stößt gegen ein Spielzeugauto;Einem Spielzeugeisenbahnzug fehlt ein Spielzeugauto;3.8;CONTRADICTION
+3721;Die Person schneidet Zwiebeln;Die Zwiebeln werden von der Person geschnitten;4.9;ENTAILMENT
+3733;Schwimmer rennen in einem See um die Wette;Einige Rennfahrer schwimmen in einem See;4.3;ENTAILMENT
+3747;Ein talentierter Mann spielt auf der Gitarre;Eine Frau spielt auf einer Gitarre;3.2;NEUTRAL
+3790;Eine Person schrubbt eine Zucchini;Die Person schrubbt eine Zucchini;5.0;ENTAILMENT
+3812;Eine Frau schneidet eine grüne Paprika in Scheiben.;Eine Frau schneidet eine grüne Paprika;4.8;ENTAILMENT
+3855;Ein Mann hält mitten auf einer Straße an;Ein Mann geht eine Straße entlang;3.2;NEUTRAL
+3861;Ein Mann aus der Wildnis ist auf einem Wanderweg;Ein Mann geht eine Straße entlang;3.4;NEUTRAL
+3862;Der Mann geht auf einem Pfad durch die Wildnis;Ein Mann geht faul eine Straße entlang;3.285;NEUTRAL
+3880;Ein Mann tanzt an der Decke eines Raumes;Der Mann tanzt kopfüber an der Decke;4.4;ENTAILMENT
+3897;Es gibt keinen Menschen, der;Ein Mann übt;3.4;CONTRADICTION
+3909;Der Mann singt und spielt auf der Gitarre;Die Gitarre wird von einem Mann gespielt;4.3;ENTAILMENT
+3910;Ein Mann packt die Gitarre ein;Der Mann singt und spielt auf der Gitarre;3.4;NEUTRAL
+3922;Jungen tanzen nicht vor manchen Leuten;Jungen tanzen vor einigen Leuten;3.8;CONTRADICTION
+3941;Ein Junge sieht sich einen Kalender an;Es gibt keinen Jungen, der einen Kalender überprüft;3.9;CONTRADICTION
+3982;Eine Frau schält eine Kartoffel;Eine Frau kühlt eine Kartoffel;3.7;NEUTRAL
+3996;Es gibt keinen Mann, der singt und eine Gitarre spielt;Ein Junge spielt auf einem Klavier;2.2;NEUTRAL
+4001;Ein Mann klettert leichtsinnig an einem Seil;Ein Mann klettert an einem Seil;4.3;ENTAILMENT
+4006;Ein Mann klettert an einem Seil;Der Mann klettert an einem Seil hoch;4.8;ENTAILMENT
+4011;Ein Mann klettert an einem Seil;Ein Mann klettert an einem Seil hoch;4.8;ENTAILMENT
+4015;Die Dame hebt das Känguru auf;Die Frau hebt das Känguru auf;4.9;ENTAILMENT
+4031;Ein Mann zerschlägt Fliesen mit seinen Händen;Es gibt keinen Mann, der mit der Hand Bretter zerschlägt;2.9;NEUTRAL
+4054;Ein Hund rennt atemlos über die Straße;Ein Hund rennt auf der Straße;4.5;ENTAILMENT
+4060;Ein Mann läuft auf der Straße;Ein Hund rennt atemlos über die Straße;2.6;NEUTRAL
+4066;Der Mann schleudert Messer gegen einen Baum;Der Mann wirft mit Messern nach einem Baum;4.6;ENTAILMENT
+4067;Der Mann entfernt Messer von einem Baum;Der Mann wirft mit Messern nach einem Baum;3.3;NEUTRAL
+4079;Ein Mann reitet auf einem Pferd;Ein Mann reitet auf einem Pferd;4.7;ENTAILMENT
+4086;Es gibt keinen Mann, der ein Bild malt;Ein Mann malt ein Bild;3.9;CONTRADICTION
+4114;Es gibt keinen Mann, der Essen isst;Ein Mann isst eine Pizza;3.2;CONTRADICTION
+4135;Ein Hund hüpft auf einem Trampolin;Ein Hund springt auf einem Trampolin;4.7;ENTAILMENT
+4140;Mehrere Jungen springen auf einem Trampolin;Ein Mann macht Rückwärtssaltos auf einem Trampolin;3.4;NEUTRAL
+4155;Ein Mann spielt auf einer Holzflöte;Es gibt keinen Mann, der eine Holzflöte spielt;3.7;CONTRADICTION
+4157;Es gibt keinen Mann, der Klavier spielt;Ein Mann spielt auf dem Klavier;4.0;CONTRADICTION
+4164;Der Mann radiert die Zeichnung an der Tafel aus;Die Frau radiert die Zeichnung an der Tafel aus;3.7;NEUTRAL
+4187;Es gibt keinen Hund, der mit einem Spielzeug spielt;Ein Hund isst eine Puppe;3.8;CONTRADICTION
+4191;Ein Hund isst eine Puppe;Ein Hund spielt mit einem Spielzeug;3.6;NEUTRAL
+4196;Ein Mann tanzt;Ein Mann betet inbrünstig;1.7;NEUTRAL
+4288;Die Frau schneidet gekochten Oktopus in Scheiben;Eine Frau zerschneidet einen Tintenfisch;4.4;ENTAILMENT
+4321;Ein Mann zeichnet;Es gibt keinen Mann, der zeichnet;3.8;CONTRADICTION
+4330;Der Mann zeichnet;Es gibt keinen Mann, der zeichnet;3.4;CONTRADICTION
+4342;Ein Mann isst eine Banane;Ein Mann isst eine Frucht;4.6;ENTAILMENT
+4360;Ein Mann schneidet einen Zettel;Ein Mann schneidet ein Papier;4.4;ENTAILMENT
+4376;Ein Mann spielt auf einer Gitarre;Es spielt niemand Klavier;2.7;NEUTRAL
+4411;Zwei Männer in einem Rennen lassen die Reifen eines Traktors platzen;Zwei Männer wetteifern in einem Reifenwettlauf;3.7;NEUTRAL
+4429;Die Männer reden;Einige alte Frauen reden;3.0;NEUTRAL
+4477;Ein Mann schlägt auf einen Fußball;Ein Mann mischt den Inhalt einer Schüssel;1.2;NEUTRAL
+4505;Die Ärzte heilen einen Mann;Der Arzt hilft dem Patienten;4.2;ENTAILMENT
+4520;Es gibt keinen Mann, der eine Gitarre spielt;Ein Mann spielt auf einer Gitarre;3.6;CONTRADICTION
+4614;Es gibt keinen Mann, der ein Auto fährt;Ein Mann fährt ein Auto;4.4;CONTRADICTION
+4638;Ein Keyboard wird von einem Mann gespielt;Ein Mann spielt auf einer Harfe;2.4;NEUTRAL
+4650;Ein Mann schneidet ein dickes Seil mit einem Schwert durch;Kein Mensch schneidet ein Seil mit einem Schwert durch;3.6;CONTRADICTION
+4661;Eine Frau schneidet eine Kartoffel;Eine Frau schneidet eine Kartoffel;4.8;ENTAILMENT
+4707;Eine Gruppe von Männern spielt Fußball am Strand;Eine Gruppe von Jungen spielt Fußball am Strand;4.4;NEUTRAL
+4734;Ein Mann montiert einen Schalldämpfer an eine Pistole;Ein Mann bringt einen Schalldämpfer an einem Gewehr an;4.8;ENTAILMENT
+4755;Das Mädchen sitzt auf der Couch und häkelt;Es gibt kein Mädchen, das am Strand Geige spielt;1.4;NEUTRAL
+4767;Ein Mann kocht eine Schlange;Es gibt keinen Mann, der eine Schlange kocht;3.7;CONTRADICTION
+4776;Es gibt keinen Jungen, der Gitarre spielt;Ein Junge spielt Gitarre;3.8;CONTRADICTION
+4803;Im Zoo gibt es keinen Affen, der einen Hund ärgert;Ein Affe ärgert einen Hund im Zoo;2.935;CONTRADICTION
+4814;Ein Affe zieht einen Hund am Schwanz;Ein Affe ärgert einen Hund im Zoo;4.4;NEUTRAL
+4816;Es gibt keine Person, die etwas Ingwer schneidet;Eine Person schneidet etwas Ingwer;3.8;CONTRADICTION
+4823;Eine Person schneidet etwas Ingwer;Eine Person schneidet eine Zwiebel;3.0;NEUTRAL
+4831;Ein Mann schneidet eine Kartoffel in Stücke;Ein Mann schneidet keine Kartoffel;4.0;CONTRADICTION
+4843;Ein Mann öffnet eine Schachtel mit einem Messer;Es gibt keinen Mann, der eine Schachtel mit einem Messer öffnet;3.8;CONTRADICTION
+4851;Einige Instrumente werden von einer Band gespielt;Eine Band spielt einige Instrumente;5.0;ENTAILMENT
+4852;Eine Band spielt nicht einige Instrumente;Eine Band spielt einige Instrumente;3.8;CONTRADICTION
+4866;Eine Person tanzt;Eine Frau trainiert;3.0;NEUTRAL
+4891;Ein Mann macht Klimmzüge;Der Mann macht Übungen in einem Fitnessstudio;4.0;NEUTRAL
+4916;Ein Mann singt und spielt auf einer Gitarre;Ein Mann singt und spielt ein Musikinstrument;4.5;ENTAILMENT
+4934;Rekruten sprechen mit einem Offizier;Ein Offizier spricht mit den Rekruten;3.7;NEUTRAL
+4963;Knoblauch wird von einer Frau gehackt;Eine Frau schneidet Knoblauch;4.7;ENTAILMENT
+4966;Eine Frau schneidet einen Fisch auf;Es gibt keine Frau, die einen Fisch aufschneidet;2.7;CONTRADICTION
+4983;Eine Frau reitet auf einem Pferd;Ein Pferd wird von einer Frau geritten;5.0;ENTAILMENT
+5003;Eine große Katze öffnet eine Plastikschublade mit ihren Pfoten und springt hinein;Eine Katze öffnet eine Schublade und springt hinein;4.4;ENTAILMENT
+5030;Der Mann spricht am Telefon;Der Mann spricht am Telefon;4.9;ENTAILMENT
+5047;Ein Mann schneidet Zwiebeln;Eine Frau schneidet eine Zwiebel;3.5;NEUTRAL
+5051;Ein Mann öffnet eine Tür;Es gibt keinen Mann, der eine Tür öffnet;3.6;CONTRADICTION
+5052;Eine Tür wird von einem Mann geöffnet;Ein Mann schneidet eine Zwiebel;1.2;NEUTRAL
+5082;Eine Frau spielt auf der Geige;Es gibt keinen Mann, der Klavier spielt;2.1;NEUTRAL
+5110;Ein Koch bereitet ein Essen zu;Ein Koch bereitet eine Mahlzeit zu;4.8;ENTAILMENT
+5113;Zwei Sumo-Ringer kämpfen;Zwei Sumo-Ringer kämpfen;4.0;ENTAILMENT
+5119;Zwei Sumo-Ringer kämpfen;Ein Mann fährt auf einem Wasserspielzeug im Wasser;1.0;NEUTRAL
+5148;Ein Mann schmiert ein Stück Brot mit Butter;Eine Frau schmiert ein Stück Brot mit Butter;3.5;NEUTRAL
+5203;Die Frau gibt Nudeln in eine Schüssel;Eine Frau gibt Nudeln in eine Schüssel;5.0;ENTAILMENT
+5206;Eine Frau zieht einen klebrigen Schleim aus einer Schüssel;Die Frau gibt keine Nudeln in ein Gericht;2.2;NEUTRAL
+5310;Es gibt kein Mädchen, das Flöte spielt;Ein Mädchen spielt auf einer Flöte;3.6;CONTRADICTION
+5349;Eine große Flöte wird von einem Mann gespielt;Ein Mann spielt auf einer Flöte;4.3;ENTAILMENT
+5352;Ein Mann spielt eine große Flöte;Es gibt keinen Mann, der eine Flöte spielt;4.1;CONTRADICTION
+5374;Ein Oktopus wird von einer Frau aufgeschnitten;Eine Frau schneidet einen Oktopus auf;5.0;ENTAILMENT
+5454;Ein Mann spielt auf einer Flöte;Ein Mann spielt nicht auf einer Flöte;4.2;CONTRADICTION
+5461;Eine Frau spielt auf der Flöte;Ein Mann spielt auf einer Flöte;3.7;NEUTRAL
+5498;Eine Frau schneidet eine Zitrone;Eine Frau schneidet Obst;4.2;ENTAILMENT
+5540;Eine Gruppe von Menschen tanzt in einer Show;Eine Gruppe von Menschen marschiert;2.3;NEUTRAL
+5588;Ein Muffin wird von einem Mädchen gegessen;Ein Mädchen isst ein Törtchen;5.0;ENTAILMENT
+5657;Eine Person isst in einem Restaurant;Eine Person macht ein Bett;1.2;NEUTRAL
+5698;Der Koch bestreut die Pizza mit Käse;Der Mann bestreut die Pizza mit Käse;4.0;NEUTRAL
+5706;Ein Mann lädt eine Schrotflinte nach;Ein Mann schießt mit einer Schrotflinte;3.7;NEUTRAL
+5745;Ein Tigerjunges spielt mit einem Ball;Ein Baby spielt mit einer Puppe;1.4;NEUTRAL
+5747;Ein Baby spielt mit einem Spielzeug;Ein Babytiger spielt mit einem Ball;3.2;NEUTRAL
+5799;Eine Person schält eine Kartoffel;Eine Kartoffel wird von einer Person geschält;5.0;ENTAILMENT
+5806;Ein Mann rudert ein Kanu;Ein Mann rudert ein Boot;4.2;ENTAILMENT
+5904;Ein Mann und eine Frau fahren in einem Jeep die Straße entlang;Ein Mann und eine Frau fahren in einem offenen Fahrzeug die Straße entlang;4.0;NEUTRAL
+5909;Eine Frau schüttet Zutaten in eine Schüssel;Der Chefkoch würzt das Öl;3.1;NEUTRAL
+5914;Ein Pferd wird von einer Person geritten;Eine Person reitet auf einem Pferd;5.0;ENTAILMENT
+5920;Ein Pferd wird von einer Person geritten;Eine Frau schneidet Kartoffeln;1.0;NEUTRAL
+5924;Der Mann macht keine Übungen;Der Mann macht Übungen;3.8;CONTRADICTION
+5930;Der Mann macht keine Übungen;Zwei Männer kämpfen;2.3;NEUTRAL
+5938;Gemüse wird von einem Mann in einen Topf gesteckt;Jemand schüttet Zutaten in einen Topf;4.0;ENTAILMENT
+5955;Ein Hund lässt einen Ball im Dreck liegen;Ein Hund jagt einen Ball durch den Dreck;3.7;NEUTRAL
+6001;Es gibt keinen braunen Hund, der im Wasser steht;Ein Hund mit goldenem Fell ist im Wasser;2.8;NEUTRAL
+6005;Ein junges Mädchen in einem blauen Hemd geht auf dem Bürgersteig und hält ein rosa Schild hoch;Ein junges Mädchen mit einem rosa Schild hält ein blaues Hemd hoch und geht auf dem Bürgersteig.;3.4;NEUTRAL
+6042;Das kleine Kind läuft durch das Wasser und wird von einer anderen Person geführt;Ein kleines Kind plantscht im Wasser;3.4;NEUTRAL
+6047;Ein Mann und eine Frau befinden sich in einem beige gestrichenen Raum, tragen dunkle Hemden und im Hintergrund ist ein Monitor zu sehen.;Ein Mann und eine Frau befinden sich in einem beigen Raum, tragen dunkle Hemden und im Hintergrund ist ein Monitor zu sehen.;5.0;ENTAILMENT
+6078;Eine Person, die Jeans trägt, sitzt glücklich auf einem Pferdesattel;Eine Frau in Jeans sitzt auf dem Sattel eines Pferdes;4.2;NEUTRAL
+6119;Ein braun-weißer Hund hält einen Baseball in seinem Maul;Ein schwarzer und weißer Hund lässt einen Baseball aus seinem Maul fallen;3.3;NEUTRAL
+6131;Ein kleiner Junge in einem roten Badeanzug springt in ein blaues Kinderbecken;Ein Junge in roten Shorts springt in ein Planschbecken;4.0;NEUTRAL
+6146;Zwei Menschen stehen im Meer und beobachten den Sonnenuntergang;Niemand steht im Meer und beobachtet den Sonnenuntergang;2.5;CONTRADICTION
+6153;Ein Rennfahrer steht auf und zeigt mit der Hand in den Himmel;Ein Rennfahrer setzt sich hin und ist unbeweglich;3.0;NEUTRAL
+6158;Ein Rennfahrer steht auf und deutet mit der Hand in den Himmel;Die Person mit der blauen Jacke trägt einen bunten Helm;1.6;NEUTRAL
+6203;Ein Radfahrer hält ein Fahrrad über seinen Kopf in einer Gruppe von Menschen;Ein Radfahrer wird über den Köpfen einer Gruppe von Menschen mit dem Fahrrad gehalten;3.4;NEUTRAL
+6213;Ein Mann sitzt auf einem Boot vor dem Sonnenuntergang, in der Nähe einer Flagge;Ein Mann steht auf einem Boot vor dem Sonnenuntergang in der Nähe einer Flagge;3.8;NEUTRAL
+6219;Ein Mann steht auf einem Boot vor dem Sonnenuntergang in der Nähe einer Flagge;Ein Mann sitzt auf einem Boot vor dem Sonnenuntergang;4.1;ENTAILMENT
+6228;Menschen bei einem Dragster-Rennen rennen vor den Flammen weg, die aus den Autos schlagen;Die Zuschauer beobachten zwei Rennwagen, die die Startlinie verlassen.;2.6;NEUTRAL
+6231;Zwei Hunde spielen zusammen auf der Wiese;Zwei Hunde ruhen sich gemeinsam im Gras aus;3.3;NEUTRAL
+6280;Ein Hund, der schwarz ist, läuft im Gras;Ein schwarzer Hund rennt im Gras;5.0;ENTAILMENT
+6287;Ein schwarzer Hund rennt im Gras und seine Zunge hängt heraus;Ein schwarzer Hund rennt im Gras;4.9;ENTAILMENT
+6315;Ein gelber Hund läuft auf weißem Schnee an einem sehr sonnigen Tag;Ein gelber Hund läuft auf weißem Schnee an einem sonnigen Tag;4.6;ENTAILMENT
+6330;Ein Mädchen trägt Jeans und ein rosa T-Shirt und läuft;Ein kleiner Junge in einem rosa Hemd läuft unter einem Baum in der Wüste;2.8;NEUTRAL
+6344;Ein weißer Hund trägt ein weihnachtliches Rentier-Stirnband und spielt mit einem braunen Hund im Gras;Das weiße Rentier mit den Eselsohren steht in der Nähe eines braunen Rentieres.;2.2;NEUTRAL
+6358;Die Frau im roten Kostüm lehnt an einer Backsteinmauer und spielt ein Instrument;Die Frau im roten Kostüm lehnt nicht an einer Backsteinmauer und spielt kein Instrument;3.2;CONTRADICTION
+6394;Ein Wasserfall fließt in ein seichtes Becken;Die Menschen gehen auf der Straße neben einem schönen Wasserfall;2.3;NEUTRAL
+6396;Ein Hund vertreibt eine Herde weißer Schafe auf einem staubigen Bauernhof;Ein Hund hütet ein Rudel weißer Schafe auf einem staubigen Bauernhof;3.8;NEUTRAL
+6450;Ein kleiner Junge trägt ein gelbes Tank-Top und lacht;Ein lachender Junge trägt einen gelben Tank und ein Top;3.5;NEUTRAL
+6482;Die Person steht nicht auf weißem Eis;Eine Person steht in einem riesigen Feld aus Gletschereis;3.1;NEUTRAL
+6544;Der Eishockeytorwart trägt ein gelbes Trikot und verteidigt das Tor.;Es gibt keinen Eishockeyspieler im gelben Trikot, der das Tor bewacht.;4.0;CONTRADICTION
+6568;Eine Frau trägt einen blauen Helm und fährt mit dem Fahrrad auf einem Parkplatz;Eine Frau parkt ein blaues Fahrrad und trägt eine Menge Reithelme;3.1;NEUTRAL
+6590;Ein junges Mädchen steht auf einem Bein;Eine junge Frau tanzt;3.3;NEUTRAL
+6592;Ein junges Mädchen steht auf einem Bein;Ein junges Mädchen tanzt;2.7;NEUTRAL
+6598;Eine Biene klammert sich an eine gelbe Blume;Es gibt keine kleine Biene, die auf einem Strauß gelber Blumen landet;3.9;NEUTRAL
+6625;Es gibt keinen weißen Hund mit beigen Flecken, der durch ein Feld rennt;Ein hellbrauner Hund rennt durch das Gebüsch;2.7;NEUTRAL
+6634;Eine Hürde wird von einem Pferd übersprungen, das einen Reiter auf seinem Rücken hat.;Ein Pferd und sein Reiter springen über ein Hindernis;4.5;ENTAILMENT
+6649;Zwei Mädchen im Teenageralter tragen ausgefallene Kleider bei einer Veranstaltung;Zwei Mädchen im Teenageralter tragen ausgefallene Kleider bei einer Veranstaltung;4.8;ENTAILMENT
+6673;Ein Klassenzimmer voller Schüler schaut aufmerksam in die gleiche Richtung in einem Bambusbauwerk;Eine Gruppe von Schülern in Uniformen hört aufmerksam zu.;2.8;NEUTRAL
+6705;Ein kleines Kind klettert im Freien auf einer grasbewachsenen Fläche eine Treppe hinauf.;Ein kleines Kind klettert im Freien auf einer Wiese Stufen hinauf.;4.9;ENTAILMENT
+6709;Ein kleines Kind in einem rosa Pullover klettert eine Betontreppe hinauf;Ein kleines Kind klettert im Freien auf einer Wiese Stufen hinauf.;3.5;NEUTRAL
+6729;Ein Kind in Orange spielt draußen mit einem Schneeball;Ein Kind macht einen Schneeball;3.3;NEUTRAL
+6740;Die Menschen sitzen nicht auf einer Bank vor einem Restaurant;Drei Personen sitzen auf einer Bank unter Palmen;3.2;NEUTRAL
+6756;Ein großer brauner Hund und ein kleiner grauer Hund stehen auf einer felsigen Fläche;Ein großer brauner Hund und ein kleiner grauer Hund stehen auf einer felsigen Fläche;4.8;ENTAILMENT
+6764;Drei Jungen ruhen sich auf Felsen an einem Fluss aus;Drei Jungen laufen auf Felsen entlang eines Flusses;3.8;NEUTRAL
+6784;Es gibt keinen schwarz gekleideten Mann, der eine kunstvolle schwarze Maske trägt;Ein schwarz gekleideter Mann trägt eine kunstvolle schwarze Maske;3.4;CONTRADICTION
+6849;Zwei kleine Kinder spielen mit einem Spielzeugauto auf der Straße.;Ein Vater schiebt seine Tochter auf einem Gokart und ein anderes Mädchen schaut zu;2.2;NEUTRAL
+6866;Ein goldener Hund rennt durch ein Feld mit hohem Gras;Es gibt keinen braunen Hund, der durch hohes grünes Gras rennt;4.0;NEUTRAL
+6912;Die Frau, die die blau-weiße Uniform mit dem weiß-blauen Hut trägt, hält den Mund offen und steht in der Nähe von anderen, die auf die gleiche Weise gekleidet sind;Eine Frau trägt ein blaues Hemd, eine weiße Weste und eine weiße Mütze, sie spricht und marschiert;3.4;NEUTRAL
+6932;Der Snowboarder macht einen Salto über einen Schneehügel;Jemand springt auf einem Brett in die Luft;3.8;ENTAILMENT
+6955;Ein blonder Junge in Grün sitzt auf einer Schaukel;Es gibt kein kleines Mädchen mit blondem Haar, das lächelt und auf einer Schaukel sitzt;3.185;NEUTRAL
+6961;Ein weißer Mann setzt sich einen Hut auf und spielt Gitarre;Ein Mann mit einem weißen Hut spielt auf der Bühne Gitarre;3.0;NEUTRAL
+6971;Es gibt keinen Mann in einer roten Uniform, der bei einem Dirtbike-Rennen einen Sprung macht;Ein Mann in roter Uniform macht einen Sprung bei einem Dirtbike-Rennen;3.4;CONTRADICTION
+7002;Rugbyspieler greifen sich nicht gegenseitig an;Ein Fußballspieler wird von seinem Gegenspieler angegriffen;2.5;NEUTRAL
+7007;Ein weißer Hund steht auf gefallenen Blättern;Ein weißer Hund liegt auf gefallenen Blättern;3.8;NEUTRAL
+7018;Ein Kind in heller Kleidung steht mit nach außen gestreckten Armen;Ein Kind in heller Kleidung steht mit nach außen gestreckten Armen;5.0;ENTAILMENT
+7027;Der Junge und das Mädchen spielen nicht auf einem Spielplatz;Der Junge und das Mädchen spielen in der Turnhalle im Freien;3.0;NEUTRAL
+7043;Der Motocross-Fahrer steht nackt;Ein Motorradfahrer mit blauer Jacke, schwarzer Hose und weißem Helm fährt auf einer unbefestigten Straße und die Leute schauen zu;2.6;NEUTRAL
+7044;Der Fahrer auf dem blau-schwarzen Motocross-Motorrad hat keine Hose an.;Ein Motorradfahrer mit blauer Jacke, schwarzer Hose und weißem Helm fährt auf einer unbefestigten Straße und die Leute schauen zu;3.2;NEUTRAL
+7064;Ein Trick wird von einem Rollerblader auf einer Rampe vorgeführt;Ein Rollerblader vollführt einen Trick auf einer Rampe;5.0;ENTAILMENT
+7088;Eine Gruppe von Fußballspielern steht still auf dem Feld;Die Zuschauer sehen sich ein Fußballspiel an;2.6;NEUTRAL
+7093;Die Gruppe von Menschen steht zusammen und schaut in die Kamera.;Eine Gruppe von Menschen steht zusammen und schaut in die Kamera;5.0;ENTAILMENT
+7214;Ein brauner Hund rennt mit einem Spielzeug im Maul über den Hof;Es gibt keinen braunen Hund, der mit einem Spielzeug im Maul über den Hof rennt;3.8;CONTRADICTION
+7228;Es gibt keinen kleinen Jungen, der mit gebeugten Knien und ausgebreiteten Armen in die Luft springt;Eine Person mit einem grünen Hemd springt hoch über das Gras;2.6;NEUTRAL
+7311;Der Mann mit dem Strohhut raucht eine Zigarette.;Ein Mann trägt einen Strohhut und raucht eine Zigarette;4.8;ENTAILMENT
+7319;Ein Mann trägt ein blaues Hemd mit langen Ärmeln und Jeans und fährt auf einem Einrad eine Straße entlang.;Ein Mann trägt ein blau-kariertes Hemd und fährt auf der Straße Einrad.;4.3;NEUTRAL
+7356;Kleine Kinder klettern auf eine Statue in einem Park;Zwei Kinder spielen auf einer Statue;4.1;NEUTRAL
+7363;Ein Turm wird von einer blonden Dame begutachtet;Eine Frau betrachtet die Aussicht auf eine Stadt;3.3;NEUTRAL
+7374;Ein Mann steht auf dem Gipfel eines Felsens mit Wolken dahinter;Jemand steht auf einem Berggipfel;3.1;NEUTRAL
+7394;Ein Kind lächelt in die Kamera und schwimmt unter Wasser;Ein Kind schwimmt in einem Schwimmbecken unter Wasser;4.1;NEUTRAL
+7410;Ein amerikanischer Fußballspieler trägt das rot-weiße Trikot;Ein Fußballspieler trägt schwarze Armbinden;2.4;NEUTRAL
+7445;Das kleine Mädchen schaukelt und die Frau steht hinter ihr;Das kleine Mädchen schaukelt und die Frau steht hinter ihm.;4.9;ENTAILMENT
+7448;Ein kleines Kind zeigt Aufregung auf einer Schaukel im Park;Das kleine Mädchen schaukelt und die Frau steht hinter ihm.;3.6;NEUTRAL
+7464;Ein Surfer reitet auf der Welle;Ein Mann fällt von einem Surfbrett ins Wasser;3.5;NEUTRAL
+7466;Die Gruppe von Menschen sitzt in einem schummrigen Raum.;Die Gruppe von Menschen sitzt in einem schummrigen Raum.;4.9;ENTAILMENT
+7471;Ein Mann und zwei Frauen sitzen in einem dunklen Raum an einem Tisch mit Kerzen.;Die Gruppe von Menschen sitzt in einem schummrigen Raum.;3.6;ENTAILMENT
+7475;Ein Mann und zwei Frauen sitzen in einem abgedunkelten Raum an einem Tisch mit Kerzen.;Die Gruppe von schummrigen Menschen sitzt in einem Raum;2.5;NEUTRAL
+7477;Ein Mann mit einem weißen Hemd und einer Sonnenbrille und ein Mann mit einem schwarzen Hemd und einer Sonnenbrille sitzen an einem Tisch mit vier Bierflaschen;Ein Mann mit einem weißen Hemd und einer Sonnenbrille und ein Mann mit einem schwarzen Hemd und einer Sonnenbrille sitzen an einem Tisch mit vier Bierflaschen;4.9;ENTAILMENT
+7501;Die Frau trägt keine rote Jacke und hält dem Mann im weißen T-Shirt kein Glas vor die Nase.;Eine Person trägt eine rote Jacke und hält ein Bier;2.4;NEUTRAL
+7533;Ein Kind beobachtet jemanden, der im Freien spielt und den Rest seiner Familie mit Wasser bespritzt;Ein Junge hält einen Schlauch neben einem Mann und ein anderer Junge schaut zu;3.0;NEUTRAL
+7541;Es gibt keinen Fußballspieler in einem lila Trikot, der mit dem Ball einen Touchdown erzielt.;Ein Fußballspieler läuft an einem Beamten vorbei, der einen Fußball trägt;3.3;NEUTRAL
+7544;Ein Fußballspieler trägt einen Beamten an einem rollenden Fußball vorbei;Ein Fußballspieler in einem lila Trikot läuft mit dem Ball zu einem Touchdown;2.9;NEUTRAL
+7546;Ein junges Mädchen in einem blauen Trikot springt in die Luft;Ein junges Mädchen in einem blauen Trikot springt in die Luft;5.0;ENTAILMENT
+7548;Das junge Mädchen in Blau springt in die Luft;Ein junges Mädchen in Blau springt in die Luft;5.0;ENTAILMENT
+7582;Ein paar Männer spielen Rugby auf einem Feld voller Schlamm;Einige Männer spielen Rugby;4.5;ENTAILMENT
+7590;Eine Person betrachtet ein Motocross-Motorrad, das auf der Seite liegt, während eine andere Person vorbeirennt.;Der Fahrradfahrer sieht sich einen Unfall eines anderen Fahrradfahrers an;3.1;NEUTRAL
+7649;Es gibt keinen kleinen Jungen, der ein grünes Fußballtrikot trägt und über den Rasen rennt;Ein kleiner Junge trägt ein grünes Fußballtrikot und rennt auf dem Rasen;3.6;CONTRADICTION
+7667;Der Mann am Strand macht keinen Handstand auf dem nassen Sand am Rande des Wassers;Der Mann macht einen Handstand auf dem nassen Sand am Rande des Wassers am Strand;3.7;CONTRADICTION
+7677;Eine junge Mutter spielt mit ihrem Sohn im Park;Ein kleiner Junge spielt mit seiner Mutter im Park;4.5;ENTAILMENT
+7718;Ein Mann sprüht einen Super Soaker in das Maul eines Hundes;Es gibt keinen Mann, der einen Super Soaker in das Maul eines Hundes sprüht;3.8;CONTRADICTION
+7720;Es gibt keinen Mann, der einen Super Soaker in das Maul eines Hundes sprüht;Ein Mann spritzt einem weißen Hund mit einer Spritzpistole Wasser in den Mund;2.9;NEUTRAL
+7726;Ein Junge unter einem Regenschirm wird von seinem Vater gehalten, der einen blauen Mantel trägt.;Ein Junge, der einen blauen Mantel trägt, wird von seinem Vater unter einem Regenschirm gehalten.;4.3;NEUTRAL
+7734;Ein Junge unter einem Regenschirm wird von seinem Vater gehalten, der einen blauen Mantel trägt.;Ein Kind erlebt eine neue Welt;1.5;NEUTRAL
+7743;Ein Hund spielt allein an einem verschneiten Strand;Ein Hund läuft entlang einer Schneeverwehung;3.2;NEUTRAL
+7772;Ein Surfer reitet auf einer großen Welle über dunkelgrünes Wasser;Der Surfer reitet auf einer kleinen Welle;3.9;CONTRADICTION
+7795;Ein Tennisspieler macht einen Ausfallschritt nach links;Ein Tennisspieler springt nach links;4.4;ENTAILMENT
+7820;Zwei Hunde schauen sich etwas an, das im Wasser plätschert;Manche Hunde spielen nicht in einem Bach;3.7;NEUTRAL
+7877;Ein Mann mit einem blauen Cowboyhut reitet auf einem weißen Pferd;Ein Mann in Blau reitet auf einem Pferd über einen Feldweg;3.9;NEUTRAL
+7889;Zwei weiße Hunde spielen mit einem braunen Hund und einem Tennisball;Zwei weiße Hunde spielen mit einem braunen Hund und einem Ball;4.7;ENTAILMENT
+7932;Eine Person in einer rosa Jacke läuft auf das Spielfeld;Vier Sportler sind mit einer Frau in einem überfüllten Stadion;2.0;NEUTRAL
+7937;Eine elegant gekleidete Frau steht in einer Menschenmenge und schaut nach oben.;Eine elegant gekleidete Frau steht in einer Menschenmenge und blickt nach unten.;3.1;NEUTRAL
+7938;Eine asiatische Frau hält einen Pelzschal;Eine elegante Frau steht in einer Menschenmenge und schaut nach unten;2.2;NEUTRAL
+7947;Ein Kind in einem weißen T-Shirt planscht im flachen Wasser;Ein Junge rennt durch das Wasser am Strand;3.4;NEUTRAL
+7950;Ein Mädchen rennt durch das Wasser am Strand;Ein Junge in einem weißen T-Shirt planscht im flachen Wasser;2.3;NEUTRAL
+7951;Ein Junge in einem weißen T-Shirt planscht im flachen Wasser;Ein Junge rennt durch das Wasser am Strand;3.5;NEUTRAL
+7997;Die Kinder haben keine Anzüge an und das Wasser spritzt herum;Kinder in Badeanzügen spielen im Wasser;2.8;NEUTRAL
+8057;Ein junges Mädchen trägt einen blau gemusterten Badeanzug, eine schwarz-gelbe Badekappe und hat eine blaue Schwimmbrille auf dem Kopf.;Ein kleines Mädchen trägt einen blau gemusterten Badeanzug, eine schwarz-gelbe Badekappe und hat eine blaue Schwimmbrille auf dem Kopf;4.8;ENTAILMENT
+8122;Ein weiblicher Cheerleader sitzt auf dem Knie eines männlichen Cheerleaders;Einige Cheerleader entspannen sich;3.0;NEUTRAL
+8138;Das Mädchen hat rote Haare und Augenbrauen, mehrere Piercings in einem Ohr und eine Zeichnung auf dem Rücken;Das Mädchen hat rote Haare und Augenbrauen, mehrere Piercings in einem Ohr und eine Tätowierung auf dem Rücken;4.4;ENTAILMENT
+8141;Das Mädchen hat rote Haare und Augenbrauen, mehrere Piercings in einem Ohr und keine Tätowierung auf dem Rücken;Ein Mädchen mit roten Haaren und roten Augenbrauen ist mitten in der Rede;3.0;NEUTRAL
+8163;Zwei Personen fahren einen Jeep und eine Frau sitzt auf dem Dach des Jeeps;Zwei Personen fahren einen Jeep und ein Mädchen sitzt auf dem Dach des Jeeps;4.8;ENTAILMENT
+8193;Die Erwachsenen und Kinder sind nicht in der Nähe einer Sitzgruppe im Freien versammelt;Die Erwachsenen und Kinder werden in der Nähe einer Sitzgruppe im Freien versammelt.;4.4;CONTRADICTION
+8212;Ein Mädchen hat farbige Flecken auf den Wangen;Ein Mädchen steht in einer Gruppe und trägt ein schwarzes Hemd und rosa Perlen;2.4;NEUTRAL
+8220;Zwei Hunde rennen durch Wasser;Zwei Hunde rennen durch hohes Gras;3.335;NEUTRAL
+8263;Einige Menschen und Fahrzeuge befinden sich auf einer belebten Straße;Einige Menschen und Fahrzeuge befinden sich auf einer fast leeren Straße;4.2;CONTRADICTION
+8313;Ein junges Mädchen mit bemaltem Gesicht steht neben einigen anderen Kindern;Die Kinder werden verkleidet und spielen ein Spiel;3.1;NEUTRAL
+8326;Es gibt keinen Motorradfahrer, der über unbefestigte Rampen vor einem Gewässer springt.;Zwei Motorradfahrer springen über unbefestigte Rampen vor einem Gewässer;4.4;CONTRADICTION
+8334;Ein Mann macht einen Trick auf einem Skateboard;Eine Person macht einen Trick auf einem Skateboard;4.4;ENTAILMENT
+8343;Ein Mann in einer Motocross-Uniform trägt einen Helm und fährt auf einem roten Motorrad;Eine Person in einer Motocross-Uniform trägt einen Helm und fährt auf einem roten Motorrad;4.8;ENTAILMENT
+8362;Ein Junge im gestreiften Hemd springt hinter einer Wasserfontäne;Ein Junge in einem gestreiften Hemd springt vor einem Wasserbrunnen;4.2;NEUTRAL
+8375;Zwei große Hunde, ein heller und ein dunkler, schlafen auf einem verschneiten Gelände;Zwei Hunde springen durch verschneites Gras und Felsen;2.4;NEUTRAL
+8383;Ein Mädchen in Blau rutscht eine grüne Rutsche hinunter;Das junge Mädchen in Blau genießt eine Rutsche;4.3;ENTAILMENT
+8389;Ein weißer Mann geht neben einem Gebäude in einer Großstadt;Ein schwarzer Mann geht neben einem Gebäude in einer Großstadt;3.3;NEUTRAL
+8461;Ein Mann ohne Hut sitzt auf dem Boden;Ein Mann mit einem umgekehrten Hut sitzt auf dem Boden;4.0;NEUTRAL
+8471;Ein Mädchen im blauen Pullover hält ein buntes Spielzeug und sitzt auf den Schultern eines alten Mannes mit grauem Haar.;Ein Mädchen im blauen Pullover hält ein buntes Spielzeug und sitzt auf den Schultern eines Mannes mit grauen Haaren;4.6;ENTAILMENT
+8500;Der Mann geht ins Wasser;Die Person geht ins Meer;4.1;NEUTRAL
+8505;Zwei Menschen sitzen an einem sonnigen Tag auf einer Parkbank;Zwei Personen sitzen an einem heißen Tag auf einer Parkbank;4.3;NEUTRAL
+8548;Das Kind spritzt Wasser in einem großen roten Pool;Ein Kleinkind plantscht in einem blauen Planschbecken;3.1;NEUTRAL
+8558;Ein grauer, seidiger Hund liegt im Gras und ein brauner Hund schaut zu;Der braune Hund erspäht einen schwarzen Hund, der im trockenen Gras liegt;3.2;NEUTRAL
+8576;Ein schwarzer Hund und ein kleiner weißer und schwarzer Hund blicken auf eine Küchenarbeitsplatte;Ein großer und ein kleiner Hund stehen neben der Küchentheke und erforschen;4.2;ENTAILMENT
+8632;Ein Mann klettert nicht auf einen Felsen und im Hintergrund sind eine Stadt und eine Bucht zu sehen;Ein Mann klettert am Felsen, im Hintergrund sind eine Stadt und eine Bucht zu sehen.;4.4;CONTRADICTION
+8633;Ein Mann klettert am Felsen, hält inne und berechnet die Route;Ein Mann klettert am Fels, hält an und berechnet die Route;4.8;ENTAILMENT
+8658;Keine Gruppe von Menschen versammelt sich an einem Stand auf der Messe;Die Menschen stehen auf einem Rummelplatz;3.8;NEUTRAL
+8660;Eine Gruppe von Rollerbladern stellt sich auf der Straße auf;Eine Gruppe von Rollerbladern stellt sich auf der Straße auf;4.9;ENTAILMENT
+8678;Ein Skateboarder springt von einer Rampe;Ein Skateboarder macht einen Sprung von einer Rampe;4.8;ENTAILMENT
+8700;Ein schwarz-oranger Vogel steht im Gras;Der schwarze Vogel mit gelbem Schnabel steht im grünen Gras;4.0;NEUTRAL
+8714;Zwei weiße Hunde laufen schnell zusammen;Zwei weiße Hunde laufen zusammen;4.6;ENTAILMENT
+8727;Eine Gruppe von Leuten steht um einen Mischpult herum;Einige Leute sehen sich Tontechnik an;3.5;ENTAILMENT
+8786;Ein Mädchen springt Seil auf einem Bürgersteig;Ein Mädchen springt Seil in der Nähe einer Straße;4.3;ENTAILMENT
+8792;Ein Mädchen springt auf einem Gehweg in der Nähe eines Parkhauses Seil;Ein Mädchen springt Seil in der Nähe einer Straße;3.7;NEUTRAL
+8806;Ein Hund schwimmt in einem Gewässer;Ein Tier schwimmt in einem Gewässer;4.5;ENTAILMENT
+8832;Eine Frau lehnt auf dem Sims eines Balkons;Ein Mann lehnt auf dem Sims eines Balkons;3.8;NEUTRAL
+8841;Ein kleiner weißer Hund läuft über eine Wiese;Ein großer weißer Hund läuft über eine Wiese;3.1;NEUTRAL
+8855;Der Hund ist angeleint und läuft in der Nähe des Wassers;Ein schwarzer Hund an der Leine läuft im Wasser;4.5;NEUTRAL
+8938;Ein Junge in orangefarbenen Shorts steht auf einer Felsklippe über dem Wasser und der andere Junge in schwarzen Shorts springt von dort ins Wasser;Zwei Männer stehen auf einer Klippe und einer springt ins Wasser;4.0;NEUTRAL
+8963;Eine kleine Gruppe von Menschen steht und zwei sitzen auf dem Sofa.;Eine Gruppe von fünf jungen Erwachsenen macht es sich in einem Haus gemütlich.;3.8;NEUTRAL
+8986;Ein junges Mädchen im Bikini springt am Strand;Ein junges Mädchen im Badeanzug springt am Strand;4.4;ENTAILMENT
+9014;Ein blondes Kind fährt eine Rutsche hinunter und wirft die Arme hoch;Ein Kind mit dunklen Haaren fährt eine Rutsche hinunter und wirft die Arme hoch;3.7;CONTRADICTION
+9029;Zwei Hunde spielen in einem Wald;Ein brauner Hund läuft einem schwarzen Hund an einem felsigen Ufer hinterher;2.3;NEUTRAL
+9036;Ein weißer Hund nähert sich einem goldenen Hund am Kieselstrand;Zwei Hunde spielen an einem felsigen Strand;2.9;NEUTRAL
+9056;Zwei junge Mädchen tragen Hüte und strecken ihre farbigen Zungen heraus;Zwei Kinder strecken blaue und grüne Zungen heraus;3.6;NEUTRAL
+9069;Zwei Jungen liegen im Meer in der Nähe des Strandes;Zwei Jungen liegen in der Nähe des Strandes im Wasser;4.4;ENTAILMENT
+9093;Ein großer Mann sitzt in einem Geschäft für Militärzubehör;Ein Veteran zeigt manchen Menschen verschiedene Dinge aus einem Krieg;2.8;NEUTRAL
+9102;Ein Hund mit einem blauen Halsband spielt draußen mit einem Ball;Ein grauer Hund lässt auf einer Wiese einen Fußball auf seinem Kopf hüpfen;3.4;NEUTRAL
+9125;Eine junge Frau mit indischer Kleidung und Henna auf der Hand erledigt den Papierkram;Eine Frau trägt eine bunte Bluse und eine Menge Schmuck;2.4;NEUTRAL
+9132;Ein Mann in einem schwarzen Trikot steht in einer Turnhalle.;Ein Mann in einem schwarzen Trikot steht in einer Turnhalle;4.9;ENTAILMENT
+9136;Ein Mann in einem schwarzen Trikot steht in einer Turnhalle;Ein Mann steht in einer Turnhalle und trägt ein Trikot;4.5;ENTAILMENT
+9169;Ein kleiner braun-weißer Hund rennt auf dem Bürgersteig;Ein kleiner brauner und weißer Hund läuft auf der Straße;3.7;NEUTRAL
+9188;Ein Hund dreht sich im Gras und verfolgt einen fliegenden Tennisball;Ein gelber Hund jagt einen Ball;4.4;NEUTRAL
+9198;Eine Frau in blauen Jeans steht vor einer Gruppe von Kindern neben einem aus Stein gebauten Haus;Keine Frau steht auf der Straße und ist von Schulkindern umgeben;3.2;NEUTRAL
+9200;Eine Frau steht auf der Straße und ist von Schulkindern umgeben;Ein Mann in blauen Jeans steht vor einer Gruppe von Kindern neben einem Steinhaus.;2.0;NEUTRAL
+9211;Ein Kerl springt mit Holz in die Luft;Ein Mann springt in einem Waldgebiet in die Luft;4.3;NEUTRAL
+9224;Ein Hund rennt mit einem Ball;Der schwarze Hund trägt einen blau-weißen Ball in seinem Maul;4.0;NEUTRAL
+9242;Der Mann in Blau posiert für ein Foto neben einem Fahrzeug;Ein Mann steht am Steuer eines amerikanischen Oldtimers, dessen Türen und Kofferraum geöffnet sind.;3.2;NEUTRAL
+9287;Ein Mann fährt einen Hügel hinunter und überspringt ein rotes Hindernis;Ein Mann fährt mit dem Snowboard ein Geländer im Schnee hinunter;3.1;NEUTRAL
+9303;Der Skateboarder springt in die Luft;Ein Skateboarder springt in die Luft;4.9;ENTAILMENT
+9314;Ein Snowboarder fährt eine lange Betonschiene hinunter;Eine Person macht Akrobatik auf einem Snowboard;3.3;NEUTRAL
+9336;Eine Gruppe von Menschen geht die Straße entlang und eine Person mit einem grünen Hut telefoniert.;Vier Personen gehen auf einem Bürgersteig in der Stadt spazieren, und die Person mit dem grünen Hut telefoniert mit jemandem.;4.2;NEUTRAL
+9359;Ein Surfer surft auf einer großen Welle;Ein Surfer surft auf einer großen Welle;4.9;ENTAILMENT
+9371;Eine Person mit roter Kapuzenjacke und schwarzem Rucksack geht in der Nähe einer Felswand;Ein Mann in roter Jacke und khakifarbener Hose geht durch einen europäischen Staat;3.0;NEUTRAL
+9380;Die Spieler bewegen sich um den Fußball;Ein Mann in Grün kickt einen Fußball und ein Mann in Lila und Weiß erhebt sich;3.5;NEUTRAL
+9401;Der Mann mit den Lederchaps und dem lila Hemd steht vor jemandem, der ihn beobachtet.;Ein Mann trägt ein lila Hemd und schwarze Lederchaps und posiert für die Kamera;3.3;NEUTRAL
+9424;Ein Hund ist in einem sandigen Bereich mit dem Sand, die aufgewirbelt wird in die Luft und mehrere Pflanzen sind im Hintergrund;Ein Hund liegt im Sand, der in die Luft geblasen wird;4.1;NEUTRAL
+9425;Kein Hund ist im Sand, der im Wind weht;Ein Hund ist in einem sandigen Bereich mit dem Sand, die aufgewirbelt wird in die Luft und mehrere Pflanzen sind im Hintergrund;4.0;CONTRADICTION
+9433;Der schwarz-weiße Hund läuft in einem grünen Garten;Ein schwarz-weißer Hund läuft im Freien;4.4;ENTAILMENT
+9452;Ein Hund springt auf dem Lande in die Luft;Ein Hund springt im Schatten einiger Bäume;3.7;NEUTRAL
+9453;Ein Hund springt im Schatten einiger Bäume;Eine Katze springt auf dem Land hoch in die Luft;1.6;NEUTRAL
+9490;Eine Gruppe von vier braunen Hunden spielt auf einem Feld mit braunem Gras;Vier Hunde spielen nicht auf einer Wiese;4.0;CONTRADICTION
+9500;Ein großer braun-weiß gefleckter Hund liegt auf einer Jacke auf der Straße;Der Hund macht ein Nickerchen im Park;2.9;NEUTRAL
+9545;Ein Mann auf einem gelben Sportfahrrad macht einen Wheelie und ein Freund auf einem schwarzen Fahrrad holt auf;Der in Orange gekleidete Fahrer fährt ein Motorrad auf einem Rad;2.8;NEUTRAL
+9571;Ein älterer Mann sitzt auf einer Bank und trägt eine graue Jacke und eine schwarze Hose.;Ein älterer Mann sitzt auf einer Bank;4.5;ENTAILMENT
+9584;Die Frau hält den Pinsel neben der Staffelei des Künstlers;Die Dame hält den Pinsel neben der Staffelei des Künstlers;4.9;ENTAILMENT
+9623;Ein Mann trägt ein blaues Hemd und läuft barfuß auf einem Tennisplatz;Eine Frau trägt ein blaues Hemd und läuft barfuß auf einem Tennisplatz;3.6;NEUTRAL
+9669;Das junge Mädchen spielt am Rande eines Springbrunnens und eine ältere Frau beobachtet es.;Ein junges Mädchen spielt am Rande eines Springbrunnens und eine ältere Frau beobachtet es;4.8;ENTAILMENT
+9677;Ein junges Mädchen spielt am Rande eines Springbrunnens und eine ältere Frau beobachtet es;Ein kleines Mädchen und eine Frau in einem gelben Hemd werden von einem Stadtbrunnen bespritzt;3.5;NEUTRAL
+9706;Ein schwarz-weißer Hund mit einem großen Ast steht auf dem Feld;Ein schwarz-weißer Hund mit einem großen Ast läuft im Feld;4.2;CONTRADICTION
+9713;Ein schwarz-weißer Hund trägt einen großen Stock auf dem grünen Gras;Ein schwarz-weißer Hund mit einem großen Ast läuft im Feld;4.5;ENTAILMENT
+9722;Ein Junge rennt durch den Sand;Ein Junge im gestreiften Hemd läuft barfuß über den sandigen Hügel;3.9;NEUTRAL
+9745;Zwei Jungen schauen in die Kamera und einer streckt seine Zunge heraus.;Der kleine Junge streckt seine Zunge in die Kamera und ein anderer Junge schaut zu;4.4;NEUTRAL
+9747;Ein kleiner Junge streckt seine Zunge in die Kamera und ein anderer Junge schaut zu;Zwei Kinder schauen in die Kamera und eines streckt die Zunge heraus;4.4;ENTAILMENT
+9759;Ein lachendes Kind hält eine Wasserpistole und wird mit Wasser bespritzt;Eine Person in einer blauen Jacke springt auf eine hohe Betonmauer;1.1;NEUTRAL
+9763;Eine Person schneidet einige Pilze;Der Elefant wird von der Frau geritten;1.0;NEUTRAL
+9771;Zwei kleine Kinder spielen mit einem Spielzeugauto auf der Straße;Ein Hund rennt durch ein Feld und jagt ein Spielzeug;1.4;NEUTRAL
+9788;Ein Mann spielt auf einer E-Gitarre;Eine Gruppe von Menschen hält Getränke in der Hand und zeigt auf die Kamera;1.0;NEUTRAL
+9789;Ein Mädchen in Gold und Lila hält eine Regenbogen-Afghane;Ein Mann hockt im Gebüsch und macht ein Foto;1.0;NEUTRAL
+9822;Zwei Personen fahren auf einem Fahrrad;Ein geübter Springer wirft das Snowboard einer Person in die Luft;2.0;NEUTRAL
+9838;Einige Instrumente werden von einer Band gespielt;Eine junge, barbusige Frau ist mit Farbe bedeckt;1.0;NEUTRAL
+9843;Eine Familie kauft etwas am Automaten;Ein Mann im Anzug steht vor einem Mikrofon und singt;1.0;NEUTRAL
+9869;Ein Fahrrad wird über einen Affen gerollt;Eine Person fährt mit einem Geländemotorrad einen unbefestigten Hügel hinunter.;2.8;NEUTRAL
+9880;Ein Motorradfahrer fährt von einem Zaun weg;Ein Mann tanzt auf der Straße;1.2;NEUTRAL
+9931;Eine Frau spielt auf einer E-Gitarre;Ein Kind spielt Gitarre;3.0;NEUTRAL
+9963;Das Tier weidet auf der Wiese;Der Polizist sitzt auf einem Polizeimotorrad;1.0;NEUTRAL
+9975;Der Hund schnappt nach einigen Wassertropfen;Ein Mädchen in einer Band spielt ein Instrument;1.0;NEUTRAL
+9988;Ein junger Mann schiebt ein Motocross-Motorrad einen unbefestigten Hügel hinunter;Ein Hund schwimmt einem Tennisball hinterher;1.0;NEUTRAL
