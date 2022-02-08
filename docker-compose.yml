@@ -1,0 +1,67 @@
+version: '3.9'
+services:
+  sgic-search-api:
+    build: ./app
+    image: sgic-search-api
+    ports:
+      - '3030:80'
+    command: uvicorn main:app --host 0.0.0.0 --port 80 --proxy-headers
+    volumes:
+      - ./app:/usr/src/app
+    networks:
+      - elastic
+    environment:
+      - CELERY_BROKER_URL=sgic-redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=sgic-redis://redis:6379/0
+    env_file:
+      - .env
+    depends_on:
+      - sgic-redis
+  
+  sgic-worker:
+    build: ./app
+    image: sgic-worker
+    command: celery --app=worker.celery worker --loglevel=info --logfile=logs/celery.log
+    volumes:
+      - ./app:/usr/src/app
+    networks:
+      - elastic
+    environment:
+      - CELERY_BROKER_URL=sgic-redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=sgic-redis://redis:6379/0
+    depends_on:
+      - sgic-search-api
+      - sgic-redis
+
+  sgic-redis:
+    image: redis:6-alpine
+    networks:
+      - elastic
+
+  sgic-es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    container_name: sgic-es01
+    environment:
+      - node.name=es01
+      - cluster.name=es-docker-cluster
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - elastic
+
+volumes:
+  data01:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
