@@ -3,6 +3,7 @@ services:
   sgic-search-api:
     build: ./app
     image: sgic-search-api
+    container_name: sgic-search-api
     ports:
       - '3030:80'
     command: uvicorn main:app --host 0.0.0.0 --port 80 --proxy-headers
@@ -11,8 +12,8 @@ services:
     networks:
       - elastic
     environment:
-      - CELERY_BROKER_URL=sgic-redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=sgic-redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://sgic-redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://sgic-redis:6379/0
     env_file:
       - .env
     depends_on:
@@ -21,20 +22,22 @@ services:
   sgic-worker:
     build: ./app
     image: sgic-worker
+    container_name: sgic-worker
     command: celery --app=worker.celery worker --loglevel=info --logfile=logs/celery.log
     volumes:
       - ./app:/usr/src/app
     networks:
       - elastic
     environment:
-      - CELERY_BROKER_URL=sgic-redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=sgic-redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://sgic-redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://sgic-redis:6379/0
     depends_on:
       - sgic-search-api
       - sgic-redis
 
   sgic-redis:
     image: redis:6-alpine
+    container_name: sgic-redis
     networks:
       - elastic
 

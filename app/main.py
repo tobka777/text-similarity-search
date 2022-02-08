@@ -66,7 +66,7 @@ def index(lang: str = 'de', key: str = ''):
         #TODO send ERROR code
         return {"message": "Unauthorized."}
 
-    task = create_index.delay(searchclient, model, lang)
+    task = create_index.delay(lang)
     return {"message": "Create Index.", "task_id": task.id}
 
 @app.get("/api/update")

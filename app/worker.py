@@ -2,6 +2,8 @@ import os
 import time
 import requests
 
+from Model import SentenceTransformer
+from SearchClient import ElasticClient
 from sgic import parse_data
 from celery import Celery
 
@@ -12,12 +14,17 @@ API_URL = WEBSITE_URL+"/api"
 APP_KEY = os.environ.get('APP_KEY', '')
 CACHE_MIN = os.environ.get('CACHE_MIN', 60)
 
+print("Load model")
+model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
+print("Initializing Elastic client")
+searchclient = ElasticClient(configs_dir='config/elastic')
+
 celery = Celery(__name__)
 celery.conf.broker_url = os.environ.get("CELERY_BROKER_URL", "redis://localhost:6379")
 celery.conf.result_backend = os.environ.get("CELERY_RESULT_BACKEND", "redis://localhost:6379")
 
 @celery.task(name="create_index")
-def create_index(searchclient, model, lang):
+def create_index(lang):
     print("Read Data")
     url = API_URL+"/games/"+lang
     data_json = requests.get(url).json()
