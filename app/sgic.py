@@ -1,5 +1,5 @@
-from .SearchClient.BaseClient import BaseClient
-from .Model import BaseModel
+from SearchClient.BaseClient import BaseClient
+from Model import BaseModel
 
 def parse_data(data, model: BaseModel, search: BaseClient):
   bulk_size = 1000

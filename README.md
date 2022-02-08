@@ -13,3 +13,8 @@ After the plugin's jar has been added, configure it in the solrconfig.xml like s
 
 Schema also requires an addition: field of type `VectorField` is required in order to index vector data:
     <field name="vector" type="VectorField" indexed="true" termOffsets="true" stored="true" termPositions="true" termVectors="true" multiValued="true"/>
+
+## Deployment
+
+docker-compose up -d --build
+
