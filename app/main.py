@@ -35,11 +35,11 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-@app.get("/")
+@app.get("/api/")
 async def root():
     return {"message": "App is running."}
 
-@app.get("/search")
+@app.get("/api/search")
 @cache(namespace="search", expire=CACHE_MIN*60)
 async def search(query: str = '', lang: str = 'de', explain: bool = False):
     time_embed_start = time.time()
@@ -60,7 +60,7 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
         }
     }
 
-@app.get("/index")
+@app.get("/api/index")
 def index(lang: str = 'de', key: str = ''):
     if key == '' or APP_KEY != key:
         #TODO send ERROR code
@@ -69,7 +69,7 @@ def index(lang: str = 'de', key: str = ''):
     task = create_index.delay(searchclient, model, lang)
     return {"message": "Create Index.", "task_id": task.id}
 
-@app.get("/update")
+@app.get("/api/update")
 def update(id: str = '', lang: str = 'de'):
     url = API_URL+"/game/?lang="+lang+"&key="+id
     request = requests.get(url)
@@ -82,16 +82,16 @@ def update(id: str = '', lang: str = 'de'):
     searchclient.index_documents(INDEX_NAME+lang, data)
     return {"message": "Document "+id+" updated."}
 
-@app.get("/delete")
+@app.get("/api/delete")
 def delete(id: str = '', lang: str = 'de'):
     searchclient.delete_doc(id, INDEX_NAME+lang)
     return {"message": "Document "+id+" deleted."}
 
-@app.get("/get")
+@app.get("/api/get")
 def get(id: str = '', lang: str = 'de'):
     return searchclient.get_doc(id, INDEX_NAME+lang)
 
-@app.get("/clear")
+@app.get("/api/clear")
 async def clear():
     return await FastAPICache.clear(namespace="search")
 
@@ -107,7 +107,7 @@ async def add_process_time_header(request: Request, call_next):
 async def startup():
     FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")
 
-@app.get("/tasks/{task_id}")
+@app.get("/api/tasks/{task_id}")
 def get_status(task_id):
     task_result = AsyncResult(task_id)
     return {
