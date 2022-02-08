@@ -4,14 +4,20 @@ from .Model import BaseModel
 def parse_data(data, model: BaseModel, search: BaseClient):
   bulk_size = 1000
   count = 0
+  vector_size = 768
+
+  def to_vector(name, value, doc):
+    if value.strip() != '':
+      doc[name] = search.transform_vector(model.encode(value.strip()))
 
   for d in data:
     doc = {
       "id": d["metadataInfo"]["metadataFileIdentifier"],
       "title": d["gameInfo"]["titleInfo"]["title"],
-      "title_vec": search.transform_vector(model.encode(d["gameInfo"]["titleInfo"]["title"])),
-      "abstract_vec": search.transform_vector(model.encode(d["gameInfo"]["abstract"])),
     }
+    to_vector("title_vec", d["gameInfo"]["titleInfo"]["title"], doc)
+    to_vector("abstract_vec", d["gameInfo"]["abstract"], doc)
+    
     yield doc
 
     count += 1

@@ -39,13 +39,17 @@ async def root():
 
 @app.get("/search")
 @cache(namespace="search", expire=CACHE_MIN*60)
-async def search(query: str = '', lang: str = 'de'):
+async def search(query: str = '', lang: str = 'de', explain: bool = False):
     time_embed_start = time.time()
     query_vector = searchclient.transform_vector(model.encode(query))
     time_embed = time.time() - time_embed_start
 
-    query_config = ElasticQuery().get_query_densevector(query_vector, get_relevance(), get_source(), 1000)
-    matches, time_elastic, value = searchclient.query(INDEX_NAME+lang, query_config)
+    if explain:
+        query_config = ElasticQuery().get_query_densevector_explain(query_vector, get_relevance(), get_source())
+    else:
+        query_config = ElasticQuery().get_query_densevector(query_vector, get_relevance(), get_source(), docs_count=1000)
+
+    matches, time_elastic, value = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
         "matches": matches,
         "time": {

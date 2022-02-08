@@ -4,6 +4,7 @@ import json
 from .BaseClient import BaseClient
 import elasticsearch.helpers
 from elasticsearch import Elasticsearch
+import re
 
 class ElasticResp:
     def __init__(self, resp):
@@ -41,9 +42,10 @@ class ElasticClient(BaseClient):
         In the future, we may wish to isolate an Index's feature
         store to a feature store of the same name of the index
     """
-    def __init__(self, host=None, configs_dir='.', https=False):
+    def __init__(self, host=None, configs_dir='.', https=False, port=9200):
         self.docker = os.environ.get('LTR_DOCKER') != None
         self.configs_dir = configs_dir #location of elastic configs
+        self.port = port
 
         # respect host if it is set
         if host is not None:
@@ -58,9 +60,9 @@ class ElasticClient(BaseClient):
             self.protocol = "https"
         else:
             self.protocol = "http"
-
-        self.elastic_ep = '{}://{}:9200/_ltr'.format(self.protocol, self.host)
-        self.es = Elasticsearch('{}://{}:9200'.format(self.protocol, self.host))
+        
+        self.elastic_ep = '{}://{}:{}/_ltr'.format(self.protocol, self.host, self.port)
+        self.es = Elasticsearch('{}://{}:{}'.format(self.protocol, self.host, self.port))
 
     def get_host(self):
         return self.host
@@ -217,21 +219,21 @@ class ElasticClient(BaseClient):
 
         return matches
 
-    def query(self, index, query):
+    def query(self, index, query, explain: False):
         print("query:{}".format(query))
         resp = self.es.search(index=index, body=query)
         self.resp_msg(msg="Searching {} - {}".format(index, str(query)[:20]), resp=SearchResp(resp))
 
         #print("================ ES response")
-        print(resp)
+        #print(resp)
 
         # Transform to consistent format between ES/Solr
         matches = []
         for hit in resp['hits']['hits']:
-            hit['_source']['_score'] = hit['_score']
-            matches.append(hit['_source'])
-
-
+          hit['_source']['_score'] = hit['_score']
+          if explain:
+            hit['_source']['scores'] = ElasticQuery().explain_scores(hit)
+          matches.append(hit['_source'])
 
         return matches, resp['took'], resp['hits']['total']['value']
 
@@ -271,10 +273,8 @@ class ElasticQuery():
             "query": query
         }
 
-    def get_query_densevector(self, query_vector, relevance_json, source, docs_count):
-        return {
-            "size": docs_count,
-            "_source": source,
+    def get_query_densevector(self, query_vector, relevance_json, source=None, docs_count=None, min_score=None):
+        query = {
             "query": {
                 "script_score": {
                     "query": {"match_all": {}},
@@ -285,9 +285,17 @@ class ElasticQuery():
                 }
             }
         }
+        if min_score is not None:
+          query['query']['script_score']['min_score'] = min_score
+        if docs_count is not None:
+          query['size'] = docs_count
+        if source is not None:
+          query['_source'] = source
+
+        return query
 
     def get_distance_value(self, attribute, boost):
-      return "(cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0) * "+str(boost)
+      return "doc['"+attribute+"'].size() == 0 ? 0 : (cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0) * "+str(boost)
 
     def get_distance_metric(self, relevance_json):
       metric = []
@@ -295,3 +303,58 @@ class ElasticQuery():
         metric.append(self.get_distance_value(attribute, boost))
       metric.append('_score')
       return ' + '.join(metric)
+
+    def explain_scores(self, hit):
+      scores = []
+      if '_explanation' in hit and 'details' in hit['_explanation']:
+        for detail in hit['_explanation']['details']:
+          if 'value' in detail and 'description' in detail:
+            template = {
+              "score": detail['value'],
+              "script": detail['description']
+            }
+            script = re.search("idOrCode='(.*)'", detail['description'])
+            if script and len(script.groups()) >= 1:
+              template["script"] = script.group(1)
+              values = re.search("'(\w*)'.*\*\s(\d+\.?\d*)", template["script"])
+              if values and len(values.groups()) >= 2:
+                template["attribute"] = values.group(1)
+                template["boost"] = float(values.group(2))
+                template["score"] = float(template["score"])/float(values.group(2))
+            scores.append(template)
+        scores = sorted(scores, key=lambda k: k['score'], reverse=True)
+      return scores
+
+    def get_query_densevector_explain(self, query_vector, relevance_json, source):
+        script_score = []
+        #"boost": boost
+        for attribute, boost in relevance_json.items():
+          template = {
+            "script_score": {
+              "query": {"match_all": {}},
+              "script": {
+                "source": self.get_distance_value(attribute, boost),
+                "params": {"query_vector": query_vector}
+              }
+            }
+          }
+          script_score.append(template)
+
+        script_score.append({
+          "script_score": {
+            "query": {"match_all": {}},
+            "script": {
+              "source": "_score"
+            }
+          }
+        })
+
+        return {
+            "explain": True,
+            "_source": source,
+            "query": {
+                "bool": {
+                    "should": script_score
+                }
+            }
+        }
