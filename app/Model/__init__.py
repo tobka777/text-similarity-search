@@ -5,4 +5,3 @@ from .Gensim import Gensim
 from .Bert import Bert
 from .mUSE import mUSE
 from .LASER import LASER
-from .SIF import SIF
