@@ -7,13 +7,15 @@ from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
 from fastapi.middleware.cors import CORSMiddleware
+from celery.result import AsyncResult
 
-from .Model import SentenceTransformer
-from .SearchClient import ElasticClient, ElasticQuery
-from .sgic import parse_data, get_relevance, get_source
+from Model import SentenceTransformer
+from SearchClient import ElasticClient, ElasticQuery
+from sgic import parse_data, get_relevance, get_source
+from worker import create_index
 
-INDEX_SPEC = "vector"
-INDEX_NAME = "sgic_search_"
+INDEX_SPEC = os.environ.get('INDEX_SPEC', 'vector')
+INDEX_NAME = os.environ.get('INDEX_NAME', 'sgic_search_')
 WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:9876')
 API_URL = WEBSITE_URL+"/api"
 APP_KEY = os.environ.get('APP_KEY', '')
@@ -47,7 +49,7 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
     if explain:
         query_config = ElasticQuery().get_query_densevector_explain(query_vector, get_relevance(), get_source())
     else:
-        query_config = ElasticQuery().get_query_densevector(query_vector, get_relevance(), get_source(), docs_count=1000)
+        query_config = ElasticQuery().get_query_densevector(query_vector, get_relevance(), get_source(), docs_count=1000, min_score=get_minimum_score())
 
     matches, time_elastic, value = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
@@ -64,19 +66,8 @@ def index(lang: str = 'de', key: str = ''):
         #TODO send ERROR code
         return {"message": "Unauthorized."}
 
-    print("Read Data")
-    url = API_URL+"/games/"+lang
-    data_json = requests.get(url).json()
-
-    print("Create Index")
-    searchclient.delete_index(INDEX_NAME+lang)
-    searchclient.create_index(INDEX_NAME+lang, INDEX_SPEC)
-
-    print("Index Documents")   
-    data = parse_data(data_json, model, searchclient)
-    searchclient.index_documents(INDEX_NAME+lang, data)
-
-    return {"message": "Index created."}
+    task = create_index.delay(searchclient, model, lang)
+    return {"message": "Create Index.", "task_id": task.id}
 
 @app.get("/update")
 def update(id: str = '', lang: str = 'de'):
@@ -116,4 +107,11 @@ async def add_process_time_header(request: Request, call_next):
 async def startup():
     FastAPICache.init(InMemoryBackend(), prefix="fastapi-cache")
 
-  
+@app.get("/tasks/{task_id}")
+def get_status(task_id):
+    task_result = AsyncResult(task_id)
+    return {
+        "task_id": task_id,
+        "task_status": task_result.status,
+        "task_result": task_result.result
+    }
