@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from Model import SentenceTransformer
 from SearchClient import ElasticClient, ElasticQuery
-from sgic import parse_data, get_relevance, get_source
+from data import Data
 
 INDEX_SPEC = "vector"
 INDEX_NAME = "sgic_search_"
@@ -24,6 +24,7 @@ print("Load model")
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 print("Initializing Elastic client")
 searchclient = ElasticClient(configs_dir='config/elastic', host=ELASTIC_HOST)
+dataclass = Data(model, searchclient)
 
 app = FastAPI()
 app.add_middleware(
@@ -46,9 +47,9 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
     time_embed = time.time() - time_embed_start
 
     if explain:
-        query_config = ElasticQuery().get_query_densevector_explain(query_vector, get_relevance(), get_source())
+        query_config = ElasticQuery().get_query_densevector_explain(query_vector, dataclass.get_relevance(), dataclass.get_source())
     else:
-        query_config = ElasticQuery().get_query_densevector(query_vector, get_relevance(), get_source(), docs_count=1000)
+        query_config = ElasticQuery().get_query_densevector(query_vector, dataclass.get_relevance(), dataclass.get_source(), docs_count=1000)
 
     matches, time_elastic, value = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
@@ -74,7 +75,7 @@ def index(lang: str = 'de', key: str = ''):
     searchclient.create_index(INDEX_NAME+lang, INDEX_SPEC)
 
     print("Index Documents")   
-    data = parse_data(data_json, model, searchclient)
+    data = dataclass.parse_data(data_json)
     searchclient.index_documents(INDEX_NAME+lang, data)
 
     return {"message": "Index created."}
@@ -88,7 +89,7 @@ def update(id: str = '', lang: str = 'de'):
     data_json = request.json()
 
     print("Index Document")
-    data = parse_data([data_json], model, searchclient)
+    data = dataclass.parse_data([data_json])
     searchclient.index_documents(INDEX_NAME+lang, data)
     return {"message": "Document "+id+" updated."}
 

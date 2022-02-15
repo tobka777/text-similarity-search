@@ -1,8 +1,9 @@
 [
-  {"attribute": "useInfo.*", "score": 1},
+  {"attribute": "gameInfo.titleInfo.gameID", "vector": false, "name": "id", "source": true},
+  {"attribute": "gameInfo.titleInfo.title", "score": 500, "vector": false, "name": "title", "source": true},
+
   {"attribute": "applicationProfile", "score": 50},
 
-  {"attribute": "gameInfo.titleInfo.title", "score": 500, "vector": false},
   {"attribute": "gameInfo.titleInfo.title", "score": 500},
   {"attribute": "gameInfo.titleInfo.subTitle", "score": 300},
   {"attribute": "gameInfo.abstract", "score": 200},
