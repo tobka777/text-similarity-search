@@ -2,7 +2,7 @@ import requests
 import os
 import time
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, HTTPException
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
@@ -61,11 +61,11 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
 @app.get("/api/index")
 def index(lang: str = 'de', key: str = ''):
     if key == '' or APP_KEY != key:
-        #TODO send ERROR code
-        return {"message": "Unauthorized."}
+        raise HTTPException(status_code=401, detail="Unauthorized.")
 
     print("Read Data")
-    url = API_URL+"/games/"+lang
+    #url = API_URL+"/games/"+lang
+    url = API_URL+"/"+lang+"/games"
     data_json = requests.get(url).json()
 
     print("Create Index")
@@ -83,7 +83,7 @@ def update(id: str = '', lang: str = 'de'):
     url = API_URL+"/game/?lang="+lang+"&key="+id
     request = requests.get(url)
     if request.content == b'':
-        return {"message": "Game "+id+" not found."}
+        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
     data_json = request.json()
 
     print("Index Document")

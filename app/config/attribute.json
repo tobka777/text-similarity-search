@@ -1,0 +1,34 @@
+[
+  {"attribute": "useInfo.*", "score": 1},
+  {"attribute": "applicationProfile", "score": 50},
+
+  {"attribute": "gameInfo.titleInfo.title", "score": 500, "vector": false},
+  {"attribute": "gameInfo.titleInfo.title", "score": 500},
+  {"attribute": "gameInfo.titleInfo.subTitle", "score": 300},
+  {"attribute": "gameInfo.abstract", "score": 200},
+  {"attribute": "gameInfo.characterizingGoal.primaryGoal", "score": 50},
+  {"attribute": "gameInfo.characterizingGoal.goalDescription.[]", "score": 50},
+  {"attribute": "gameInfo.keywordInfo.[*].keyword", "score": 15},
+  {"attribute": "gameInfo.gameGenre.[]", "score": 15},
+  {"attribute": "gameInfo.gameMode.[]", "score": 3},
+  {"attribute": "gameInfo.releaseInfo.[*].releaseDate", "score": 3, "vector": false},
+  {"attribute": "gameInfo.*", "score": 1},
+
+  {"attribute": "useInfo.applicationFields.[*].applicationField", "score": 15},
+  {"attribute": "useInfo.targetUserGroups.[*].targetUserGroup", "score": 3},
+  {"attribute": "useInfo.ageRestrictions.[*].ageRestriction", "score": 3, "vector": false},
+  {"attribute": "useInfo.language.[]", "score": 3, "vector": false},
+  {"attribute": "useInfo.*", "score": 1},
+
+  {"attribute": "distributionInfo.[*].distributionChannel", "score": 3},
+  {"attribute": "distributionInfo.*", "score": 1},
+
+  {"attribute": "technicalInfo.platformInfo.[*].platform", "score": 3},
+  {"attribute": "technicalInfo.*", "score": 1},
+
+  {"attribute": "involvedPartyInfo.*", "score": 1},
+
+  {"attribute": "qualityInfo.*", "score": 1},
+  
+  {"attribute": "*", "score": 1, "vector": false}
+]
