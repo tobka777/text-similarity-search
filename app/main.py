@@ -17,12 +17,13 @@ INDEX_NAME = "sgic_search_"
 WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:9876')
 API_URL = WEBSITE_URL+"/api"
 APP_KEY = os.environ.get('APP_KEY', '')
-CACHE_MIN = os.environ.get('CACHE_MIN', 60)
+CACHE_MIN = int(os.environ.get('CACHE_MIN', 60))
+ELASTIC_HOST = os.environ.get('ELASTIC_HOST', 'localhost')
 
 print("Load model")
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 print("Initializing Elastic client")
-searchclient = ElasticClient(configs_dir='config/elastic')
+searchclient = ElasticClient(configs_dir='config/elastic', host=ELASTIC_HOST)
 
 app = FastAPI()
 app.add_middleware(

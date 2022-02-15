@@ -3,6 +3,7 @@ services:
   sgic-search-api:
     build: ./app
     image: sgic-search-api
+    container_name: sgic-search-api
     ports:
       - '3030:80'
     command: uvicorn main:app --host 0.0.0.0 --port 80 --proxy-headers
@@ -13,7 +14,7 @@ services:
     env_file:
       - .env
     depends_on:
-      - sgic-redis
+      - sgic-es01
 
   sgic-es01:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
