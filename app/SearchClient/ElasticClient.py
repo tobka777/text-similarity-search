@@ -306,7 +306,7 @@ class ElasticQuery():
      
 
     def get_distance_value(self, attribute, boost):
-      return "(doc['"+attribute+"'].size() == 0 ? 1.0 : (cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0) * "+str(boost)+")"
+      return "(doc['"+attribute+"'].size() == 0 ? 1.0 : (cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0)) * "+str(boost)
 
     def get_distance_metric(self, relevance_json):
       metric = []
@@ -330,7 +330,7 @@ class ElasticQuery():
               if values and len(values.groups()) >= 2:
                 template["attribute"] = values.group(1)
                 template["boost"] = float(values.group(2))
-                template["score"] = float(template["score"])/float(values.group(2))
+                template["similarity"] = float(template["score"])/float(values.group(2))
             else:
               template["description"] = detail['description']
               if 'details' in detail:
