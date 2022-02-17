@@ -18,13 +18,13 @@ WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:9876')
 API_URL = WEBSITE_URL+"/api"
 APP_KEY = os.environ.get('APP_KEY', '')
 CACHE_MIN = int(os.environ.get('CACHE_MIN', 60))
-ELASTIC_HOST = os.environ.get('ELASTIC_HOST', 'localhost')
+ELASTIC_URL = os.environ.get('ELASTIC_URL', 'http://localhost:9200')
 
 print("Load model")
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 print("Initializing Elastic client")
-searchclient = ElasticClient(configs_dir='config/elastic', host=ELASTIC_HOST)
-dataclass = Data(model, searchclient)
+searchclient = ElasticClient(configs_dir='config/elastic', url=ELASTIC_URL)
+dataclass = Data(model, searchclient, config_file="config/attribute.json", setting_file="config/elastic/"+INDEX_SPEC+"_settings.json")
 
 app = FastAPI()
 app.add_middleware(
@@ -47,11 +47,11 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
     time_embed = time.time() - time_embed_start
 
     if explain:
-        query_config = ElasticQuery().get_query_densevector_explain(query_vector, dataclass.get_relevance(), dataclass.get_source())
+        query_config = ElasticQuery().get_query_densevector_explain(query, query_vector, dataclass.get_relevance(cosine=False), dataclass.get_relevance(cosine=True), dataclass.get_source(), docs_count=1000)
     else:
-        query_config = ElasticQuery().get_query_densevector(query_vector, dataclass.get_relevance(), dataclass.get_source(), docs_count=1000)
+        query_config = ElasticQuery().get_query_densevector(query, query_vector, dataclass.get_relevance(cosine=False), dataclass.get_relevance(cosine=True), dataclass.get_source(), docs_count=1000, min_score=dataclass.get_minimum_score())
 
-    matches, time_elastic, value = searchclient.query(INDEX_NAME+lang, query_config, explain)
+    matches, time_elastic, value, resp = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
         "matches": matches,
         "time": {

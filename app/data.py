@@ -5,13 +5,14 @@ import json
 from functools import reduce
 
 class Data:
-  def __init__(self, model: BaseModel, search: BaseClient):
+  def __init__(self, model: BaseModel, search: BaseClient, config_file, setting_file):
     self.model = model
     self.search = search
-    attrjson = self.load_config('attribute')
-    relevance = {}
+    attrjson = self.load_config(config_file)
+    relevance = {"normal": {}, "cosine": {}}
     source = []
     attribute = []
+    settings = {}
     for attr in attrjson:
       #required
       if "attribute" not in attr:
@@ -30,14 +31,39 @@ class Data:
         attr["source"] = False
       attribute.append(attr)
 
-      relevance[attr["name"]] = attr["score"]
+      if attr["score"] > 0:
+        if attr["vector"]:
+          relevance["cosine"][attr["name"]] = attr["score"]
+        else:
+          relevance["normal"][attr["name"]] = attr["score"]
       if attr["source"]:
         source.append(attr["name"])
+
+      if attr["vector"]:
+        settings[attr["name"]] = {"type": "dense_vector", "dims": 768}
+      elif attr["name"] == 'id':
+        settings[attr["name"]] = {"type": "keyword"}
+      else:
+        settings[attr["name"]] = {"type": "text"}
 
     self.relevance = relevance
     self.source = source
     self.attribute = attribute
-    print(attribute)
+
+    settings_json = {
+      "settings": {
+        "number_of_shards": 2,
+        "number_of_replicas": 0
+      },
+      "mappings": {
+        "dynamic": "false",
+        "_source": {
+          "enabled": "true"
+        },
+        "properties": settings
+      }
+    }
+    self.write_config(settings_json, setting_file)
 
   def transform(self, name, value, doc, vector=True):
     if vector:
@@ -61,8 +87,13 @@ class Data:
     return arr
 
   def load_config(self, file):
-    with open('config/'+file+'.json', 'r') as f:
+    with open(file, 'r') as f:
       return json.load(f)
+
+  def write_config(self, dictionary, filename):
+    json_object = json.dumps(dictionary, indent = 4)
+    with open(filename, "w") as outfile:
+      outfile.write(json_object)
 
   def parse_data(self, data):
     bulk_size = 1000
@@ -130,10 +161,14 @@ class Data:
   def get_source(self):
     return self.source
 
-  def get_relevance(self):
-    return self.relevance
+  def get_relevance(self, cosine=True):
+    if cosine:
+      return self.relevance["cosine"]
+    else:
+      return self.relevance["normal"]
 
   def get_minimum_score(self):
-    values = self.relevance.values()
-    return sum(values)/len(values)
+    val1 = self.get_relevance(True).values()
+    val2 = self.get_relevance(False).values()
+    return (sum(val1)+sum(val2))/(len(val1)+len(val2))
 

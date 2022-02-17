@@ -42,27 +42,17 @@ class ElasticClient(BaseClient):
         In the future, we may wish to isolate an Index's feature
         store to a feature store of the same name of the index
     """
-    def __init__(self, host=None, configs_dir='.', https=False, port=9200):
-        self.docker = os.environ.get('LTR_DOCKER') != None
+    def __init__(self, url=None, configs_dir='.'):
         self.configs_dir = configs_dir #location of elastic configs
-        self.port = port
 
-        # respect host if it is set
-        if host is not None:
-            self.host = host
+        # respect url if it is set
+        if url is not None:
+            self.url = url
         else:
-            if self.docker:
-                self.host = 'elastic'
-            else:
-                self.host = 'localhost'
-
-        if https:
-            self.protocol = "https"
-        else:
-            self.protocol = "http"
+            self.url = 'http://localhost:9200'
         
-        self.elastic_ep = '{}://{}:{}/_ltr'.format(self.protocol, self.host, self.port)
-        self.es = Elasticsearch('{}://{}:{}'.format(self.protocol, self.host, self.port))
+        self.elastic_ep = '{}/_ltr'.format(self.url)
+        self.es = Elasticsearch('{}'.format(self.url))
 
     def get_host(self):
         return self.host
@@ -235,7 +225,7 @@ class ElasticClient(BaseClient):
             hit['_source']['scores'] = ElasticQuery().explain_scores(hit)
           matches.append(hit['_source'])
 
-        return matches, resp['took'], resp['hits']['total']['value']
+        return matches, resp['took'], resp['hits']['total']['value'], resp
 
     def feature_set(self, index, name):
         resp = requests.get('{}/_featureset/{}'.format(self.elastic_ep,
@@ -273,20 +263,34 @@ class ElasticQuery():
             "query": query
         }
 
-    def get_query_densevector(self, query_vector, relevance_json, source=None, docs_count=None, min_score=None):
+    def get_query_densevector(self, query_string, query_vector, relevance_normal, relevance_cosine, source=None, docs_count=None, min_score=0):
         query = {
-            "query": {
-                "script_score": {
-                    "query": {"match_all": {}},
+          "min_score": min_score,
+          "query": {
+            "bool": {
+              "should": [
+                {
+                  "script_score": {
+                    "query": {
+                      "match_all": {}
+                    },
                     "script": {
-                        "source": self.get_distance_metric(relevance_json),
-                        "params": {"query_vector": query_vector}
+                      "source": self.get_distance_metric(relevance_cosine),
+                      "params": {"query_vector": query_vector}
                     }
+                  }
+                },
+                {
+                  "multi_match": {
+                    "query": query_string,
+                    "fields": self.get_match_fields(relevance_normal)
+                  }
                 }
+              ]
             }
+          }
         }
-        if min_score is not None:
-          query['query']['script_score']['min_score'] = min_score
+        
         if docs_count is not None:
           query['size'] = docs_count
         if source is not None:
@@ -294,14 +298,21 @@ class ElasticQuery():
 
         return query
 
+    def get_match_fields(self, relevance_json):
+      match = []
+      for attribute, boost in relevance_json.items():
+        match.append(str(attribute)+"^"+str(round(boost/2.2, 2)))
+      return match
+     
+
     def get_distance_value(self, attribute, boost):
-      return "doc['"+attribute+"'].size() == 0 ? 0 : (cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0) * "+str(boost)
+      return "(doc['"+attribute+"'].size() == 0 ? 1.0 : (cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0) * "+str(boost)+")"
 
     def get_distance_metric(self, relevance_json):
       metric = []
       for attribute, boost in relevance_json.items():
         metric.append(self.get_distance_value(attribute, boost))
-      metric.append('_score')
+      #metric.append('_score')
       return ' + '.join(metric)
 
     def explain_scores(self, hit):
@@ -310,8 +321,7 @@ class ElasticQuery():
         for detail in hit['_explanation']['details']:
           if 'value' in detail and 'description' in detail:
             template = {
-              "score": detail['value'],
-              "script": detail['description']
+              "score": detail['value']
             }
             script = re.search("idOrCode='(.*)'", detail['description'])
             if script and len(script.groups()) >= 1:
@@ -321,14 +331,17 @@ class ElasticQuery():
                 template["attribute"] = values.group(1)
                 template["boost"] = float(values.group(2))
                 template["score"] = float(template["score"])/float(values.group(2))
+            else:
+              template["description"] = detail['description']
+              if 'details' in detail:
+                template["details"] = detail['details']
             scores.append(template)
         scores = sorted(scores, key=lambda k: k['score'], reverse=True)
       return scores
 
-    def get_query_densevector_explain(self, query_vector, relevance_json, source):
+    def get_query_densevector_explain(self, query_string, query_vector, relevance_normal, relevance_cosine, source, docs_count=None):
         script_score = []
-        #"boost": boost
-        for attribute, boost in relevance_json.items():
+        for attribute, boost in relevance_cosine.items():
           template = {
             "script_score": {
               "query": {"match_all": {}},
@@ -340,16 +353,18 @@ class ElasticQuery():
           }
           script_score.append(template)
 
-        script_score.append({
-          "script_score": {
-            "query": {"match_all": {}},
-            "script": {
-              "source": "_score"
+        for attribute, boost in relevance_normal.items():
+          template = {
+            "match": {
+                attribute: {
+                    "query": query_string,
+                    "boost": round(boost/2.2, 2)
+                }
             }
           }
-        })
+          script_score.append(template)
 
-        return {
+        query = {
             "explain": True,
             "_source": source,
             "query": {
@@ -358,3 +373,10 @@ class ElasticQuery():
                 }
             }
         }
+
+        if docs_count is not None:
+          query['size'] = docs_count
+        if source is not None:
+          query['_source'] = source
+
+        return query

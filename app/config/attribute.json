@@ -4,7 +4,6 @@
 
   {"attribute": "applicationProfile", "score": 50},
 
-  {"attribute": "gameInfo.titleInfo.title", "score": 500},
   {"attribute": "gameInfo.titleInfo.subTitle", "score": 300},
   {"attribute": "gameInfo.abstract", "score": 200},
   {"attribute": "gameInfo.characterizingGoal.primaryGoal", "score": 50},
