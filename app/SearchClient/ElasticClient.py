@@ -208,6 +208,30 @@ class ElasticClient(BaseClient):
 
         return matches
 
+    def _explain_scores(self, hit):
+      scores = []
+      if '_explanation' in hit and 'details' in hit['_explanation']:
+        for detail in hit['_explanation']['details']:
+          if 'value' in detail and 'description' in detail:
+            template = {
+              "score": detail['value']
+            }
+            script = re.search("idOrCode='(.*)'", detail['description'])
+            if script and len(script.groups()) >= 1:
+              template["script"] = script.group(1)
+              values = re.search("'(\w*)'.*\*\s(\d+\.?\d*)", template["script"])
+              if values and len(values.groups()) >= 2:
+                template["attribute"] = values.group(1)
+                template["boost"] = float(values.group(2))
+                template["similarity"] = float(template["score"])/float(values.group(2))
+            else:
+              template["description"] = detail['description']
+              if 'details' in detail:
+                template["details"] = detail['details']
+            scores.append(template)
+        scores = sorted(scores, key=lambda k: k['score'], reverse=True)
+      return scores
+
     def query(self, index, query, explain: False):
         print("query:{}".format(query))
         resp = self.es.search(index=index, body=query)
@@ -221,7 +245,7 @@ class ElasticClient(BaseClient):
         for hit in resp['hits']['hits']:
           hit['_source']['_score'] = hit['_score']
           if explain:
-            hit['_source']['scores'] = ElasticQuery().explain_scores(hit)
+            hit['_source']['scores'] = self._explain_scores(hit)
           matches.append(hit['_source'])
 
         return matches, resp['took'], resp['hits']['total']['value'], resp
@@ -257,7 +281,7 @@ class ElasticClient(BaseClient):
         #self.resp_msg(msg="Deleted Doc {}".format(doc_id), resp=resp, throw=False)
 
 class ElasticQuery():
-    def get_template_script_score(self, source, params):
+    def _get_template_script_score(self, source, params):
         return {
             "script_score": {
                 "query": {"match_all": {}},
@@ -268,7 +292,7 @@ class ElasticQuery():
             }
         }
 
-    def get_template_match(self, query, attribute, boost):
+    def _get_template_match(self, query, attribute, boost):
         return {
             "match": {
                 attribute: {
@@ -289,11 +313,11 @@ class ElasticQuery():
           "query": {
             "bool": {
               "should": [
-                self.get_template_script_score(self.get_distance_metric(relevance_cosine), {"query_vector": query_vector}),
+                self._get_template_script_score(self._get_distance_metric(relevance_cosine), {"query_vector": query_vector}),
                 {
                   "multi_match": {
                     "query": query_string,
-                    "fields": self.get_match_fields(relevance_normal)
+                    "fields": self._get_match_fields(relevance_normal)
                   }
                 }
               ]
@@ -308,55 +332,30 @@ class ElasticQuery():
 
         return query
 
-    def get_match_fields(self, relevance_json):
+    def _get_match_fields(self, relevance_json):
       match = []
       for attribute, boost in relevance_json.items():
         match.append(str(attribute)+"^"+str(round(boost/2.2, 2)))
       return match
-     
 
-    def get_distance_value(self, attribute, boost):
+    def _get_distance_value(self, attribute, boost):
       return "(doc['"+attribute+"'].size() == 0 ? 1.0 : (cosineSimilarity(params.query_vector, '"+attribute+"') + 1.0)) * "+str(boost)
 
-    def get_distance_metric(self, relevance_json):
+    def _get_distance_metric(self, relevance_json):
       metric = []
       for attribute, boost in relevance_json.items():
-        metric.append(self.get_distance_value(attribute, boost))
+        metric.append(self._get_distance_value(attribute, boost))
       #metric.append('_score')
       return ' + '.join(metric)
-
-    def explain_scores(self, hit):
-      scores = []
-      if '_explanation' in hit and 'details' in hit['_explanation']:
-        for detail in hit['_explanation']['details']:
-          if 'value' in detail and 'description' in detail:
-            template = {
-              "score": detail['value']
-            }
-            script = re.search("idOrCode='(.*)'", detail['description'])
-            if script and len(script.groups()) >= 1:
-              template["script"] = script.group(1)
-              values = re.search("'(\w*)'.*\*\s(\d+\.?\d*)", template["script"])
-              if values and len(values.groups()) >= 2:
-                template["attribute"] = values.group(1)
-                template["boost"] = float(values.group(2))
-                template["similarity"] = float(template["score"])/float(values.group(2))
-            else:
-              template["description"] = detail['description']
-              if 'details' in detail:
-                template["details"] = detail['details']
-            scores.append(template)
-        scores = sorted(scores, key=lambda k: k['score'], reverse=True)
-      return scores
 
     def get_query_densevector_explain(self, query_string, query_vector, relevance_normal, relevance_cosine, source, docs_count=None):
         script_score = []
         for attribute, boost in relevance_cosine.items():
-          template = self.get_template_script_score(self.get_distance_value(attribute, boost), {"query_vector": query_vector})
+          template = self._get_template_script_score(self._get_distance_value(attribute, boost), {"query_vector": query_vector})
           script_score.append(template)
 
         for attribute, boost in relevance_normal.items():
-          template = self.get_template_match(query_string, attribute, round(boost/2.2, 2))
+          template = self._get_template_match(query_string, attribute, round(boost/2.2, 2))
           script_score.append(template)
 
         query = {
@@ -380,10 +379,10 @@ class ElasticQuery():
         for attribute, value in document.items():
             template = False
             if attribute in relevance_cosine:
-                template = self.get_template_script_score(self.get_distance_value(attribute, relevance_cosine[attribute]), {"query_vector": value})
+                template = self._get_template_script_score(self._get_distance_value(attribute, relevance_cosine[attribute]), {"query_vector": value})
                 script_score.append(template)
             elif attribute in relevance_normal:
-                template = self.get_template_match(value, attribute, round(relevance_normal[attribute]/2.2, 2))
+                template = self._get_template_match(value, attribute, round(relevance_normal[attribute]/2.2, 2))
                 script_score.append(template)
             else:
                 print("ERROR: "+attribute+" not found")

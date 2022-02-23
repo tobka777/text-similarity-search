@@ -5,11 +5,16 @@ import json
 from functools import reduce
 
 class Data:
+  SEARCH_NORMAL="search_normal"
+  SEARCH_COSINE="search_cosine"
+  SIMILAR_NORMAL="similar_normal"
+  SIMILAR_COSINE="similar_cosine"
+
   def __init__(self, model: BaseModel, search: BaseClient, config_file, setting_file):
     self.model = model
     self.search = search
     attrjson = self.load_config(config_file)
-    relevance = {"normal": {}, "cosine": {}}
+    relevance = {self.SEARCH_NORMAL: {}, self.SEARCH_COSINE: {}, self.SIMILAR_NORMAL: {}, self.SIMILAR_COSINE: {}}
     source = []
     attribute = []
     settings = {}
@@ -24,6 +29,8 @@ class Data:
         attr["score"] = 0
       if "vector" not in attr:
         attr["vector"] = True
+      if "similar" not in attr:
+        attr["similar"] = True
       if "name" not in attr:
         name = attr["attribute"].replace(".[*]", "").replace(".[]", "").replace(".", "_").replace("*", "all")
         attr["name"] = name+"_vec" if attr["vector"] else name
@@ -33,9 +40,13 @@ class Data:
 
       if attr["score"] > 0:
         if attr["vector"]:
-          relevance["cosine"][attr["name"]] = attr["score"]
+          relevance[self.SEARCH_COSINE][attr["name"]] = attr["score"]
+          if attr["similar"]:
+            relevance[self.SIMILAR_COSINE][attr["name"]] = attr["score"]
         else:
-          relevance["normal"][attr["name"]] = attr["score"]
+          relevance[self.SEARCH_NORMAL][attr["name"]] = attr["score"]
+          if attr["similar"]:
+            relevance[self.SIMILAR_NORMAL][attr["name"]] = attr["score"]
       if attr["source"]:
         source.append(attr["name"])
 
@@ -161,11 +172,8 @@ class Data:
   def get_source(self):
     return self.source
 
-  def get_relevance(self, cosine=True):
-    if cosine:
-      return self.relevance["cosine"]
-    else:
-      return self.relevance["normal"]
+  def get_relevance(self, relevance_type):
+    return self.relevance[relevance_type]
 
   def get_minimum_score(self):
     val1 = self.get_relevance(True).values()

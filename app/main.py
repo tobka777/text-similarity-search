@@ -48,9 +48,9 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
     time_embed = time.time() - time_embed_start
 
     if explain:
-        query_config = ElasticQuery().get_query_densevector_explain(query, query_vector, dataclass.get_relevance(cosine=False), dataclass.get_relevance(cosine=True), dataclass.get_source(), docs_count=1000)
+        query_config = ElasticQuery().get_query_densevector_explain(query, query_vector, dataclass.get_relevance(dataclass.SEARCH_NORMAL), dataclass.get_relevance(dataclass.SEARCH_COSINE), dataclass.get_source(), docs_count=1000)
     else:
-        query_config = ElasticQuery().get_query_densevector(query, query_vector, dataclass.get_relevance(cosine=False), dataclass.get_relevance(cosine=True), dataclass.get_source(), docs_count=1000, min_score=dataclass.get_minimum_score())
+        query_config = ElasticQuery().get_query_densevector(query, query_vector, dataclass.get_relevance(dataclass.SEARCH_NORMAL), dataclass.get_relevance(dataclass.SEARCH_COSINE), dataclass.get_source(), docs_count=1000, min_score=dataclass.get_minimum_score())
 
     matches, time_elastic, value, resp = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
@@ -84,7 +84,8 @@ def index(lang: str = 'de', key: str = ''):
 
 @app.get("/api/update")
 def update(id: str = '', lang: str = 'de'):
-    url = API_URL+"/game/?lang="+lang+"&key="+id
+    #url = API_URL+"/game/?lang="+lang+"&key="+id
+    url = API_URL+"/"+lang+"/games/"+id
     request = requests.get(url)
     if request.content == b'':
         raise HTTPException(status_code=404, detail="Game "+id+" not found.")
@@ -113,7 +114,7 @@ def get(id: str = '', lang: str = 'de', explain: bool = False):
     if not document:
         raise HTTPException(status_code=404, detail="Game "+id+" not found.")
     
-    query_config = ElasticQuery().get_similarity_query(document, dataclass.get_relevance(cosine=False), dataclass.get_relevance(cosine=True), source=dataclass.get_source(), docs_count=10, explain=explain)
+    query_config = ElasticQuery().get_similarity_query(document, dataclass.get_relevance(dataclass.SIMILAR_NORMAL), dataclass.get_relevance(dataclass.SIMILAR_COSINE), source=dataclass.get_source(), docs_count=10, explain=explain)
 
     matches, time_elastic, value, resp = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
