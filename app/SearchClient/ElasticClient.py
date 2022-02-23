@@ -23,7 +23,6 @@ class BulkResp():
         if resp[0] > 0:
             self.status_code = 201
 
-
 class SearchResp():
     def __init__(self, resp):
         self.status_code = 400
@@ -246,9 +245,9 @@ class ElasticClient(BaseClient):
         return mapping, rawFeatureSet
 
     def get_doc(self, doc_id, index):
-        resp = self.es.get(index=index, id=doc_id)
+        resp = self.es.get(index=index, id=doc_id, ignore=[400, 404])
         #self.resp_msg(msg="Fetched Doc {}".format(doc_id), resp=resp, throw=False)
-        return resp['_source']
+        return resp['_source'] if resp['found'] else False
 
     def transform_vector(self, vector):
         return vector.flatten().tolist()
@@ -258,6 +257,27 @@ class ElasticClient(BaseClient):
         #self.resp_msg(msg="Deleted Doc {}".format(doc_id), resp=resp, throw=False)
 
 class ElasticQuery():
+    def get_template_script_score(self, source, params):
+        return {
+            "script_score": {
+                "query": {"match_all": {}},
+                "script": {
+                    "source": source,
+                    "params": params
+                }
+            }
+        }
+
+    def get_template_match(self, query, attribute, boost):
+        return {
+            "match": {
+                attribute: {
+                    "query": query,
+                    "boost": boost
+                }
+            }
+        }
+
     def get_query_basic(self, query):
         return {
             "query": query
@@ -269,17 +289,7 @@ class ElasticQuery():
           "query": {
             "bool": {
               "should": [
-                {
-                  "script_score": {
-                    "query": {
-                      "match_all": {}
-                    },
-                    "script": {
-                      "source": self.get_distance_metric(relevance_cosine),
-                      "params": {"query_vector": query_vector}
-                    }
-                  }
-                },
+                self.get_template_script_score(self.get_distance_metric(relevance_cosine), {"query_vector": query_vector}),
                 {
                   "multi_match": {
                     "query": query_string,
@@ -342,31 +352,15 @@ class ElasticQuery():
     def get_query_densevector_explain(self, query_string, query_vector, relevance_normal, relevance_cosine, source, docs_count=None):
         script_score = []
         for attribute, boost in relevance_cosine.items():
-          template = {
-            "script_score": {
-              "query": {"match_all": {}},
-              "script": {
-                "source": self.get_distance_value(attribute, boost),
-                "params": {"query_vector": query_vector}
-              }
-            }
-          }
+          template = self.get_template_script_score(self.get_distance_value(attribute, boost), {"query_vector": query_vector})
           script_score.append(template)
 
         for attribute, boost in relevance_normal.items():
-          template = {
-            "match": {
-                attribute: {
-                    "query": query_string,
-                    "boost": round(boost/2.2, 2)
-                }
-            }
-          }
+          template = self.get_template_match(query_string, attribute, round(boost/2.2, 2))
           script_score.append(template)
 
         query = {
             "explain": True,
-            "_source": source,
             "query": {
                 "bool": {
                     "should": script_score
@@ -378,5 +372,40 @@ class ElasticQuery():
           query['size'] = docs_count
         if source is not None:
           query['_source'] = source
+
+        return query
+
+    def get_similarity_query(self, document, relevance_normal, relevance_cosine, source, docs_count=None, explain=False):
+        script_score = []
+        for attribute, value in document.items():
+            template = False
+            if attribute in relevance_cosine:
+                template = self.get_template_script_score(self.get_distance_value(attribute, relevance_cosine[attribute]), {"query_vector": value})
+                script_score.append(template)
+            elif attribute in relevance_normal:
+                template = self.get_template_match(value, attribute, round(relevance_normal[attribute]/2.2, 2))
+                script_score.append(template)
+            else:
+                print("ERROR: "+attribute+" not found")
+
+        query = {
+            "query": {
+                "bool": {
+                    "should": script_score,
+                    "must_not": {
+                        "match": {
+                            "id": document['id']
+                        }
+                    }
+                }
+            }
+        }
+
+        if docs_count is not None:
+          query['size'] = docs_count
+        if source is not None:
+          query['_source'] = source
+        if explain:
+          query['explain'] = True
 
         return query

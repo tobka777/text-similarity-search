@@ -98,24 +98,24 @@ class Data:
   def parse_data(self, data):
     bulk_size = 1000
     count = 0
-    joinString = " , "
+    join_string = " , "
 
     for d in data:
       doc = {}
 
-      valueValid = True
+      value_valid = True
       for attr in self.attribute:
         if not attr:
           continue
 
         value = d
         for id in attr["attribute"].split("."):
-          valueValid = True
+          value_valid = True
 
           if id == '*':
             #JSON Values
-            JsonValues = self.get_all_values(value, [])
-            value = joinString.join([v for v in list(set(JsonValues)) if v != None and v.strip() != '' and v != 'none'])
+            json_values = self.get_all_values(value, [])
+            value = join_string.join([v for v in list(set(json_values)) if v != None and v.strip() != '' and v != 'none'])
             break
 
           elif isinstance(value, list):
@@ -124,31 +124,31 @@ class Data:
             print(id)
             if id == '[]':
               #array list
-              value = joinString.join(list(set(value)))
+              value = join_string.join(list(set(value)))
               break
             elif id == '[*]':
               #object, jump to object value in next loop
               continue
             else:
               #combine object value
-              tmpval = []
+              tmp_val = []
               for val in value:
                 if id in val:
-                  tmpval.append(val[id])
+                  tmp_val.append(val[id])
                 else:
                   print("ERROR: "+str(id)+" not exists")
-              value = joinString.join(list(set(tmpval)))
+              value = join_string.join(list(set(tmp_val)))
               break
 
           else:
             #specific value
             if id not in value:
-              valueValid = False
+              value_valid = False
               print("ERROR: "+str(id)+" not exists")
               break
             value = value[id]
 
-        if valueValid:
+        if value_valid:
           self.transform(attr["name"], value, doc, attr["vector"])
 
       yield doc

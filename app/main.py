@@ -35,6 +35,7 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+@app.get("/")
 @app.get("/api/")
 async def root():
     return {"message": "App is running."}
@@ -57,7 +58,8 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
         "time": {
             "elastic": round(time_elastic/1000, 4),
             "embed": round(time_embed, 4)
-        }
+        },
+        "resp": resp
     }
 
 @app.get("/api/index")
@@ -100,7 +102,26 @@ def delete(id: str = '', lang: str = 'de'):
 
 @app.get("/api/get")
 def get(id: str = '', lang: str = 'de'):
-    return searchclient.get_doc(id, INDEX_NAME+lang)
+    document = searchclient.get_doc(id, INDEX_NAME+lang)
+    if not document:
+        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
+    return document
+
+@app.get("/api/similar")
+def get(id: str = '', lang: str = 'de', explain: bool = False):
+    document = searchclient.get_doc(id, INDEX_NAME+lang)
+    if not document:
+        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
+    
+    query_config = ElasticQuery().get_similarity_query(document, dataclass.get_relevance(cosine=False), dataclass.get_relevance(cosine=True), source=dataclass.get_source(), docs_count=10, explain=explain)
+
+    matches, time_elastic, value, resp = searchclient.query(INDEX_NAME+lang, query_config, explain)
+    return {
+        "matches": matches,
+        "time": {
+            "elastic": round(time_elastic/1000, 4)
+        }
+    }
 
 @app.get("/api/clear")
 async def clear():
