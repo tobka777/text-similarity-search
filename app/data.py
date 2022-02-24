@@ -25,8 +25,8 @@ class Data:
         return False
 
       #optional values with default value
-      if "score" not in attr:
-        attr["score"] = 0
+      if "boost" not in attr:
+        attr["boost"] = 0
       if "vector" not in attr:
         attr["vector"] = True
       if "similar" not in attr:
@@ -38,15 +38,15 @@ class Data:
         attr["source"] = False
       attribute.append(attr)
 
-      if attr["score"] > 0:
+      if attr["boost"] > 0:
         if attr["vector"]:
-          relevance[self.SEARCH_COSINE][attr["name"]] = attr["score"]
+          relevance[self.SEARCH_COSINE][attr["name"]] = attr["boost"]
           if attr["similar"]:
-            relevance[self.SIMILAR_COSINE][attr["name"]] = attr["score"]
+            relevance[self.SIMILAR_COSINE][attr["name"]] = attr["boost"]
         else:
-          relevance[self.SEARCH_NORMAL][attr["name"]] = attr["score"]
+          relevance[self.SEARCH_NORMAL][attr["name"]] = attr["boost"]
           if attr["similar"]:
-            relevance[self.SIMILAR_NORMAL][attr["name"]] = attr["score"]
+            relevance[self.SIMILAR_NORMAL][attr["name"]] = attr["boost"]
       if attr["source"]:
         source.append(attr["name"])
 
@@ -176,7 +176,7 @@ class Data:
     return self.relevance[relevance_type]
 
   def get_minimum_score(self):
-    val1 = self.get_relevance(True).values()
-    val2 = self.get_relevance(False).values()
-    return (sum(val1)+sum(val2))/(len(val1)+len(val2))
+    val1 = self.get_relevance(self.SEARCH_NORMAL).values()
+    val2 = self.get_relevance(self.SEARCH_COSINE).values()
+    return ((sum(val1)+sum(val2))/(len(val1)+len(val2)))*1.3
 
