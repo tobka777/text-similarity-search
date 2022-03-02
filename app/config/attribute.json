@@ -23,5 +23,14 @@
 
   {"attribute": "technicalInfo.platformInfo.[*].platform", "boost": 3},
   
-  {"attribute": "*", "boost": 1, "vector": false}
+  {"attribute": "*", "boost": 1, "vector": false},
+
+  {"attribute": "useInfo.educational.learningResourceType.[]", "boost": 3},
+  {"attribute": "useInfo.educational.frame.[]", "boost": 3},
+  {"attribute": "useInfo.educational.foreknowledge", "boost": 3},
+  {"attribute": "useInfo.educational.applicationScenarios", "boost": 3},
+
+  {"attribute": "gameInfo.intendedHealthEffects", "boost": 3},
+  {"attribute": "useInfo.applicationFields.[*].diseases.[]", "boost": 3},
+  {"attribute": "useInfo.targetUserGroups.[*].targetedGroupHealthConditions.[*].targetedGroupHealthCondition", "boost": 3}
 ]

@@ -83,18 +83,17 @@ class Data:
     else:
       doc[name] = value.strip()
 
-  def get_all_values(self, obj, arr):
+  def get_all_values(self, obj, arr, key=None):
     """Recursively search for values of key in JSON tree."""
     if isinstance(obj, dict):
       for k, v in obj.items():
         if isinstance(v, (dict, list)):
-          self.get_all_values(v, arr)
-        else:
-          #print(k, ":", v)
-          arr.append(v)
+          self.get_all_values(v, arr, key)
+        elif key is None or key == k:
+          arr.append(v)          
     elif isinstance(obj, list):
       for item in obj:
-        self.get_all_values(item, arr)
+        self.get_all_values(item, arr, key)
     return arr
 
   def load_config(self, file):
@@ -107,7 +106,7 @@ class Data:
       outfile.write(json_object)
 
   def parse_data(self, data):
-    bulk_size = 1000
+    bulk_size = 50
     count = 0
     join_string = " , "
 
@@ -122,7 +121,7 @@ class Data:
         value = d
         for id in attr["attribute"].split("."):
           value_valid = True
-
+          
           if id == '*':
             #JSON Values
             json_values = self.get_all_values(value, [])
@@ -145,7 +144,14 @@ class Data:
               tmp_val = []
               for val in value:
                 if id in val:
-                  tmp_val.append(val[id])
+                  if isinstance(val[id], list):
+                    if all(isinstance(elem, str) for elem in val[id]):
+                      tmp_val = tmp_val + val[id]
+                    else:
+                      last_attr = attr["attribute"].split(".")[-1]
+                      tmp_val = self.get_all_values(val[id], [], last_attr)
+                  else:
+                    tmp_val.append(val[id])
                 else:
                   print("ERROR: "+str(id)+" not exists")
               value = join_string.join(list(set(tmp_val)))

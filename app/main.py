@@ -109,6 +109,7 @@ def get(id: str = '', lang: str = 'de'):
     return document
 
 @app.get("/api/similar")
+@cache(namespace="similar", expire=CACHE_MIN*60)
 def get(id: str = '', lang: str = 'de', explain: bool = False):
     document = searchclient.get_doc(id, INDEX_NAME+lang)
     if not document:
