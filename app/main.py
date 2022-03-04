@@ -63,7 +63,7 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
     }
 
 @app.get("/api/index")
-def index(lang: str = 'de', key: str = ''):
+async def index(lang: str = 'de', key: str = ''):
     if key == '' or APP_KEY != key:
         raise HTTPException(status_code=401, detail="Unauthorized.")
 
@@ -83,7 +83,7 @@ def index(lang: str = 'de', key: str = ''):
     return {"message": "Index created."}
 
 @app.get("/api/update")
-def update(id: str = '', lang: str = 'de'):
+async def update(id: str = '', lang: str = 'de'):
     #url = API_URL+"/game/?lang="+lang+"&key="+id
     url = API_URL+"/"+lang+"/games/"+id
     request = requests.get(url)
@@ -97,12 +97,12 @@ def update(id: str = '', lang: str = 'de'):
     return {"message": "Document "+id+" updated."}
 
 @app.get("/api/delete")
-def delete(id: str = '', lang: str = 'de'):
+async def delete(id: str = '', lang: str = 'de'):
     searchclient.delete_doc(id, INDEX_NAME+lang)
     return {"message": "Document "+id+" deleted."}
 
 @app.get("/api/get")
-def get(id: str = '', lang: str = 'de'):
+async def get(id: str = '', lang: str = 'de'):
     document = searchclient.get_doc(id, INDEX_NAME+lang)
     if not document:
         raise HTTPException(status_code=404, detail="Game "+id+" not found.")
@@ -110,7 +110,7 @@ def get(id: str = '', lang: str = 'de'):
 
 @app.get("/api/similar")
 @cache(namespace="similar", expire=CACHE_MIN*60)
-def get(id: str = '', lang: str = 'de', explain: bool = False):
+async def similar(id: str = '', lang: str = 'de', explain: bool = False):
     document = searchclient.get_doc(id, INDEX_NAME+lang)
     if not document:
         raise HTTPException(status_code=404, detail="Game "+id+" not found.")
