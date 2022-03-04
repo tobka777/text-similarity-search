@@ -14,7 +14,7 @@ from data import Data
 
 INDEX_SPEC = "vector"
 INDEX_NAME = "sgic_search_"
-WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:9876')
+WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:3000')
 API_URL = WEBSITE_URL+"/api"
 APP_KEY = os.environ.get('APP_KEY', '')
 CACHE_MIN = int(os.environ.get('CACHE_MIN', 60))
