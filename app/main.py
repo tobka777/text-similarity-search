@@ -58,8 +58,7 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
         "time": {
             "elastic": round(time_elastic/1000, 4),
             "embed": round(time_embed, 4)
-        },
-        "resp": resp
+        }
     }
 
 @app.get("/api/index")
