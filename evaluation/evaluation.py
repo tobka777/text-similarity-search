@@ -44,6 +44,7 @@ matrix_time = []
 doclen = 73
 resultdocs = 5
 rs = []
+all_timer_start = time.time()
 for index, row in df.iterrows():
   if row["query"] and hasattr(row, "res1"):
     timer_start = time.time()
@@ -67,7 +68,10 @@ for index, row in df.iterrows():
  
     matrix.append(eval_res)
   #time.sleep(2)
-    
+
+all_timer = time.time() - all_timer_start
+print(all_timer)
+
 eval_matrix = pd.DataFrame(matrix, columns=["query","tp","fp","fn","tn","precision","recall","acc","f1","mcc","map","precision_rank_10"])
 
 result_folder = 'result/'+name+'_'
