@@ -2,27 +2,29 @@ import requests
 import os
 import time
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, HTTPException
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.inmemory import InMemoryBackend
 from fastapi_cache.decorator import cache
 from fastapi.middleware.cors import CORSMiddleware
 
-from .Model import SentenceTransformer
-from .SearchClient import ElasticClient, ElasticQuery
-from .sgic import parse_data, get_relevance, get_source
+from Model import SentenceTransformer
+from SearchClient import ElasticClient, ElasticQuery
+from data import Data
 
 INDEX_SPEC = "vector"
 INDEX_NAME = "sgic_search_"
-WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:9876')
+WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:3000')
 API_URL = WEBSITE_URL+"/api"
 APP_KEY = os.environ.get('APP_KEY', '')
-CACHE_MIN = os.environ.get('CACHE_MIN', 60)
+CACHE_MIN = int(os.environ.get('CACHE_MIN', 60))
+ELASTIC_URL = os.environ.get('ELASTIC_URL', 'http://localhost:9200')
 
 print("Load model")
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 print("Initializing Elastic client")
-searchclient = ElasticClient(configs_dir='config/elastic')
+searchclient = ElasticClient(configs_dir='config/elastic', url=ELASTIC_URL)
+dataclass = Data(model, searchclient, config_file="config/attribute.json", setting_file="config/elastic/"+INDEX_SPEC+"_settings.json")
 
 app = FastAPI()
 app.add_middleware(
@@ -34,10 +36,11 @@ app.add_middleware(
 )
 
 @app.get("/")
+@app.get("/api/")
 async def root():
     return {"message": "App is running."}
 
-@app.get("/search")
+@app.get("/api/search")
 @cache(namespace="search", expire=CACHE_MIN*60)
 async def search(query: str = '', lang: str = 'de', explain: bool = False):
     time_embed_start = time.time()
@@ -45,27 +48,28 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
     time_embed = time.time() - time_embed_start
 
     if explain:
-        query_config = ElasticQuery().get_query_densevector_explain(query_vector, get_relevance(), get_source())
+        query_config = ElasticQuery().get_query_densevector_explain(query, query_vector, dataclass.get_relevance(dataclass.SEARCH_NORMAL), dataclass.get_relevance(dataclass.SEARCH_COSINE), dataclass.get_source(), docs_count=1000)
     else:
-        query_config = ElasticQuery().get_query_densevector(query_vector, get_relevance(), get_source(), docs_count=1000)
+        query_config = ElasticQuery().get_query_densevector(query, query_vector, dataclass.get_relevance(dataclass.SEARCH_NORMAL), dataclass.get_relevance(dataclass.SEARCH_COSINE), dataclass.get_source(), docs_count=1000, min_score=dataclass.get_minimum_score())
 
-    matches, time_elastic, value = searchclient.query(INDEX_NAME+lang, query_config, explain)
+    matches, time_elastic, value, resp = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
         "matches": matches,
         "time": {
             "elastic": round(time_elastic/1000, 4),
             "embed": round(time_embed, 4)
-        }
+        },
+        "resp": resp
     }
 
-@app.get("/index")
+@app.get("/api/index")
 def index(lang: str = 'de', key: str = ''):
     if key == '' or APP_KEY != key:
-        #TODO send ERROR code
-        return {"message": "Unauthorized."}
+        raise HTTPException(status_code=401, detail="Unauthorized.")
 
     print("Read Data")
-    url = API_URL+"/games/"+lang
+    #url = API_URL+"/games/"+lang
+    url = API_URL+"/"+lang+"/games"
     data_json = requests.get(url).json()
 
     print("Create Index")
@@ -73,34 +77,55 @@ def index(lang: str = 'de', key: str = ''):
     searchclient.create_index(INDEX_NAME+lang, INDEX_SPEC)
 
     print("Index Documents")   
-    data = parse_data(data_json, model, searchclient)
+    data = dataclass.parse_data(data_json)
     searchclient.index_documents(INDEX_NAME+lang, data)
 
     return {"message": "Index created."}
 
-@app.get("/update")
+@app.get("/api/update")
 def update(id: str = '', lang: str = 'de'):
-    url = API_URL+"/game/?lang="+lang+"&key="+id
+    #url = API_URL+"/game/?lang="+lang+"&key="+id
+    url = API_URL+"/"+lang+"/games/"+id
     request = requests.get(url)
     if request.content == b'':
-        return {"message": "Game "+id+" not found."}
+        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
     data_json = request.json()
 
     print("Index Document")
-    data = parse_data([data_json], model, searchclient)
+    data = dataclass.parse_data([data_json])
     searchclient.index_documents(INDEX_NAME+lang, data)
     return {"message": "Document "+id+" updated."}
 
-@app.get("/delete")
+@app.get("/api/delete")
 def delete(id: str = '', lang: str = 'de'):
     searchclient.delete_doc(id, INDEX_NAME+lang)
     return {"message": "Document "+id+" deleted."}
 
-@app.get("/get")
+@app.get("/api/get")
 def get(id: str = '', lang: str = 'de'):
-    return searchclient.get_doc(id, INDEX_NAME+lang)
+    document = searchclient.get_doc(id, INDEX_NAME+lang)
+    if not document:
+        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
+    return document
 
-@app.get("/clear")
+@app.get("/api/similar")
+@cache(namespace="similar", expire=CACHE_MIN*60)
+def get(id: str = '', lang: str = 'de', explain: bool = False):
+    document = searchclient.get_doc(id, INDEX_NAME+lang)
+    if not document:
+        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
+    
+    query_config = ElasticQuery().get_similarity_query(document, dataclass.get_relevance(dataclass.SIMILAR_NORMAL), dataclass.get_relevance(dataclass.SIMILAR_COSINE), source=dataclass.get_source(), docs_count=10, explain=explain)
+
+    matches, time_elastic, value, resp = searchclient.query(INDEX_NAME+lang, query_config, explain)
+    return {
+        "matches": matches,
+        "time": {
+            "elastic": round(time_elastic/1000, 4)
+        }
+    }
+
+@app.get("/api/clear")
 async def clear():
     return await FastAPICache.clear(namespace="search")
 
