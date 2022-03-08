@@ -76,20 +76,11 @@ async def index(lang: str = 'de', key: str = ''):
     searchclient.create_index(INDEX_NAME+lang, INDEX_SPEC)
 
     print("Index Documents")
-    time_embed_start = time.time() 
     data = dataclass.parse_data(data_json)
-    time_embed = time.time() - time_embed_start
-
-    time_elastic_start = time.time() 
     searchclient.index_documents(INDEX_NAME+lang, data)
-    time_elastic = time.time() - time_elastic_start
 
     return {
         "message": "Index created.",
-        "time": {
-            "elastic": round(time_elastic, 4),
-            "embed": round(time_embed, 4)
-        }
     }
 
 @app.get("/api/update")
