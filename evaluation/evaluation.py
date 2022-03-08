@@ -36,9 +36,9 @@ def calc_evaluation_metrics(row, req, doclen, resultdocs):
   acc = (tp+tn)/(tp+tn+fp+fn)
   f1 = 2*precision*recall / (precision+recall) if precision>0 or recall>0 else 0
   mcc = (tp*tn - fp*fn) / math.sqrt((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn)) if ((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn)) > 0 else 0
-  return [row["query"], tp, fp, fn, tn, round(precision,1), round(recall,2), round(acc,2), round(f1,2), round(mcc,2)]
+  return [row["query"], tp, fp, fn, tn, round(precision,2), round(recall,2), round(acc,2), round(f1,2), round(mcc,2)]
 
-df = pd.DataFrame(dataset, columns=["attribute","query","res1","res2","res3","res4","res5"])
+df = pd.DataFrame(dataset, columns=["query","res1","res2","res3","res4","res5"])
 matrix = []
 matrix_time = []
 doclen = 73
