@@ -1,18 +1,18 @@
 [
   {"attribute": "gameInfo.titleInfo.gameID", "vector": false, "name": "id", "source": true},
   {"attribute": "gameInfo.titleInfo.title", "boost": 1000, "vector": false, "name": "title", "source": true, "similar": false},
-
+  
   {"attribute": "applicationProfile", "boost": 80},
-
-  {"attribute": "gameInfo.titleInfo.title", "boost": 300, "similar": false},
-  {"attribute": "gameInfo.titleInfo.subTitle", "boost": 100, "similar": false},
+  
+  {"attribute": "gameInfo.titleInfo.title", "boost": 300, "similar_boost": 100},
+  {"attribute": "gameInfo.titleInfo.subTitle", "boost": 100},
   {"attribute": "gameInfo.abstract", "boost": 100},
   {"attribute": "gameInfo.characterizingGoal.primaryGoal", "boost": 40},
   {"attribute": "gameInfo.characterizingGoal.goalDescription.[]", "boost": 40},
   {"attribute": "gameInfo.keywordInfo.[*].keyword", "boost": 15},
   {"attribute": "gameInfo.gameGenre.[]", "boost": 15},
   {"attribute": "gameInfo.gameMode.[]", "boost": 3},
-  {"attribute": "gameInfo.releaseInfo.[*].releaseDate", "boost": 3, "vector": false},
+  {"attribute": "gameInfo.releaseInfo.[*].releaseDate", "boost": 100, "vector": false},
 
   {"attribute": "useInfo.applicationFields.[*].applicationField", "boost": 15},
   {"attribute": "useInfo.targetUserGroups.[*].targetUserGroup", "boost": 3},

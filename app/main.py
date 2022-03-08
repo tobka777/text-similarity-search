@@ -109,12 +109,12 @@ async def get(id: str = '', lang: str = 'de'):
 
 @app.get("/api/similar")
 @cache(namespace="similar", expire=CACHE_MIN*60)
-async def similar(id: str = '', lang: str = 'de', explain: bool = False):
+async def similar(id: str = '', lang: str = 'de', explain: bool = False, count: int = 10):
     document = searchclient.get_doc(id, INDEX_NAME+lang)
     if not document:
         raise HTTPException(status_code=404, detail="Game "+id+" not found.")
     
-    query_config = ElasticQuery().get_similarity_query(document, dataclass.get_relevance(dataclass.SIMILAR_NORMAL), dataclass.get_relevance(dataclass.SIMILAR_COSINE), source=dataclass.get_source(), docs_count=10, explain=explain)
+    query_config = ElasticQuery().get_similarity_query(document, dataclass.get_relevance(dataclass.SIMILAR_NORMAL), dataclass.get_relevance(dataclass.SIMILAR_COSINE), source=dataclass.get_source(), docs_count=count, explain=explain)
 
     matches, time_elastic, value, resp = searchclient.query(INDEX_NAME+lang, query_config, explain)
     return {
