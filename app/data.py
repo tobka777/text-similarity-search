@@ -45,12 +45,12 @@ class Data:
           if attr["search"]:
             relevance[self.SEARCH_COSINE][attr["name"]] = attr["boost"]
           if attr["similar"]:
-            relevance[self.SIMILAR_COSINE][attr["name"]] = attr["similar_boost"] if attr["similar_boost"] else attr["boost"]
+            relevance[self.SIMILAR_COSINE][attr["name"]] = attr["similar_boost"] if "similar_boost" not in attr else attr["boost"]
         else:
           if attr["search"]:
             relevance[self.SEARCH_NORMAL][attr["name"]] = attr["boost"]
           if attr["similar"]:
-            relevance[self.SIMILAR_NORMAL][attr["name"]] = attr["similar_boost"] if attr["similar_boost"] else attr["boost"]
+            relevance[self.SIMILAR_NORMAL][attr["name"]] = attr["similar_boost"] if "similar_boost" not in attr else attr["boost"]
       if attr["source"]:
         source.append(attr["name"])
 
