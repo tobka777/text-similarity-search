@@ -2,7 +2,7 @@ from numpy import array
 from SearchClient.BaseClient import BaseClient
 from Model import BaseModel
 import json
-from functools import reduce
+import os
 
 class Data:
   SEARCH_NORMAL="search_normal"
@@ -186,7 +186,10 @@ class Data:
     return self.relevance[relevance_type]
 
   def get_minimum_score(self):
-    #val1 = self.get_relevance(self.SEARCH_NORMAL).values()
-    val2 = self.get_relevance(self.SEARCH_COSINE).values()
-    return sum(val2)
+    MIN_SCORE = int(os.environ.get('MIN_SCORE', 0))
+    if MIN_SCORE <= 0:
+      val2 = self.get_relevance(self.SEARCH_COSINE).values()
+      MIN_SCORE = sum(val2)
+    print(MIN_SCORE)
+    return MIN_SCORE
 
