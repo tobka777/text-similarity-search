@@ -18,6 +18,7 @@ $ docker-compose up -d --build
 - `APP_KEY`: Key as a protection of the index creation
 - `CACHE_MIN`: Duration of the caching (in memory) of the search queries in minutes (default: 60 min)
 - `MIN_SCORE`: fixed minimum score (default: sum of all weights of the attributes in vector representation)
+
 ### [attribute.json](https://github.com/tobka777/text-similarity-search/blob/main/app/config/attribute.json)
 The JSON array contains an object with the following values for each attribute to be considered.
 - `attribute` (erforderlich):
@@ -34,5 +35,5 @@ Pull requests are welcome. For major changes, please open an [issue](https://git
 
 ## License
 
-Distributed under the Apache 2.0 License. See [LICENSE](https://github.com/tobka777/text-similarity-search/blob/main/LICENSE) for more information.
+Distributed under the Apache 2.0 License. See [LICENSE](https://github.com/tobka777/text-similarity-search/blob/main/LICENCE) for more information.
 
