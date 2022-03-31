@@ -35,8 +35,8 @@ model = LASER('LASER')
 
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 
-#print(benchmark_run_print(STSB(), 'en', model))
-#print(benchmark_run_print(STSB(), 'de', model))
-#print(benchmark_run_print(SICK(), 'en', model))
+print(benchmark_run_print(STSB(), 'en', model))
+print(benchmark_run_print(STSB(), 'de', model))
+print(benchmark_run_print(SICK(), 'en', model))
 print(benchmark_run_print(SICK(), 'de', model))
 

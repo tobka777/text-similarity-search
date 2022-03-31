@@ -190,6 +190,5 @@ class Data:
     if MIN_SCORE <= 0:
       val2 = self.get_relevance(self.SEARCH_COSINE).values()
       MIN_SCORE = sum(val2)
-    print(MIN_SCORE)
     return MIN_SCORE
 

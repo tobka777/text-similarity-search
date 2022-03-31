@@ -63,7 +63,7 @@ async def search(query: str = '', lang: str = 'de', explain: bool = False):
 
 @app.get("/api/index")
 async def index(lang: str = 'de', key: str = ''):
-    if key == '' or APP_KEY != key:
+    if APP_KEY != key:
         raise HTTPException(status_code=401, detail="Unauthorized.")
 
     print("Read Data")
