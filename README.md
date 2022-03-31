@@ -21,7 +21,7 @@ $ docker-compose up -d --build
 
 ### [attribute.json](https://github.com/tobka777/text-similarity-search/blob/main/app/config/attribute.json)
 The JSON array contains an object with the following values for each attribute to be considered.
-- `attribute` (erforderlich):
+- `attribute`: path in JSON like `gameInfo.titleInfo.title` (`.`: object; `[]`: array; `[*]`: array of objects; `*`: all values of an object)
 - `boost`: weighting of the attribute (default: `0` - no boost)
 - `vector`: `true` if saved as vector representation and `false` if saved as text (default: `true`)
 - `name`: alternative name if not to be derived from attributes (default: `attribute`)
