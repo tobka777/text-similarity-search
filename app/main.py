@@ -13,9 +13,10 @@ from SearchClient import ElasticClient, ElasticQuery
 from data import Data
 
 INDEX_SPEC = "vector"
-INDEX_NAME = "sgic_search_"
+INDEX_NAME = os.environ.get('INDEX_NAME', 'index_')
 WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:3000')
-API_URL = WEBSITE_URL+"/api"
+RESOURCE_PATH_ALL = os.environ.get('RESOURCE_PATH_ALL', '/api/{lang}/')
+RESOURCE_PATH_ID = os.environ.get('RESOURCE_PATH_ID', RESOURCE_PATH_ALL+'/{id}')
 APP_KEY = os.environ.get('APP_KEY', '')
 CACHE_MIN = int(os.environ.get('CACHE_MIN', 60))
 ELASTIC_URL = os.environ.get('ELASTIC_URL', 'http://localhost:9200')
@@ -29,7 +30,7 @@ dataclass = Data(model, searchclient, config_file="config/attribute.json", setti
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[WEBSITE_URL,'http://localhost:3000'],
+    allow_origins=[WEBSITE_URL],
     allow_credentials=True,
     allow_methods=["POST", "GET"],
     allow_headers=["*"]
@@ -67,8 +68,7 @@ async def index(lang: str = 'de', key: str = ''):
         raise HTTPException(status_code=401, detail="Unauthorized.")
 
     print("Read Data")
-    #url = API_URL+"/games/"+lang
-    url = API_URL+"/"+lang+"/games"
+    url = WEBSITE_URL+RESOURCE_PATH_ALL.format(lang=lang)
     data_json = requests.get(url).json()
 
     print("Create Index")
@@ -85,11 +85,10 @@ async def index(lang: str = 'de', key: str = ''):
 
 @app.get("/api/update")
 async def update(id: str = '', lang: str = 'de'):
-    #url = API_URL+"/game/?lang="+lang+"&key="+id
-    url = API_URL+"/"+lang+"/games/"+id
+    url = WEBSITE_URL+RESOURCE_PATH_ID.format(lang=lang, id=id)
     request = requests.get(url)
     if request.content == b'':
-        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
+        raise HTTPException(status_code=404, detail="Resource "+id+" not found.")
     data_json = request.json()
 
     print("Index Document")
@@ -106,7 +105,7 @@ async def delete(id: str = '', lang: str = 'de'):
 async def get(id: str = '', lang: str = 'de'):
     document = searchclient.get_doc(id, INDEX_NAME+lang)
     if not document:
-        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
+        raise HTTPException(status_code=404, detail="Resource "+id+" not found.")
     return document
 
 @app.get("/api/similar")
@@ -114,7 +113,7 @@ async def get(id: str = '', lang: str = 'de'):
 async def similar(id: str = '', lang: str = 'de', explain: bool = False, count: int = 10):
     document = searchclient.get_doc(id, INDEX_NAME+lang)
     if not document:
-        raise HTTPException(status_code=404, detail="Game "+id+" not found.")
+        raise HTTPException(status_code=404, detail="Resource "+id+" not found.")
     
     query_config = ElasticQuery().get_similarity_query(document, dataclass.get_relevance(dataclass.SIMILAR_NORMAL), dataclass.get_relevance(dataclass.SIMILAR_COSINE), source=dataclass.get_source(), docs_count=count, explain=explain)
 

@@ -1,4 +1,6 @@
-from Benchmark import SICK, STSB
+#import sys
+#sys.path.append('../app')
+
 from Model import SentenceTransformer, FastText, Bert, Spacy, mUSE, LASER, SIF, Gensim
 
 def benchmark_run_print(benchmark, lang, model):

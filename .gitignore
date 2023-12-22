@@ -5,3 +5,5 @@ __pycache__
 .DS_Store
 /app/data
 old
+myenv
+vector_settings.json

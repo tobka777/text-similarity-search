@@ -1,5 +1,4 @@
 import pandas as pd
-from .BaseBenchmark import BaseBenchmark
 import os
 
 class SICK(BaseBenchmark):

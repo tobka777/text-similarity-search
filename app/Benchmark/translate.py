@@ -1,6 +1,5 @@
 import sys
 import os
-from Benchmark import SICK
 
 benchmark = SICK()
 
@@ -11,7 +10,7 @@ for i, row in data.iterrows():
   t2 = benchmark.translate(row[2],'DE')
   data.at[i,1] = t1
   data.at[i,2] = t2
-  with open("Benchmark/data/sickbenchmark/de/sick-train_bak.csv", "a") as f:
+  with open("data/sickbenchmark/de/sick-train_bak.csv", "a") as f:
     f.write(data.iloc[[i]].to_csv(sep=";", encoding='utf-8', index=False, header=False))
 
-data.to_csv("Benchmark/data/sickbenchmark/de/sick-train.csv", sep=";", encoding='utf-8', index=False, header=False)
+data.to_csv("data/sickbenchmark/de/sick-train.csv", sep=";", encoding='utf-8', index=False, header=False)

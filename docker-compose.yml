@@ -1,24 +1,23 @@
 version: '3.9'
 services:
-  sgic-search-api:
+  text-similarity-search:
     build: ./app
-    image: sgic-search-api
-    container_name: sgic-search-api
+    image: text-similarity-search
+    container_name: text-similarity-search
     ports:
       - '3030:80'
-    command: uvicorn main:app --host 0.0.0.0 --port 80 --proxy-headers
     volumes:
-      - ./app:/usr/src/app
+      - ./config:/usr/src/app/config
     networks:
       - elastic
     env_file:
       - .env
     depends_on:
-      - sgic-es01
+      - es01
 
-  sgic-es01:
+  es01:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
-    container_name: sgic-es01
+    container_name: es01
     environment:
       - node.name=es01
       - cluster.name=es-docker-cluster

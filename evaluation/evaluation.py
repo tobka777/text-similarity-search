@@ -5,7 +5,7 @@ import math
 import numpy as np
 import time
 
-name = "sgic"
+name = "evaluation"
 filename = name+"_test_quality.csv"
 dataset = []
 with open('data/'+filename, 'r', encoding='utf-8') as f:
