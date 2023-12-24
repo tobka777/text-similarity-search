@@ -14,7 +14,8 @@ from data import Data
 
 INDEX_SPEC = "vector"
 INDEX_NAME = os.environ.get('INDEX_NAME', 'index_')
-WEBSITE_URL = os.environ.get('WEBSITE_URL', 'http://localhost:3000')
+RESOURCE_URL = os.environ.get('RESOURCE_URL', 'http://localhost:3000')
+RESOURCE_AUTH_HEADER = os.environ.get('RESOURCE_AUTH_HEADER', '')
 RESOURCE_PATH_ALL = os.environ.get('RESOURCE_PATH_ALL', '/api/{lang}/')
 RESOURCE_PATH_ID = os.environ.get('RESOURCE_PATH_ID', RESOURCE_PATH_ALL+'/{id}')
 APP_KEY = os.environ.get('APP_KEY', '')
@@ -30,7 +31,7 @@ dataclass = Data(model, searchclient, config_file="config/attribute.json", setti
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[WEBSITE_URL],
+    allow_origins=[RESOURCE_URL],
     allow_credentials=True,
     allow_methods=["POST", "GET"],
     allow_headers=["*"]
@@ -68,8 +69,8 @@ async def index(lang: str = 'de', key: str = ''):
         raise HTTPException(status_code=401, detail="Unauthorized.")
 
     print("Read Data")
-    url = WEBSITE_URL+RESOURCE_PATH_ALL.format(lang=lang)
-    data_json = requests.get(url).json()
+    url = RESOURCE_URL+RESOURCE_PATH_ALL.format(lang=lang)
+    data_json = requests.get(url, headers={'Authorization': RESOURCE_AUTH_HEADER}).json()
 
     print("Create Index")
     searchclient.delete_index(INDEX_NAME+lang)
@@ -85,8 +86,8 @@ async def index(lang: str = 'de', key: str = ''):
 
 @app.get("/api/update")
 async def update(id: str = '', lang: str = 'de'):
-    url = WEBSITE_URL+RESOURCE_PATH_ID.format(lang=lang, id=id)
-    request = requests.get(url)
+    url = RESOURCE_URL+RESOURCE_PATH_ID.format(lang=lang, id=id)
+    request = requests.get(url, headers={'Authorization': RESOURCE_AUTH_HEADER})
     if request.content == b'':
         raise HTTPException(status_code=404, detail="Resource "+id+" not found.")
     data_json = request.json()

@@ -13,12 +13,13 @@ $ docker-compose up -d --build
 
 ## Configuration
 ### .env / [.env.example](https://github.com/tobka777/text-similarity-search/blob/main/.env.example)
-- `WEBSITE_URL`: URL of the web page that provides the resources (default: http://localhost:3000)
+- `RESOURCE_URL`: URL of the web page that provides the resources (default: http://localhost:3000)
 - `RESOURCE_PATH_ALL`: Path to get all resources as JSON (default: `/api/{lang}/`)
     - `{lang}`: language iso 
 - `RESOURCE_PATH_ALL`: Path to get specific resources by id as JSON (default: `RESOURCE_PATH_ALL`+`/{id}`) 
     - `{lang}`: language iso 
     - `{id}`: id of resource 
+- `RESOURCE_AUTH_HEADER`: Authorisation Header for requests (i.e. Bearer token)
 - `ELASTIC_URL`: URL of the Elasticsearch cluster (default: http://localhost:9200)
 - `APP_KEY`: Key as a protection of the index creation
 - `CACHE_MIN`: Duration of the caching (in memory) of the search queries in minutes (default: 60 min)
@@ -42,4 +43,3 @@ Pull requests are welcome. For major changes, please open an [issue](https://git
 ## License
 
 Distributed under the Apache 2.0 License. See [LICENSE](https://github.com/tobka777/text-similarity-search/blob/main/LICENCE) for more information.
-
