@@ -1,4 +1,5 @@
 import pandas as pd
+from BaseBenchmark import BaseBenchmark
 
 class STSB(BaseBenchmark):
   def load_dataset(self, lang='en'):

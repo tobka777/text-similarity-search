@@ -1,5 +1,5 @@
-#import sys
-#sys.path.append('../app')
+import sys
+sys.path.append('../app')
 
 from Model import SentenceTransformer, FastText, Bert, Spacy, mUSE, LASER, SIF, Gensim
 

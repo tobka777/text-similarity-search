@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+from BaseBenchmark import BaseBenchmark
 
 class SICK(BaseBenchmark):
   def load_dataset(self, lang='en'):

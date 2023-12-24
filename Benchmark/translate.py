@@ -1,5 +1,6 @@
 import sys
 import os
+from SICK import SICK
 
 benchmark = SICK()
 

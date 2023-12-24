@@ -64,6 +64,7 @@ class BaseBenchmark(ABC):
     return (pearson_correlation, spearman_correlation, embed_time)
 
   def translate(self, text, target_language):
+    return text
     result = requests.get( 
       "https://api-free.deepl.com/v2/translate", 
       params={ 
